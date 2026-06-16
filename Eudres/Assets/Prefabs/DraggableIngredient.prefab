@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DraggableIngredient
   ingredientData: {fileID: 0}
   spriteRenderer: {fileID: 6898204499215455826}
+  ingredientCollider: {fileID: 1531675111313336459}
 --- !u!212 &6898204499215455826
 SpriteRenderer:
   serializedVersion: 2

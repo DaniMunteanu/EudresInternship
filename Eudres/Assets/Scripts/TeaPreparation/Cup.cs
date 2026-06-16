@@ -1,16 +1,32 @@
 using UnityEngine;
 
-public class Cup : MonoBehaviour
+public class Cup : MonoBehaviour, IDropArea
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] IngredientTracker ingredientTracker;
+
+    [SerializeField] private Collider2D cupCollider;
+    [SerializeField] private SpriteRenderer cupSpriteRenderer;
+    [SerializeField] private Sprite emptyCupSprite;
+    [SerializeField] private Sprite filledCupSprite;
+
     void Start()
     {
-        
+        if (cupSpriteRenderer != null)
+            cupSpriteRenderer.sprite = emptyCupSprite;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnIngredientDropped(Ingredient ingredient)
     {
-        
+        if (cupSpriteRenderer != null)
+            cupSpriteRenderer.sprite = filledCupSprite;
+
+        Debug.Log("Ingredient dropped: " + ingredient.ingredientName);
+
+        ingredientTracker.AddIngredient(ingredient);
+    }
+
+    public void ClearCup()
+    {
+        cupSpriteRenderer.sprite = emptyCupSprite;
     }
 }
