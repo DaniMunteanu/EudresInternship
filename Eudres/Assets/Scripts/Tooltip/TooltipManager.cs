@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class TooltipManager : MonoBehaviour
 {
-    public static TooltipManager Instance;
-
     [SerializeField] private Tooltip tooltip;
 
+    public static TooltipManager Instance;
     void Awake()
     {
         if (Instance == null)

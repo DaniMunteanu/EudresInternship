@@ -37,6 +37,8 @@ public class IngredientTracker : MonoBehaviour
             currentIngredientIndex++;
 
             currentRecipe.ingredients.Add(ingredient);
+
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.ingredientDrop);
         }
         else
         {
