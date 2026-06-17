@@ -20,8 +20,6 @@ public class Cup : MonoBehaviour, IDropArea
         if (cupSpriteRenderer != null)
             cupSpriteRenderer.sprite = filledCupSprite;
 
-        Debug.Log("Ingredient dropped: " + ingredient.ingredientName);
-
         ingredientTracker.AddIngredient(ingredient);
     }
 

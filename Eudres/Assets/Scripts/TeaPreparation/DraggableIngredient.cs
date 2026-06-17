@@ -6,6 +6,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
     [SerializeField] private Ingredient ingredientData;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Collider2D ingredientCollider;
+    [SerializeField] private TooltipTrigger tooltipTrigger;
 
     private Vector3 initialPosition;
 
@@ -16,6 +17,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         if (spriteRenderer != null && ingredientData != null)
         {
             spriteRenderer.sprite = ingredientData.ingredientSprite;
+            tooltipTrigger.text = ingredientData.ingredientName;
         }
     }
 
@@ -31,7 +33,6 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
         worldPos.z = 0f;
         transform.position = worldPos;
-        print("Click detected");
     }
 
     public void OnDrag(PointerEventData eventData)

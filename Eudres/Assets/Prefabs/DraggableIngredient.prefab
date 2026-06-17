@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 213484532705230685}
   - component: {fileID: 6272456836041224320}
+  - component: {fileID: 3069959560925202326}
   - component: {fileID: 6898204499215455826}
   - component: {fileID: 1531675111313336459}
   m_Layer: 0
@@ -49,6 +50,20 @@ MonoBehaviour:
   ingredientData: {fileID: 0}
   spriteRenderer: {fileID: 6898204499215455826}
   ingredientCollider: {fileID: 1531675111313336459}
+  tooltipTrigger: {fileID: 3069959560925202326}
+--- !u!114 &3069959560925202326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8883794430057297486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8beb25bc9de0f4da97aec6c57064df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
+  text: 
 --- !u!212 &6898204499215455826
 SpriteRenderer:
   serializedVersion: 2
