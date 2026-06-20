@@ -1,17 +1,18 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private Transform cup;
 
     public bool IsDragging { get; private set; } = false;
 
-    private Vector3 offset;
     private Camera mainCamera;
     private Rigidbody2D rb;
     private float spawnY;
     private float minY;
+    private float offset;
 
     void Start()
     {
@@ -19,7 +20,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spawnY = transform.position.y;
 
-        // Limita de jos = centrul cupului (ca sa intre in el)
         if (cup != null)
             minY = cup.position.y;
         else
@@ -33,23 +33,21 @@ public class PlayerController : MonoBehaviour
             Vector2 mousePos2D = Mouse.current.position.ReadValue();
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(mousePos2D.x, mousePos2D.y, 0));
 
-            float targetY = Mathf.Clamp(mousePosition.y + offset.y, minY, spawnY);
-
+            float targetY = Mathf.Clamp(mousePosition.y + offset, minY, spawnY);
             rb.MovePosition(new Vector2(0, targetY));
         }
     }
 
-    private void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
         IsDragging = true;
 
         Vector2 mousePos2D = Mouse.current.position.ReadValue();
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(mousePos2D.x, mousePos2D.y, 0));
-
-        offset = transform.position - mousePosition;
+        offset = transform.position.y - mousePosition.y;
     }
 
-    private void OnMouseUp()
+    public void OnPointerUp(PointerEventData eventData)
     {
         IsDragging = false;
     }
