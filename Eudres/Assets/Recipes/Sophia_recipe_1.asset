@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
+  m_Name: Sophia_recipe_1
+  m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
+  introText: "Hi\u2026 I'm Sophia. I don't usually come to places like this, but
+    I had to get out of my dorm for a bit."
+  questionSets:
+  - exchanges:
+    - playerQuestion: "You\u2019re a student, huh? Did you come here to study or
+        to take a break?"
+      npcResponse: " I\u2026 Don\u2019t think about any of those. When I try to study,
+        I can\u2019t tell if I\u2019m learning or if the words I repeat in my head
+        just become background noise. And when I try to take breaks\u2026 I don\u2019t
+        know\u2026 I keep thinking about needing to study."
+    - playerQuestion: "You look tired\u2026 Hard time with the exams?"
+      npcResponse: "Yeah, you could say that. It\u2019s as if it doesn\u2019t have
+        an end. There are days when I wake up and feel as if I already lost time
+        even if I didn\u2019t even start studying. I keep thinking about what will
+        be on the exam paper, what if it\u2019s something I can\u2019t remember or
+        didn\u2019t get to study altogether because I feel I don\u2019t have time
+        to study everything properly."
+    - playerQuestion: You seem to need something warm and a good conversation.
+      npcResponse: " I think it would help\u2026 Maybe, at this point I\u2019m willing
+        to try anything. It\u2019s as if my mind can\u2019t stay focused on one single
+        task. Even when I\u2019m doing something else completely like eating or just
+        walking my thoughts keep going astray."
+  - exchanges:
+    - playerQuestion: Do you think more about what could happen than what you are
+        doing now?
+      npcResponse: " That\u2019s the weird part, it\u2019s as if the present doesn\u2019t
+        have any weight. What goes on, what could happen, what if\u2026 It doesn't
+        stop to just one conclusion, it always keeps growing and I forget where I
+        started from."
+    - playerQuestion: "It\u2019s only for this exam or is it always like that?"
+      npcResponse: "Mostly it\u2019s always like that because\u2026 Well it isn\u2019t
+        necessarily about the exam, but what could happen before it even begins.
+        The exam is already over in my mind, but many times no outcome I can think
+        about is good enough."
+    - playerQuestion: What is it that you think about so hard?
+      npcResponse: "It\u2019s hard to explain, it\u2019s not only one thing. I think
+        about studying, about my exam, how I would get there and what if something
+        happens. I forget something or maybe I lose my bus."
+  - exchanges:
+    - playerQuestion: "When you finally stop studying or thinking about it\u2026
+        what happens in your head?"
+      npcResponse: "I thought stopping would feel like relief\u2026 but it doesn\u2019t
+        really work like that. It\u2019s more like everything I tried to keep under
+        control finally speaks at once. Not loudly, not aggressively\u2026 just constantly.
+        Like small thoughts tapping on the same surface over and over again, reminding
+        me they were there the whole time. Even when I\u2019m not doing anything,
+        it doesn\u2019t stop."
+    - playerQuestion: If you could remove one thing from all this pressure, what
+        would it be?
+      npcResponse: " I think\u2026 the part where my mind keeps jumping ahead of
+        me. If I could just stay in one place mentally, even for a little while,
+        everything would feel more manageable. But it keeps pulling me forward, like
+        I\u2019m already late for something that hasn\u2019t even started yet. And
+        I can\u2019t tell if I\u2019m preparing or just\u2026 exhausting myself before
+        anything even happens."
+    - playerQuestion: What scares you the most about not being ready?
+      npcResponse: "I think it\u2019s more the idea that I\u2019ll realize too late
+        that I didn\u2019t do enough. That I\u2019ll sit there and know the answer
+        was somewhere in my head, but I just can\u2019t reach it anymore. And then
+        everything I kept pushing myself for just collapsed into that one moment.
+        That thought stays longer than everything else."
+  requiredIngredients:
+  - apa, sange

@@ -1,0 +1,349 @@
+fileFormatVersion: 2
+guid: 92d724402555f4b4bad9fbd44ff3cb98
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4338928236674095663
+    second: Cup_0
+  - first:
+      213: 3147476705318918355
+    second: Cup_1
+  - first:
+      213: 6941648621150802775
+    second: Cup_2
+  - first:
+      213: 8001217152823314272
+    second: Cup_3
+  - first:
+      213: -755548851329013874
+    second: Cup_4
+  - first:
+      213: -2447232200964551536
+    second: Cup_5
+  - first:
+      213: -5421499840754783328
+    second: Cup_6
+  - first:
+      213: 4752989959154546549
+    second: Cup_7
+  - first:
+      213: -3314084547565363994
+    second: Cup_8
+  - first:
+      213: -7470838593016426061
+    second: Cup_9
+  - first:
+      213: 1707289485527131778
+    second: Cup_10
+  - first:
+      213: 2152955137136427078
+    second: Cup_11
+  - first:
+      213: 5963967880436974669
+    second: Cup_12
+  - first:
+      213: -2577923673449179355
+    second: Cup_13
+  - first:
+      213: -3947250607587377947
+    second: Cup_14
+  - first:
+      213: -5919667202445671527
+    second: Cup_15
+  - first:
+      213: 1350865150440647691
+    second: Cup_16
+  - first:
+      213: 1542743217831451824
+    second: Cup_17
+  - first:
+      213: 1520962759672523566
+    second: Cup_18
+  - first:
+      213: 312161957205050393
+    second: Cup_19
+  - first:
+      213: -8071644771749772358
+    second: Cup_20
+  - first:
+      213: -3986689110710567416
+    second: Cup_21
+  - first:
+      213: 6624564301517734039
+    second: Cup_22
+  - first:
+      213: -1546131460421351203
+    second: Cup_23
+  - first:
+      213: -6255415861969734398
+    second: Cup_24
+  - first:
+      213: -2282933408859532581
+    second: Cup_25
+  - first:
+      213: -2798681170817350719
+    second: Cup_26
+  - first:
+      213: 6670592226886805747
+    second: Cup_27
+  - first:
+      213: -4805852644142616309
+    second: Cup_28
+  - first:
+      213: -1713792067381659747
+    second: Cup_29
+  - first:
+      213: 1210497606287512393
+    second: Cup_30
+  - first:
+      213: 7611228493835437556
+    second: Cup_31
+  - first:
+      213: 4295037927752874839
+    second: Cup_32
+  - first:
+      213: -6171174816808069962
+    second: Cup_33
+  - first:
+      213: 2217076518979758462
+    second: Cup_34
+  - first:
+      213: 563369580442817203
+    second: Cup_35
+  - first:
+      213: -3325430894245995765
+    second: Cup_36
+  - first:
+      213: -779238105541792219
+    second: Cup_37
+  - first:
+      213: 6207830629045537559
+    second: Cup_38
+  - first:
+      213: 5126948767155583670
+    second: Cup_39
+  - first:
+      213: -1883883784340540060
+    second: Cup_40
+  - first:
+      213: -8837560919220376696
+    second: Cup_41
+  - first:
+      213: -1368397629130345066
+    second: Cup_42
+  - first:
+      213: 9138861151319515463
+    second: Cup_43
+  - first:
+      213: 3186495460700546425
+    second: Cup_44
+  - first:
+      213: -7384337754100098332
+    second: Cup_45
+  - first:
+      213: -2716665128205054555
+    second: Cup_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cup_27
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 345
+        width: 517
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8e11db944b29c50800000000000000
+      internalID: 6670592226886805747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cup_28
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 345
+        width: 470
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01f10f8b7e2e4db0800000000000000
+      internalID: -4805852644142616309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8129874038c80124584c00f00e7cff0d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cup_0: -4338928236674095663
+      Cup_1: 3147476705318918355
+      Cup_10: 1707289485527131778
+      Cup_11: 2152955137136427078
+      Cup_12: 5963967880436974669
+      Cup_13: -2577923673449179355
+      Cup_14: -3947250607587377947
+      Cup_15: -5919667202445671527
+      Cup_16: 1350865150440647691
+      Cup_17: 1542743217831451824
+      Cup_18: 1520962759672523566
+      Cup_19: 312161957205050393
+      Cup_2: 6941648621150802775
+      Cup_20: -8071644771749772358
+      Cup_21: -3986689110710567416
+      Cup_22: 6624564301517734039
+      Cup_23: -1546131460421351203
+      Cup_24: -6255415861969734398
+      Cup_25: -2282933408859532581
+      Cup_26: -2798681170817350719
+      Cup_27: 6670592226886805747
+      Cup_28: -4805852644142616309
+      Cup_29: -1713792067381659747
+      Cup_3: 8001217152823314272
+      Cup_30: 1210497606287512393
+      Cup_31: 7611228493835437556
+      Cup_32: 4295037927752874839
+      Cup_33: -6171174816808069962
+      Cup_34: 2217076518979758462
+      Cup_35: 563369580442817203
+      Cup_36: -3325430894245995765
+      Cup_37: -779238105541792219
+      Cup_38: 6207830629045537559
+      Cup_39: 5126948767155583670
+      Cup_4: -755548851329013874
+      Cup_40: -1883883784340540060
+      Cup_41: -8837560919220376696
+      Cup_42: -1368397629130345066
+      Cup_43: 9138861151319515463
+      Cup_44: 3186495460700546425
+      Cup_45: -7384337754100098332
+      Cup_46: -2716665128205054555
+      Cup_5: -2447232200964551536
+      Cup_6: -5421499840754783328
+      Cup_7: 4752989959154546549
+      Cup_8: -3314084547565363994
+      Cup_9: -7470838593016426061
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
