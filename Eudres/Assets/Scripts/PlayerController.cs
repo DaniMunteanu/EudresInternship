@@ -1,54 +1,38 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform cup;
+    [SerializeField] private float moveSpeed = 4f;
 
-    public bool IsDragging { get; private set; } = false;
+    public bool IsHeld { get; private set; } = false;
+    public float NormalizedPosition { get; private set; } = 1f;
 
-    private Camera mainCamera;
     private Rigidbody2D rb;
     private float spawnY;
     private float minY;
-    private float offset;
 
     void Start()
     {
-        mainCamera = Camera.main;
         rb = GetComponent<Rigidbody2D>();
         spawnY = transform.position.y;
-
-        if (cup != null)
-            minY = cup.position.y;
-        else
-            minY = spawnY - 5f;
+        minY = cup != null ? cup.position.y : spawnY - 3f;
     }
 
     void Update()
     {
-        if (IsDragging)
-        {
-            Vector2 mousePos2D = Mouse.current.position.ReadValue();
-            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(mousePos2D.x, mousePos2D.y, 0));
+        IsHeld = Mouse.current.leftButton.isPressed;
 
-            float targetY = Mathf.Clamp(mousePosition.y + offset, minY, spawnY);
-            rb.MovePosition(new Vector2(0, targetY));
-        }
+        float targetY = IsHeld
+            ? Mathf.Max(transform.position.y - moveSpeed * Time.deltaTime, minY)
+            : Mathf.Min(transform.position.y + moveSpeed * Time.deltaTime, spawnY);
+
+        rb.MovePosition(new Vector2(transform.position.x, targetY));
+
+        NormalizedPosition = Mathf.InverseLerp(minY, spawnY, transform.position.y);
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        IsDragging = true;
-
-        Vector2 mousePos2D = Mouse.current.position.ReadValue();
-        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(mousePos2D.x, mousePos2D.y, 0));
-        offset = transform.position.y - mousePosition.y;
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        IsDragging = false;
-    }
+    public bool IsAtBottom() => transform.position.y <= minY + 0.05f;
+    public bool IsAtTop() => transform.position.y >= spawnY - 0.05f;
 }
