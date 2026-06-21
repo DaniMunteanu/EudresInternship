@@ -14,16 +14,16 @@ public class DraggableTeaBag : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        minigame?.OnTeaBagBeginDrag();
+        //minigame?.OnTeaBagBeginDrag();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        minigame?.OnTeaBagDrag(eventData.position);
+        //minigame?.OnTeaBagDrag(eventData.position);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        minigame?.OnTeaBagEndDrag();
+       //minigame?.OnTeaBagEndDrag();
     }
 }

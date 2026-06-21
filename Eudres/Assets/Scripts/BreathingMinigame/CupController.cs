@@ -10,6 +10,7 @@ public class CupController : MonoBehaviour
     public TextMeshProUGUI cycleCounterText;
     public Slider progressBar;
     public PlayerController teaBag;
+    public event System.Action OnMinigameComplete;
 
     [Header("Settings")]
     public int requiredCycles = 3;
@@ -20,8 +21,19 @@ public class CupController : MonoBehaviour
     private int completedCycles = 0;
     private bool isTeaBagInCup = false;
 
+    void OnDisable()
+    {
+        completedCycles = 0;
+        currentPhase = Phase.WaitingToInhale;
+        progressBar.value = 1f;
+        UpdateUI();
+    }
+
     void Start()
     {
+        completedCycles = 0;
+        currentPhase = Phase.WaitingToInhale;
+
         if (progressBar != null)
         {
             progressBar.minValue = 0f;
@@ -116,6 +128,7 @@ public class CupController : MonoBehaviour
                 break;
             case Phase.Complete:
                 instructionText.text = "Well done!";
+                OnMinigameComplete?.Invoke();
                 break;
         }
     }
