@@ -12,7 +12,6 @@ public class DialogueManager : MonoBehaviour
 
     [Header("UI References")]
     public GameObject dialoguePanel;
-    public Image npcPortraitImage;
     public TextMeshProUGUI npcNameText;
     public TextMeshProUGUI npcDialogueText;
 
@@ -51,7 +50,7 @@ public class DialogueManager : MonoBehaviour
         if (isTyping && Mouse.current.leftButton.wasPressedThisFrame)
         {
             if (typingCoroutine != null) StopCoroutine(typingCoroutine);
-            npcDialogueText.text = fullTextBuffer;
+            npcDialogueText.maxVisibleCharacters = fullTextBuffer.Length;
             isTyping = false;
 
             System.Action callback = onTypingComplete;
@@ -73,7 +72,6 @@ public class DialogueManager : MonoBehaviour
         clickToContinueOverlay.SetActive(false);
 
         npcNameText.text = npc.npcName;
-        npcPortraitImage.sprite = npc.npcPortrait;
 
         ClearQuestionButtons();
 
@@ -99,6 +97,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        npcDialogueText.text = "";
         ClearQuestionButtons();
 
         foreach (var exchange in sets[setIndex].exchanges)
@@ -152,7 +151,6 @@ public class DialogueManager : MonoBehaviour
         clickToContinueOverlay.SetActive(false);
 
         npcNameText.text = TeaSession.CurrentNPC.npcName;
-        npcPortraitImage.sprite = TeaSession.CurrentNPC.npcPortrait;
 
         bool isCorrect = TeaSession.SelectedIngredients.Count ==
                          TeaSession.CurrentRecipe.requiredIngredients.Count;
@@ -201,10 +199,12 @@ public class DialogueManager : MonoBehaviour
         fullTextBuffer = text;
         onTypingComplete = onComplete;
 
-        npcDialogueText.text = "";
-        foreach (char c in text)
+        npcDialogueText.text = text;
+        npcDialogueText.maxVisibleCharacters = 0;
+
+        for (int i = 0; i <= text.Length; i++)
         {
-            npcDialogueText.text += c;
+            npcDialogueText.maxVisibleCharacters = i;
             yield return new WaitForSeconds(0.03f);
         }
 
