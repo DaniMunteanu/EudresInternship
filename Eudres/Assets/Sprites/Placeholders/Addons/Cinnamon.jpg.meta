@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c955bf3dd39495e44a3a856e0cc90756
+guid: 361dacd69cfc03c4ba8709dab819ea36
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2439041262173701937
-    second: Strawberries_0
+      213: -6176264708628463375
+    second: Cinnamon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Strawberries_0
+      name: Cinnamon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2048
-        height: 1365
+        width: 440
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1374268fa1739d120800000000000000
-      internalID: 2439041262173701937
+      spriteID: 1f04b6388ff794aa0800000000000000
+      internalID: -6176264708628463375
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Strawberries_0: 2439041262173701937
+      Cinnamon_0: -6176264708628463375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

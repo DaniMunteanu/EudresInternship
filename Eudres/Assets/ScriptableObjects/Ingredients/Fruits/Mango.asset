@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1224beccc0a7494bbb7d3b947dfc332, type: 3}
-  m_Name: Rosehips
+  m_Name: Mango
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
-  ingredientName: Rosehips
-  ingredientSprite: {fileID: 21300000, guid: 10b16e32f88e62d4c89c16498b3a5bf4, type: 3}
+  ingredientName: Mango
+  ingredientSprite: {fileID: 21300000, guid: ceeedeb80594ee74a88325d7b9eca836, type: 3}
   ingredientType: 1

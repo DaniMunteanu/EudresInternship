@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f70f6270081a53a49b66630935f10bc0
+guid: e3b2477e4a62d7943b9244645f4717bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -899009766805395131
-    second: OolongTea_0
+      213: -5706222377407152166
+    second: ChamomileTea_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OolongTea_0
+      name: ChamomileTea_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 288
-        height: 221
+        width: 368
+        height: 543
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54925f751631683f0800000000000000
-      internalID: -899009766805395131
+      spriteID: adff2490bfc6fc0b0800000000000000
+      internalID: -5706222377407152166
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      OolongTea_0: -899009766805395131
+      ChamomileTea_0: -5706222377407152166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3a573c48769f2854d90d0b8ca228d32c
+guid: f70c34b660b46734386d39dd6a697122
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8096712738661471234
-    second: WhiteTea_0
+      213: 3994751796928444559
+    second: MintTea_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WhiteTea_0
+      name: MintTea_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 479
+        width: 447
+        height: 447
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efbe3b399a2b2af80800000000000000
-      internalID: -8096712738661471234
+      spriteID: f88f5cd1895307730800000000000000
+      internalID: 3994751796928444559
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WhiteTea_0: -8096712738661471234
+      MintTea_0: 3994751796928444559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

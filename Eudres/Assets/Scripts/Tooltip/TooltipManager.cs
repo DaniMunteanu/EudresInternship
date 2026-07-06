@@ -24,9 +24,9 @@ public class TooltipManager : MonoBehaviour
         Hide();
     }
 
-    public void Show(string text)
+    public void Show(string text, string details)
     {
-        tooltip.SetText(text);
+        tooltip.SetText(text, details);
         tooltip.gameObject.SetActive(true);
     }
 

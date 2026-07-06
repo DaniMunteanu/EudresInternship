@@ -10,8 +10,7 @@ public class Ingredient : ScriptableObject
 
 public enum IngredientType
 {
-    Leaf,
+    Base,
     Fruit,
-    Addon,
-    Biscuit
+    Addon
 }

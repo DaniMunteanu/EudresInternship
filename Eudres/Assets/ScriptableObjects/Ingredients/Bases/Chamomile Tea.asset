@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1224beccc0a7494bbb7d3b947dfc332, type: 3}
-  m_Name: Raspberries
+  m_Name: Chamomile Tea
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
-  ingredientName: Raspberries
-  ingredientSprite: {fileID: 21300000, guid: 5b8bf34efbea0f84880f6aed5919e5ab, type: 3}
-  ingredientType: 1
+  ingredientName: Chamomile Tea
+  ingredientSprite: {fileID: 21300000, guid: e3b2477e4a62d7943b9244645f4717bb, type: 3}
+  ingredientType: 0

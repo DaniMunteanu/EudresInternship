@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1224beccc0a7494bbb7d3b947dfc332, type: 3}
-  m_Name: Pu-erh Tea
+  m_Name: Mint Tea
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
-  ingredientName: Pu-erh Tea
-  ingredientSprite: {fileID: 21300000, guid: 5f038b8199185d94ab19a1ab2109b570, type: 3}
+  ingredientName: Mint Tea
+  ingredientSprite: {fileID: 21300000, guid: 9ccfdd199643d6a49826801ed53c14e2, type: 3}
   ingredientType: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 10b16e32f88e62d4c89c16498b3a5bf4
+guid: ceeedeb80594ee74a88325d7b9eca836
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8935676943998207519
-    second: Rosehips_0
+      213: -3968840770022985357
+    second: Mango_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rosehips_0
+      name: Mango_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1440
+        width: 1280
+        height: 853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f1649aa56d6e10c70800000000000000
-      internalID: 8935676943998207519
+      spriteID: 37131b4f858dbe8c0800000000000000
+      internalID: -3968840770022985357
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rosehips_0: 8935676943998207519
+      Mango_0: -3968840770022985357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

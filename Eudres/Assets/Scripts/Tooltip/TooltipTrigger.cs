@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string text;
+    public string details;
 
     private IEnumerator tooltipShowCoroutine;
 
@@ -18,13 +19,13 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         //I tried displaying the tooltip with a small delay, doesn't work properly yet
         //StartCoroutine(tooltipShowCoroutine);
 
-        TooltipManager.Instance.Show(text);
+        TooltipManager.Instance.Show(text, details);
     }
 
     IEnumerator ShowText(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        TooltipManager.Instance.Show(text);
+        TooltipManager.Instance.Show(text, details);
     }
 
     public void OnPointerExit(PointerEventData eventData)

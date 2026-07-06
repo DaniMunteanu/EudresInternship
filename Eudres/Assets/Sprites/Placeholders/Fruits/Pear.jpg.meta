@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b8bf34efbea0f84880f6aed5919e5ab
+guid: 12393714c58c63f40bfeab99323378f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1459816386390163421
-    second: Raspberries_0
+      213: -5670339388207800344
+    second: Pear_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Raspberries_0
+      name: Pear_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1200
-        height: 675
+        width: 640
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3208be32bb0bdbbe0800000000000000
-      internalID: -1459816386390163421
+      spriteID: 8efd7f18e58ee41b0800000000000000
+      internalID: -5670339388207800344
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Raspberries_0: -1459816386390163421
+      Pear_0: -5670339388207800344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1224beccc0a7494bbb7d3b947dfc332, type: 3}
-  m_Name: Yellow Tea
+  m_Name: Cinnamon
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
-  ingredientName: Yellow Tea
-  ingredientSprite: {fileID: 21300000, guid: 08414d7f4b6f23a42b8409c9871993e3, type: 3}
-  ingredientType: 0
+  ingredientName: Cinnamon
+  ingredientSprite: {fileID: -6176264708628463375, guid: 361dacd69cfc03c4ba8709dab819ea36, type: 3}
+  ingredientType: 2

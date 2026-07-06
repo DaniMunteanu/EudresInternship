@@ -8,21 +8,23 @@ using UnityEngine.UIElements;
 
 public class Tooltip : MonoBehaviour
 {
-    public TMP_Text textField;
+    public TMP_Text titleTextField;
+    public TMP_Text detailsTextField;
     
     [SerializeField] private LayoutElement layoutElement;
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private InputSystemUIInputModule inputModule;
 
-    public void SetText(string content)
+    public void SetText(string titleContent, string detailsContent)
     {
-        textField.text = content;
+        titleTextField.text = titleContent;
+        detailsTextField.text = detailsContent;
         RefreshSize();
     }
 
     public void RefreshSize()
     {
-        layoutElement.enabled = textField.preferredWidth >= layoutElement.preferredWidth;
+        layoutElement.enabled = detailsTextField.preferredWidth >= layoutElement.preferredWidth;
     }
 
     public void Update()

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 08414d7f4b6f23a42b8409c9871993e3
+guid: 2c67eba42d80aef4da548b04130e410c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6909950057223166472
-    second: YellowTea_0
+      213: -6182139567355005811
+    second: Peach_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: YellowTea_0
+      name: Peach_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 800
-        height: 800
+        width: 700
+        height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f5e58f880dea10a0800000000000000
-      internalID: -6909950057223166472
+      spriteID: d84faef51d0a43aa0800000000000000
+      internalID: -6182139567355005811
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      YellowTea_0: -6909950057223166472
+      Peach_0: -6182139567355005811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
