@@ -15,3 +15,6 @@ MonoBehaviour:
   ingredientName: Raisins
   ingredientSprite: {fileID: 21300000, guid: 0326366a72aa78f4e996ddddc69422b1, type: 3}
   ingredientType: 1
+  keywords:
+  - {fileID: 11400000, guid: a3f9f1466b79c554f9c5bdcea89ab291, type: 2}
+  - {fileID: 11400000, guid: bb60e62d8789c5b4f9f3134a46927582, type: 2}

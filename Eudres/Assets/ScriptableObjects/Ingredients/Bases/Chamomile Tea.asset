@@ -15,3 +15,7 @@ MonoBehaviour:
   ingredientName: Chamomile Tea
   ingredientSprite: {fileID: 21300000, guid: e3b2477e4a62d7943b9244645f4717bb, type: 3}
   ingredientType: 0
+  keywords:
+  - {fileID: 11400000, guid: d8bfe2c615da5aa429416c655b9905ae, type: 2}
+  - {fileID: 11400000, guid: 564f24d9d72494240a5ecbf00a30d9da, type: 2}
+  - {fileID: 11400000, guid: 158ca1e2965a0b5438c506c772e117ab, type: 2}

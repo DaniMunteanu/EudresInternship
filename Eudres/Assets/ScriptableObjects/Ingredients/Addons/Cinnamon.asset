@@ -15,3 +15,6 @@ MonoBehaviour:
   ingredientName: Cinnamon
   ingredientSprite: {fileID: -6176264708628463375, guid: 361dacd69cfc03c4ba8709dab819ea36, type: 3}
   ingredientType: 2
+  keywords:
+  - {fileID: 11400000, guid: bc1557b588cc32541beb7c75aba30e88, type: 2}
+  - {fileID: 11400000, guid: b266cce39c82b884e935c515dae6a968, type: 2}

@@ -15,3 +15,7 @@ MonoBehaviour:
   ingredientName: Lemon
   ingredientSprite: {fileID: 21300000, guid: b5016402f9978244f9d8692b18bc3f00, type: 3}
   ingredientType: 1
+  keywords:
+  - {fileID: 11400000, guid: 106172dfa5888804eafe39738397ee8c, type: 2}
+  - {fileID: 11400000, guid: 75220f1c66beb044db932700ae994a6e, type: 2}
+  - {fileID: 11400000, guid: 82109b2ba439b6a4aa4249f0d46cb1d1, type: 2}

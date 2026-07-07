@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Mint Tea
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Mint Tea
-  ingredientSprite: {fileID: 21300000, guid: 9ccfdd199643d6a49826801ed53c14e2, type: 3}
+  ingredientSprite: {fileID: 21300000, guid: f70c34b660b46734386d39dd6a697122, type: 3}
   ingredientType: 0
+  keywords:
+  - {fileID: 11400000, guid: 5e2c32077427cb44ea32c3aa9c1789b0, type: 2}
+  - {fileID: 11400000, guid: d973fc2e0517cdc4c9e28643a6d446fd, type: 2}
+  - {fileID: 11400000, guid: db1f7c7379d35034d8018d56aaf11861, type: 2}

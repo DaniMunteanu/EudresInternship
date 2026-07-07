@@ -15,3 +15,6 @@ MonoBehaviour:
   ingredientName: Ice
   ingredientSprite: {fileID: 21300000, guid: d50408e0bbb390046ab5cd7bbdea2cce, type: 3}
   ingredientType: 2
+  keywords:
+  - {fileID: 11400000, guid: eccb87de510747a48ae2c283a6a57427, type: 2}
+  - {fileID: 11400000, guid: e9b8056175022c94a9bd0cfa003aa8ed, type: 2}
