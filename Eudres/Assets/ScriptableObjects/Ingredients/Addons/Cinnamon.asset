@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1224beccc0a7494bbb7d3b947dfc332, type: 3}
+  m_Name: Cinnamon
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  ingredientName: Cinnamon
+  ingredientSprite: {fileID: -6176264708628463375, guid: 361dacd69cfc03c4ba8709dab819ea36, type: 3}
+  ingredientType: {fileID: 11400000, guid: 399045d3b9a482f4389b5436fa8af941, type: 2}
+  keywords:
+  - {fileID: 11400000, guid: bc1557b588cc32541beb7c75aba30e88, type: 2}
+  - {fileID: 11400000, guid: b266cce39c82b884e935c515dae6a968, type: 2}

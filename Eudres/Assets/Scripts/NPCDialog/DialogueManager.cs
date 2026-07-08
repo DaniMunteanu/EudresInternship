@@ -40,7 +40,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     void Start()
-    {
+    {   
+
+
+        KeywordsTracker.Instance.ClearBubbles();
+
         if (TeaSession.IsReturningFromPreparation)
             ShowFeedbackAndServe();
     }
@@ -111,13 +115,18 @@ public class DialogueManager : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 ClearQuestionButtons();
-                DisplayDialogue(response, onComplete: AdvanceToNextSet);
+                DisplayDialogue(response, onComplete: () => AdvanceToNextSet(exchange.keyword));
             });
         }
     }
 
-    void AdvanceToNextSet()
+    void AdvanceToNextSet(Keyword keyword = null)
     {
+        if (keyword != null)
+        {
+            KeywordsTracker.Instance.AddBubble(keyword);
+        }
+
         currentSetIndex++;
 
         if (currentSetIndex < TeaSession.CurrentRecipe.questionSets.Count)

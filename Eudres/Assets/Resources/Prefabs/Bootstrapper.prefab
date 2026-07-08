@@ -145,23 +145,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 144772263845104537, guid: c78f15a19768759489006bff0bafce18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 204090060959398057, guid: c78f15a19768759489006bff0bafce18, type: 3}
       propertyPath: m_Name
       value: Settings
       objectReference: {fileID: 0}
+    - target: {fileID: 204090060959398057, guid: c78f15a19768759489006bff0bafce18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 298710491064584667, guid: c78f15a19768759489006bff0bafce18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4342438182068190891, guid: c78f15a19768759489006bff0bafce18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4466646467868394560, guid: c78f15a19768759489006bff0bafce18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7948663105596264861, guid: c78f15a19768759489006bff0bafce18, type: 3}
       propertyPath: m_Pivot.x
@@ -245,11 +249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7974099647491817465, guid: c78f15a19768759489006bff0bafce18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8837475188609463768, guid: c78f15a19768759489006bff0bafce18, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -269,6 +273,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5087233800735934154}
     m_Modifications:
+    - target: {fileID: 12174676413023929, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2038007718479794569, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -312,6 +320,10 @@ PrefabInstance:
     - target: {fileID: 4536995690368918191, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536995690368918191, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

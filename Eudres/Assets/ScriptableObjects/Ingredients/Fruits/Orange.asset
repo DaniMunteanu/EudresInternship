@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Orange
   ingredientSprite: {fileID: 21300000, guid: 3e29f9206f68a0e4d8fd30a3b78174d4, type: 3}
-  ingredientType: 1
+  ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
+  keywords:
+  - {fileID: 11400000, guid: 54692ec9cafe8c5489ef5478c3a77dc9, type: 2}
+  - {fileID: 11400000, guid: bca85ebb852d8394a8ef9d2af61e73f4, type: 2}
+  - {fileID: 11400000, guid: d8b10c2e29caab1489c0c5f1bf463256, type: 2}

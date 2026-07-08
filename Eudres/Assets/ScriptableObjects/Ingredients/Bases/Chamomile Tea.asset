@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1224beccc0a7494bbb7d3b947dfc332, type: 3}
+  m_Name: Chamomile Tea
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  ingredientName: Chamomile Tea
+  ingredientSprite: {fileID: 21300000, guid: e3b2477e4a62d7943b9244645f4717bb, type: 3}
+  ingredientType: {fileID: 11400000, guid: b371ba27c66fb9346b19664588c30ff3, type: 2}
+  keywords:
+  - {fileID: 11400000, guid: d8bfe2c615da5aa429416c655b9905ae, type: 2}
+  - {fileID: 11400000, guid: 564f24d9d72494240a5ecbf00a30d9da, type: 2}
+  - {fileID: 11400000, guid: 158ca1e2965a0b5438c506c772e117ab, type: 2}

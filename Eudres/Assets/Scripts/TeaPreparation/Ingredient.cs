@@ -6,12 +6,5 @@ public class Ingredient : ScriptableObject
     public string ingredientName;
     public Sprite ingredientSprite;
     public IngredientType ingredientType;
-}
-
-public enum IngredientType
-{
-    Leaf,
-    Fruit,
-    Addon,
-    Biscuit
+    public Keyword[] keywords;
 }

@@ -25,4 +25,5 @@ public class DialogueExchange
 {
     public string playerQuestion;
     [TextArea(2, 4)] public string npcResponse;
+    public Keyword keyword;
 }

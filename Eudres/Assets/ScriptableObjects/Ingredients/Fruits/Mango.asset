@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1224beccc0a7494bbb7d3b947dfc332, type: 3}
+  m_Name: Mango
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  ingredientName: Mango
+  ingredientSprite: {fileID: 21300000, guid: ceeedeb80594ee74a88325d7b9eca836, type: 3}
+  ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
+  keywords:
+  - {fileID: 11400000, guid: 91fb635179aabbe44ace06e3bd5ebf83, type: 2}
+  - {fileID: 11400000, guid: e2cbe986d68d55c4abe2a43031edbb9d, type: 2}
