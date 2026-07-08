@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Pear
   ingredientSprite: {fileID: 21300000, guid: 12393714c58c63f40bfeab99323378f7, type: 3}
-  ingredientType: 1
+  ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
   keywords:
   - {fileID: 11400000, guid: a6d618367d853374e88283aa5f1fcd4c, type: 2}
   - {fileID: 11400000, guid: 6fd788431a9b357479d2205905b5f54f, type: 2}

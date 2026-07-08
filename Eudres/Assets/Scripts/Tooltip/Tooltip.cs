@@ -10,7 +10,8 @@ public class Tooltip : MonoBehaviour
 {
     public TMP_Text titleTextField;
     public TMP_Text detailsTextField;
-    
+    public TMP_Text[] keywordTextFields;
+
     [SerializeField] private LayoutElement layoutElement;
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private InputSystemUIInputModule inputModule;

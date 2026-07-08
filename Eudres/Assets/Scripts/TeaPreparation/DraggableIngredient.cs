@@ -18,6 +18,11 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         {
             spriteRenderer.sprite = ingredientData.ingredientSprite;
             tooltipTrigger.text = ingredientData.ingredientName;
+
+            for (int i = 0; i < ingredientData.keywords.Length; i++)
+            {
+                tooltipTrigger.keywords[i] = ingredientData.keywords[i].name;
+            }
         }
     }
 

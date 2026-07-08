@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
+  m_Name: Adrian_recipe
+  m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
+  introText: "Something you can do fast, please! I don\u2019t have much time\u2026
+    Actually, never mind. Just\u2026 Something to help me think straight."
+  questionSets:
+  - exchanges:
+    - playerQuestion: In a rush?
+      npcResponse: Yeah. I need to get somewhere before it closes. I made a decision
+        and I want to finalize it before I lose my nerve. I hate having this feeling
+        of urgency.
+      keyword: {fileID: 11400000, guid: 7272cd0d790f57b4fa9221fa86eccd5b, type: 2}
+    - playerQuestion: Rough day?
+      npcResponse: "More like days, or rough few weeks. It all kind of piled up and
+        now I just want to act before I overthink it again. I\u2019m trying to listen
+        to my impulse for once."
+      keyword: {fileID: 11400000, guid: e88bce65fae3e944fa73551f7e0079f5, type: 2}
+    - playerQuestion: How about you take a seat for a second?
+      npcResponse: "I can\u2019t\u2026 I really shouldn't, not for too long at least.
+        I\u2019ll for sure start changing my mind. And I can\u2019t afford that now.
+        I need to move before I lose this impulse I\u2019ve got going on at the moment."
+      keyword: {fileID: 11400000, guid: e88bce65fae3e944fa73551f7e0079f5, type: 2}
+  - exchanges:
+    - playerQuestion: This sounds like a big decision.
+      npcResponse: "It is\u2026 And I keep thinking I should\u2019ve handled things
+        better before it got here. It\u2019s hard not to fall into self-criticism
+        about it.."
+      keyword: {fileID: 11400000, guid: edff5e263ed54964cb6982b3cfb2c38f, type: 2}
+    - playerQuestion: "Are you sure it\u2019s the right choice?"
+      npcResponse: "I don\u2019t even know anymore. I just keep replaying everything
+        I did wrong and it all leads back to me not being good enough. That feeling
+        of perfectionism is hard to ignore."
+      keyword: {fileID: 11400000, guid: fb0dd24ec00b95a4ca229323989a7e49, type: 2}
+    - playerQuestion: "Who\u2019s pressuring you the most?"
+      npcResponse: "Honestly? Me. No one else. It\u2019s all me. I keep holding myself
+        to a standard I can\u2019t reach and that constant self-criticism wears me
+        down."
+      keyword: {fileID: 11400000, guid: edff5e263ed54964cb6982b3cfb2c38f, type: 2}
+  - exchanges:
+    - playerQuestion: What exactly are you deciding?
+      npcResponse: "Whether to quit. Or at least I think that\u2019s what I decided
+        earlier today\u2026 but now everything feel blurry. I\u2019ve completely
+        lost my direction."
+      keyword: {fileID: 11400000, guid: bca85ebb852d8394a8ef9d2af61e73f4, type: 2}
+    - playerQuestion: Did something big happen recently?
+      npcResponse: "Not one thing. That\u2019s the problem. It all built up slowly
+        until I ended up here, feeling completely stuck without knowing how to get
+        out of this slump."
+      keyword: {fileID: 11400000, guid: 54692ec9cafe8c5489ef5478c3a77dc9, type: 2}
+    - playerQuestion: Are you confident about it?
+      npcResponse: "Not at all. The more I think about it, the more I realize I\u2019m
+        stuck in uncertainty. Nothing feels stable anymore."
+      keyword: {fileID: 11400000, guid: d8b10c2e29caab1489c0c5f1bf463256, type: 2}
+  - exchanges:
+    - playerQuestion: Why decide to quit now?
+      npcResponse: "I just can\u2019t keep going like this. It feels like the only
+        way to stop everything is to leave. It\u2019s probably just desperation,
+        but it feels real."
+      keyword: {fileID: 11400000, guid: b266cce39c82b884e935c515dae6a968, type: 2}
+    - playerQuestion: Have you thought about the consequences?
+      npcResponse: "Not properly. It just feels like if I don\u2019t do it now, I\u2019ll
+        never do it. I might regret it later, but right now it feels completely impulsive."
+      keyword: {fileID: 11400000, guid: bc1557b588cc32541beb7c75aba30e88, type: 2}
+    - playerQuestion: What if you wait a bit longer?
+      npcResponse: "Then I might talk myself out of it\u2026 and go back to feeling
+        stuck. That\u2019s why it feels like an impulsive decision, but also the
+        only move I can make."
+      keyword: {fileID: 11400000, guid: bc1557b588cc32541beb7c75aba30e88, type: 2}
+  - exchanges:
+    - playerQuestion: "You don\u2019t usually talk about this, do you?"
+      npcResponse: No, not at all. I usually deal with things on my own. Talking
+        about it makes me feel a bit vulnerable and I hate feeling like this.
+      keyword: {fileID: 11400000, guid: 1a31f6714614eec4ca8f961471f676e4, type: 2}
+    - playerQuestion: What would help right now?
+      npcResponse: "I don\u2019t need someone to solve it for me. I just need a bit
+        of support, maybe someone to slow me down for a second."
+      keyword: {fileID: 11400000, guid: c32166d6b01f77143b7170c8b84b28e7, type: 2}
+    - playerQuestion: Why stop here at all?
+      npcResponse: "I don\u2019t know\u2026 This place just feels calmer than everything
+        else. Like, for a moment I can actually breathe. It\u2019s weirdly comforting."
+      keyword: {fileID: 11400000, guid: 625f5205aabc3a742905577e444f9820, type: 2}
+  requiredIngredients: []

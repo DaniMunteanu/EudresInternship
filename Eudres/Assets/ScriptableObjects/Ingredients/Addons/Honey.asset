@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Honey
   ingredientSprite: {fileID: 21300000, guid: 5c526bef46ffb94498e642130f5b0c31, type: 3}
-  ingredientType: 2
+  ingredientType: {fileID: 11400000, guid: 399045d3b9a482f4389b5436fa8af941, type: 2}
   keywords:
   - {fileID: 11400000, guid: edff5e263ed54964cb6982b3cfb2c38f, type: 2}
   - {fileID: 11400000, guid: fb0dd24ec00b95a4ca229323989a7e49, type: 2}

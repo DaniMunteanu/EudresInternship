@@ -8,10 +8,3 @@ public class Ingredient : ScriptableObject
     public IngredientType ingredientType;
     public Keyword[] keywords;
 }
-
-public enum IngredientType
-{
-    Base,
-    Fruit,
-    Addon
-}
