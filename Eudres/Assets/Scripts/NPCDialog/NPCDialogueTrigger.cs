@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class NPCDialogueTrigger : MonoBehaviour
 {
-    public NPCData npcData;
+    [Tooltip("Toate NPC-urile care pot aparea la tejghea")]
+    public List<NPCData> possibleNPCs;
 
     void Start()
     {
@@ -17,8 +19,9 @@ public class NPCDialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (npcData != null)
+        if (possibleNPCs != null && possibleNPCs.Count > 0)
         {
+            NPCData npcData = possibleNPCs[Random.Range(0, possibleNPCs.Count)];
             TeaRecipe recipe = npcData.GetRandomRecipe();
             if (recipe != null)
             {
@@ -27,7 +30,7 @@ public class NPCDialogueTrigger : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"Obiectul {gameObject.name} nu are NPCData asignat în Inspector!");
+            Debug.LogWarning($"Obiectul {gameObject.name} nu are NPC-uri asignate în Inspector!");
         }
     }
 }

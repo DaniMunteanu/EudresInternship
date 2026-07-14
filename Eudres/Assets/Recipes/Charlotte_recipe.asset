@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
+  m_Name: Charlotte_recipe
+  m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
+  introText: "Hi\u2026 It\u2019s been a while, hasn\u2019t it? I kept meaning to
+    come back, but somehow the weeks just\u2026 disappeared."
+  questionSets:
+  - exchanges:
+    - playerQuestion: "Well look who\u2019s here! Haven\u2019t seen you in a while."
+      npcResponse: "I know\u2026 Every day started looking exactly the same. I don\u2019t
+        even remember when I slipped into autopilot."
+      keyword: {fileID: 11400000, guid: 106172dfa5888804eafe39738397ee8c, type: 2}
+    - playerQuestion: Have you been busy?
+      npcResponse: "Yeah, classes, work, home, sleep\u2026 then it starts again.
+        It\u2019s become so repetitive that weeks blur together. "
+      keyword: {fileID: 11400000, guid: 75220f1c66beb044db932700ae994a6e, type: 2}
+    - playerQuestion: How have you been?
+      npcResponse: "I honestly don\u2019t know anymore. Lately I\u2019ve felt a little
+        disconnected from everything, even myself."
+      keyword: {fileID: 11400000, guid: 82109b2ba439b6a4aa4249f0d46cb1d1, type: 2}
+  - exchanges:
+    - playerQuestion: 'Sounds exhausting. '
+      npcResponse: "It is. By the end of the day I\u2019m completely drained. Even
+        if nothing particularly bad happened I just feel tired."
+      keyword: {fileID: 11400000, guid: 26aa0f7f052f4ee48a24736fbbbc8ce0, type: 2}
+    - playerQuestion: Do you not get much time for yourself?
+      npcResponse: "I really don\u2019t. There\u2019s always something waiting for
+        me, needing to be done, and after a while it all becomes overwhelming."
+      keyword: {fileID: 11400000, guid: 44c2f4851c5b84147befdc1457500bcb, type: 2}
+    - playerQuestion: Have things gotten harder recently?
+      npcResponse: "Not harder\u2026 Just heavier. It feels like everything slowly
+        piled up and I can\u2019t catch up so I just became overwhelmed."
+      keyword: {fileID: 11400000, guid: 44c2f4851c5b84147befdc1457500bcb, type: 2}
+  - exchanges:
+    - playerQuestion: What made you stop by today?
+      npcResponse: "I think I needed somewhere to pause. I\u2019ve been feeling stuck
+        for a while now."
+      keyword: {fileID: 11400000, guid: 54692ec9cafe8c5489ef5478c3a77dc9, type: 2}
+    - playerQuestion: What do you miss the most?
+      npcResponse: I miss knowing what I wanted to do. Somewhere along the way I
+        lost my direction.
+      keyword: {fileID: 11400000, guid: bca85ebb852d8394a8ef9d2af61e73f4, type: 2}
+    - playerQuestion: Do you know what you want to change?
+      npcResponse: "That\u2019s the hardest part. I don't even know where to begin.
+        Everything feels full of uncertainty."
+      keyword: {fileID: 11400000, guid: d8b10c2e29caab1489c0c5f1bf463256, type: 2}
+  - exchanges:
+    - playerQuestion: What goes through your mind these days?
+      npcResponse: Not much, honestly. Most of the time my mind wanders somewhere
+        else while I just keep going.
+      keyword: {fileID: 11400000, guid: eccb87de510747a48ae2c283a6a57427, type: 2}
+    - playerQuestion: Not enjoying this routine?
+      npcResponse: "I don\u2019t even stop to think about it anymore. I feel strangely
+        detached from my own days."
+      keyword: {fileID: 11400000, guid: e9b8056175022c94a9bd0cfa003aa8ed, type: 2}
+    - playerQuestion: Do you still notice the little things?
+      npcResponse: "I used to. Now entire days pass without me remembering them.
+        It\u2019s like my mind wanders through them."
+      keyword: {fileID: 11400000, guid: eccb87de510747a48ae2c283a6a57427, type: 2}
+  - exchanges:
+    - playerQuestion: Do you blame yourself for feeling this way?
+      npcResponse: Sometimes. I keep thinking I should be handling everything better.
+        The self-criticism never really stops.
+      keyword: {fileID: 11400000, guid: edff5e263ed54964cb6982b3cfb2c38f, type: 2}
+    - playerQuestion: 'Have you tried slowing down? '
+      npcResponse: "I always tell myself I will\u2026 but then I feel guilty for
+        not doing enough. Maybe that\u2019s my perfectionism talking."
+      keyword: {fileID: 11400000, guid: fb0dd24ec00b95a4ca229323989a7e49, type: 2}
+    - playerQuestion: Are you hard on yourself?
+      npcResponse: "Probably more than I should be. I rarely feel like I\u2019ve
+        done enough, no matter how much I accomplish. But that\u2019s mostly because
+        I have a standard I\u2019m trying to meet due to my perfectionism."
+      keyword: {fileID: 11400000, guid: fb0dd24ec00b95a4ca229323989a7e49, type: 2}
+  - exchanges:
+    - playerQuestion: Do you still go out with your friends?
+      npcResponse: Not nearly as often. Without noticing, I drifted into isolation.
+      keyword: {fileID: 11400000, guid: 7624dbd73c8564a449236cacbd1b26b0, type: 2}
+    - playerQuestion: What happened to your hobbies?
+      npcResponse: "I stopped making time for them\u2026 and eventually for people
+        too. I started avoiding others without even meaning to."
+      keyword: {fileID: 11400000, guid: d4ac325e9cc8a684aa89a8409ebec0f8, type: 2}
+    - playerQuestion: Do you spend much time outside work and university?
+      npcResponse: "Not really. Most days I just go straight home. Looking back,
+        I think I\u2019ve slipped into a kind of social withdrawal."
+      keyword: {fileID: 11400000, guid: 530f546daa14db643af8c1b6e394a939, type: 2}
+  requiredIngredients: []

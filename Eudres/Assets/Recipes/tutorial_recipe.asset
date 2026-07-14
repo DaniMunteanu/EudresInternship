@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
+  m_Name: tutorial_recipe
+  m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
+  introText: Hi! I think this is my first time here. I just started university a
+    couple of weeks ago, so I'm still figuring out where everything is. I've heard
+    people here always know the right tea to recommend!
+  questionSets:
+  - exchanges:
+    - playerQuestion: First time in the neighborhood?
+      npcResponse: Yeah! I moved here recently, so everything still feels new. I
+        haven't really met many people yet, and I guess I've been avoiding others
+        without meaning to.
+      keyword: {fileID: 11400000, guid: d4ac325e9cc8a684aa89a8409ebec0f8, type: 2}
+    - playerQuestion: How are you settling in?
+      npcResponse: It's been pretty good so far! I spend most of my time exploring
+        campus on my own, so it's felt a little like isolation.
+      keyword: {fileID: 11400000, guid: 7624dbd73c8564a449236cacbd1b26b0, type: 2}
+    - playerQuestion: How are you liking university so far?
+      npcResponse: I really like my classes! I just haven't had the chance to make
+        many friends yet, so there's been a bit of social withdrawal while I get
+        comfortable.
+      keyword: {fileID: 11400000, guid: 530f546daa14db643af8c1b6e394a939, type: 2}
+  - exchanges:
+    - playerQuestion: 'What made you stop by today? '
+      npcResponse: I've been walking around campus all morning, and this place looked
+        really cozy. It sounded nice to have a little conversation with someone.
+      keyword: {fileID: 11400000, guid: 065d6a09a93f2be4aaddb88398bb813e, type: 2}
+    - playerQuestion: What do you miss most from home?
+      npcResponse: My friends, definitely. We used to spend so much time together.
+        I've been feeling left out more than I expected.
+      keyword: {fileID: 11400000, guid: ff555bbc08278814e9aead26cfc6f59e, type: 2}
+    - playerQuestion: Is university what you expected?
+      npcResponse: For the most part, yeah! Although everyone seems to already know
+        each other. Sometimes I end up feeling left out.
+      keyword: {fileID: 11400000, guid: ff555bbc08278814e9aead26cfc6f59e, type: 2}
+  - exchanges:
+    - playerQuestion: What's helped you the most so far?
+      npcResponse: Honestly, whenever someone tells me I'm doing alright, it makes
+        the whole day better. A little reassurance goes a long way.
+      keyword: {fileID: 11400000, guid: e7a499c46dee9694fb2427ccc5ec9a5f, type: 2}
+    - playerQuestion: What would make tomorrow a good day?
+      npcResponse: I think meeting someone new. Sometimes all I need is a little
+        encouragement to start talking.
+      keyword: {fileID: 11400000, guid: ae962c1c8c6b0e14bb4c0dabbe47355d, type: 2}
+    - playerQuestion: What are you hoping for this semester?
+      npcResponse: I'd love to feel like I belong here. Getting a little validation
+        that I'm doing okay would be really nice.
+      keyword: {fileID: 11400000, guid: 2be31dc8bd769d9428c706cf79ccb25c, type: 2}
+  requiredIngredients: []
