@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
-  m_Name: Sophia_recipe_1
+  m_Name: Sophia_recipe
   m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
   introText: "Hi\u2026 I'm Sophia. I don't usually come to places like this, but
     I had to get out of my dorm for a bit."
@@ -62,5 +62,4 @@ MonoBehaviour:
       npcResponse: That I'll look back and realize I should have done more. That
         perfectionism never really lets me rest.
       keyword: {fileID: 11400000, guid: fb0dd24ec00b95a4ca229323989a7e49, type: 2}
-  requiredIngredients:
-  - apa, sange
+  requiredIngredients: []

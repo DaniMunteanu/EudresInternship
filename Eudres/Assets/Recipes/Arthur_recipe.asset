@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
+  m_Name: Arthur_recipe
+  m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
+  introText: "Good evening! I\u2019d like something warm, if you don\u2019t mind.
+    It\u2019s been\u2026 a rather long day. I thought teaching would get easier with
+    experience."
+  questionSets:
+  - exchanges:
+    - playerQuestion: Long day at school?
+      npcResponse: "It wasn\u2019t particularly different from any other day. Still,
+        once I get home I end up overthinking every lesson I taught. How could I
+        have explained it better?"
+      keyword: {fileID: 11400000, guid: d8bfe2c615da5aa429416c655b9905ae, type: 2}
+    - playerQuestion: You look exhausted. Something happened?
+      npcResponse: "I\u2019ve been sleeping poorly. My head feels full of clutter,
+        even after the day\u2019s already over."
+      keyword: {fileID: 11400000, guid: 564f24d9d72494240a5ecbf00a30d9da, type: 2}
+    - playerQuestion: Do you ever get to relax after your classes?
+      npcResponse: "I try, but I rarely manage it. My mind doesn\u2019t seem to understand
+        the idea of relaxing anymore."
+      keyword: {fileID: 11400000, guid: 158ca1e2965a0b5438c506c772e117ab, type: 2}
+  - exchanges:
+    - playerQuestion: Something keeps bugging you?
+      npcResponse: "I keep wondering what tomorrow\u2019s lesson will be like. My
+        future worries tend to follow me home more often than not."
+      keyword: {fileID: 11400000, guid: 0731f2d78effc9f499b7d773dbc9d489, type: 2}
+    - playerQuestion: Do you enjoy teaching?
+      npcResponse: "I do\u2026 but I always imagine something going terribly wrong.
+        All those thoughts of something catastrophic happening are difficult to ignore."
+      keyword: {fileID: 11400000, guid: 3ed93b4d02912af408709965cd2457e7, type: 2}
+    - playerQuestion: What keeps you awake at night?
+      npcResponse: "My racing thoughts. One question leads to another until it\u2019s
+        suddenly two in the morning and I haven\u2019t caught a glimpse of sleep."
+      keyword: {fileID: 11400000, guid: 33c5db5b2506e064d9fe35c725ef15d5, type: 2}
+  - exchanges:
+    - playerQuestion: 'You seem hard on yourself. '
+      npcResponse: "I suppose I am. Sometimes I wonder if I\u2019m as capable as
+        everyone believes. I feel inadequate."
+      keyword: {fileID: 11400000, guid: 6fd788431a9b357479d2205905b5f54f, type: 2}
+    - playerQuestion: How are your students interacting with you?
+      npcResponse: "My students seem to respect me, but that\u2019s exactly what
+        worries me. I\u2019m afraid they\u2019ll eventually realize I\u2019m an impostor."
+      keyword: {fileID: 11400000, guid: a6d618367d853374e88283aa5f1fcd4c, type: 2}
+    - playerQuestion: Do you ever doubt your own experience?
+      npcResponse: "More often than I\u2019d like. Even after years of teaching,
+        I still question whether I\u2019m actually good enough. Quite the opposite,
+        I think of myself as inadequate."
+      keyword: {fileID: 11400000, guid: 6fd788431a9b357479d2205905b5f54f, type: 2}
+  - exchanges:
+    - playerQuestion: "Has anyone told you you\u2019re doing a good job? "
+      npcResponse: "They have. I just wish I believed it. Sometimes I need more reassurance
+        than I\u2019d like to admit."
+      keyword: {fileID: 11400000, guid: e7a499c46dee9694fb2427ccc5ec9a5f, type: 2}
+    - playerQuestion: What would help you believe in yourself?
+      npcResponse: "I don\u2019t know. Perhaps hearing that I\u2019m doing alright
+        more often. A bit of encouragement wouldn't hurt. "
+      keyword: {fileID: 11400000, guid: ae962c1c8c6b0e14bb4c0dabbe47355d, type: 2}
+    - playerQuestion: Do compliments help?
+      npcResponse: "For a moment, maybe. I suppose I\u2019m always looking for some
+        kind of constant validation."
+      keyword: {fileID: 11400000, guid: 2be31dc8bd769d9428c706cf79ccb25c, type: 2}
+  - exchanges:
+    - playerQuestion: 'Do you tell people you feel this way? '
+      npcResponse: Not usually. Admitting it makes me feel rather vulnerable.
+      keyword: {fileID: 11400000, guid: 1a31f6714614eec4ca8f961471f676e4, type: 2}
+    - playerQuestion: What do you think you need the most?
+      npcResponse: "Probably someone to remind me that I don\u2019t have to carry
+        every doubt alone. A little support goes a long way. "
+      keyword: {fileID: 11400000, guid: c32166d6b01f77143b7170c8b84b28e7, type: 2}
+    - playerQuestion: You are one of my regulars. What keeps bringing you back here?
+      npcResponse: This place is quiet in the best possible way. I always leave feeling
+        a little more comfortable than when I arrived.
+      keyword: {fileID: 11400000, guid: 625f5205aabc3a742905577e444f9820, type: 2}
+  requiredIngredients: []

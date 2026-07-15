@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
+  m_Name: Maya_recipe
+  m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
+  introText: "Hi\u2026 My usual, please."
+  questionSets:
+  - exchanges:
+    - playerQuestion: Long shift today?
+      npcResponse: "Long enough. I thought I was just tired at first, but my breathing
+        hasn\u2019t really slowed down. It feels like I\u2019m stuck hyperventilating."
+      keyword: {fileID: 11400000, guid: 5e2c32077427cb44ea32c3aa9c1789b0, type: 2}
+    - playerQuestion: Are you feeling alright?
+      npcResponse: "I\u2019ll be okay. It's just frustrating. My hands keep trembling
+        even though I know nothing\u2019s actually wrong."
+      keyword: {fileID: 11400000, guid: d973fc2e0517cdc4c9e28643a6d446fd, type: 2}
+    - playerQuestion: You seem a little uncomfortable. Something I could do to help?
+      npcResponse: "I don\u2019t see how you could. My heart keeps beating fast and
+        I\u2019m sweating like I just ran a marathon."
+      keyword: {fileID: 11400000, guid: db1f7c7379d35034d8018d56aaf11861, type: 2}
+  - exchanges:
+    - playerQuestion: Has work been especially difficult lately?
+      npcResponse: A bit. There have been days where everything needed my attention
+        at once. After a while, I started feeling completely overwhelmed.
+      keyword: {fileID: 11400000, guid: 44c2f4851c5b84147befdc1457500bcb, type: 2}
+    - playerQuestion: 'Do you get much time to rest? '
+      npcResponse: Not really, no. By the end of most shifts I feel drained, even
+        when nothing major happened that day.
+      keyword: {fileID: 11400000, guid: 26aa0f7f052f4ee48a24736fbbbc8ce0, type: 2}
+    - playerQuestion: 'Do you get much time to rest? '
+      npcResponse: "That\u2019s true. I don\u2019t mind helping others, but sometimes
+        it feels like there\u2019s always one more thing to do. It gets a little
+        overwhelming."
+      keyword: {fileID: 11400000, guid: 44c2f4851c5b84147befdc1457500bcb, type: 2}
+  - exchanges:
+    - playerQuestion: "What\u2019s going through your mind right now?"
+      npcResponse: "Honestly? Not much. That\u2019s the strange part. Everything
+        feels far away, like my thoughts are just wandering. "
+      keyword: {fileID: 11400000, guid: eccb87de510747a48ae2c283a6a57427, type: 2}
+    - playerQuestion: Does this happen often?
+      npcResponse: "Sometimes. It\u2019s like I know where I am, but I don\u2019t
+        quite feel connected to it. A little detached, I guess."
+      keyword: {fileID: 11400000, guid: e9b8056175022c94a9bd0cfa003aa8ed, type: 2}
+    - playerQuestion: "What\u2019s the hardest part of it?"
+      npcResponse: "Knowing I\u2019m safe but not feeling safe. Part of me understands
+        what\u2019s happening, while the rest feels completely detached from the
+        fact."
+      keyword: {fileID: 11400000, guid: e9b8056175022c94a9bd0cfa003aa8ed, type: 2}
+  - exchanges:
+    - playerQuestion: I could make you the usual, but I have something better for
+        you in mind right now.
+      npcResponse: Ok...sure.
+      keyword: {fileID: 0}
+  requiredIngredients: []
