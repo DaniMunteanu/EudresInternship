@@ -7,10 +7,12 @@ public class NPCData : ScriptableObject
     public string npcName;
     public Sprite npcPortrait;
 
+    [Header("Feedback dupa servire")]
+    [TextArea(2, 4)] public string serveFeedback;
+
     [Tooltip("2-3 retete posibile pentru acest NPC")]
     public List<TeaRecipe> possibleRecipes;
 
-    // Returneaza o reteta aleatorie la fiecare vizita
     public TeaRecipe GetRandomRecipe()
     {
         if (possibleRecipes == null || possibleRecipes.Count == 0)

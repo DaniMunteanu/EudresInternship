@@ -42,19 +42,6 @@ MonoBehaviour:
         piled up and I can\u2019t catch up so I just became overwhelmed."
       keyword: {fileID: 11400000, guid: 44c2f4851c5b84147befdc1457500bcb, type: 2}
   - exchanges:
-    - playerQuestion: What made you stop by today?
-      npcResponse: "I think I needed somewhere to pause. I\u2019ve been feeling stuck
-        for a while now."
-      keyword: {fileID: 11400000, guid: 54692ec9cafe8c5489ef5478c3a77dc9, type: 2}
-    - playerQuestion: What do you miss the most?
-      npcResponse: I miss knowing what I wanted to do. Somewhere along the way I
-        lost my direction.
-      keyword: {fileID: 11400000, guid: bca85ebb852d8394a8ef9d2af61e73f4, type: 2}
-    - playerQuestion: Do you know what you want to change?
-      npcResponse: "That\u2019s the hardest part. I don't even know where to begin.
-        Everything feels full of uncertainty."
-      keyword: {fileID: 11400000, guid: d8b10c2e29caab1489c0c5f1bf463256, type: 2}
-  - exchanges:
     - playerQuestion: What goes through your mind these days?
       npcResponse: Not much, honestly. Most of the time my mind wanders somewhere
         else while I just keep going.

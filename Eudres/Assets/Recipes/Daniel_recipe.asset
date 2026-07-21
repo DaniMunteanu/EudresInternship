@@ -12,31 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
   m_Name: Daniel_recipe
   m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
-  introText: Hello there..
+  introText: Uh... hey. I was hoping you could recommend something. I don't really
+    know much about tea...
   questionSets:
   - exchanges:
     - playerQuestion: First time here?
-      npcResponse: "Yeah. I don\u2019t go out much. Most of my free time is spent
-        at home. I\u2019m more comfortable staying indoors."
-      keyword: {fileID: 11400000, guid: 91fb635179aabbe44ace06e3bd5ebf83, type: 2}
+      npcResponse: Yeah. I spend a lot of time playing games. At some point I realized
+        I wasn't really playing just because it was fun anymore, it became a bit
+        of escapism from everything else going on.
+      keyword: {fileID: 11400000, guid: 55e65514ccca34140ad74edaae66ee99, type: 2}
     - playerQuestion: Long day?
-      npcResponse: "Not really. I just realized I\u2019d been sitting in front of
-        my computer most of the day again and figured I should try something else
-        for a change. Even if I prefer staying indoors."
-      keyword: {fileID: 11400000, guid: 91fb635179aabbe44ace06e3bd5ebf83, type: 2}
+      npcResponse: Not really. I was about to start another game, but then I caught
+        myself putting everything else off again. I've gotten pretty good at procrastination,
+        so I figured I'd come here instead.
+      keyword: {fileID: 11400000, guid: 31083b91fb82f314889acd5a566ee3a0, type: 2}
     - playerQuestion: Looking for anything special today?
-      npcResponse: "Not really. I just wanted a change of scenery. I spend so much
-        time at home that I barely notice how often I\u2019m avoiding social activities
-        and well\u2026 Today I wanted something different."
-      keyword: {fileID: 11400000, guid: d4ac325e9cc8a684aa89a8409ebec0f8, type: 2}
+      npcResponse: Not anything specific. I just wanted to get away from my screen
+        for a while. Games are great, but sometimes I use them as escapism instead
+        of dealing with what's actually on my mind.
+      keyword: {fileID: 11400000, guid: 55e65514ccca34140ad74edaae66ee99, type: 2}
   - exchanges:
     - playerQuestion: This place can get pretty busy. Does that bother you?
       npcResponse: "Not really. Normally I like a more isolated environment, but
-        currently I\u2019m fine here.\t"
+        currently I\u2019m fine here."
       keyword: {fileID: 11400000, guid: 7624dbd73c8564a449236cacbd1b26b0, type: 2}
     - playerQuestion: Not one to go out in town often, huh?
       npcResponse: "I only go out when I need something. Most of the time I keep
-        to myself. I guess I\u2019ve fallen into a habit of social withdrawal."
+        to myself. I guess I\u2019ve fallen into a habit of social withdrawal.\t"
       keyword: {fileID: 11400000, guid: 530f546daa14db643af8c1b6e394a939, type: 2}
     - playerQuestion: You seem pretty comfortable on your own.
       npcResponse: "I am, mostly. Though sometimes I wonder if I\u2019ve gotten a

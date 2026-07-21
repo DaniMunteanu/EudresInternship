@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Sir Reginald III
   npcPortrait: {fileID: 0}
+  serveFeedback: Remarkable. You prepared it exactly as it ought to be. My wife used
+    to say that a proper cup of tea doesn't make the world better... it simply reminds
+    you there's still goodness left in it. Thank you, my dear.
   possibleRecipes:
   - {fileID: 11400000, guid: e27b26bb8660f4d47a468891861194d0, type: 2}

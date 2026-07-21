@@ -1,27 +1,35 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class NPCDialogueTrigger : MonoBehaviour
 {
-    [Tooltip("Toate NPC-urile care pot aparea la tejghea")]
-    public List<NPCData> possibleNPCs;
+    public static NPCDialogueTrigger Instance;
+
+    [Tooltip("Toti NPC-ii care pot aparea intr-o zi")]
+    public List<NPCData> allNPCs;
+
+    public NPCData npcData;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
-
         if (TeaSession.IsReturningFromPreparation)
         {
             return;
         }
 
+        PickNextNPC();
         TriggerDialogue();
     }
 
     public void TriggerDialogue()
     {
-        if (possibleNPCs != null && possibleNPCs.Count > 0)
+        if (npcData != null)
         {
-            NPCData npcData = possibleNPCs[Random.Range(0, possibleNPCs.Count)];
             TeaRecipe recipe = npcData.GetRandomRecipe();
             if (recipe != null)
             {
@@ -30,7 +38,23 @@ public class NPCDialogueTrigger : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"Obiectul {gameObject.name} nu are NPC-uri asignate în Inspector!");
+            Debug.LogWarning($"Obiectul {gameObject.name} nu are NPCData asignat!");
         }
+    }
+
+    public void SpawnNextNPC()
+    {
+        PickNextNPC();
+        TriggerDialogue();
+    }
+
+    void PickNextNPC()
+    {
+        List<NPCData> available = allNPCs.FindAll(npc => !TeaSession.ServedNPCsToday.Contains(npc));
+
+        if (available.Count == 0)
+            available = allNPCs;
+
+        npcData = available[Random.Range(0, available.Count)];
     }
 }
