@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Emma
   npcPortrait: {fileID: 0}
+  serveFeedback: This is really good! Thanks... I think tomorrow won't feel quite
+    as intimidating anymore.
   possibleRecipes:
   - {fileID: 11400000, guid: 6964e5bb13295d740ad3b31d59ae082b, type: 2}

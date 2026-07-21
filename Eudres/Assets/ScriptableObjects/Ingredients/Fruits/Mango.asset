@@ -16,5 +16,5 @@ MonoBehaviour:
   ingredientSprite: {fileID: 21300000, guid: ceeedeb80594ee74a88325d7b9eca836, type: 3}
   ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
   keywords:
-  - {fileID: 11400000, guid: 91fb635179aabbe44ace06e3bd5ebf83, type: 2}
-  - {fileID: 11400000, guid: e2cbe986d68d55c4abe2a43031edbb9d, type: 2}
+  - {fileID: 11400000, guid: 55e65514ccca34140ad74edaae66ee99, type: 2}
+  - {fileID: 11400000, guid: 31083b91fb82f314889acd5a566ee3a0, type: 2}

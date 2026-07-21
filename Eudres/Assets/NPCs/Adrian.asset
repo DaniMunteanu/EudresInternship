@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Adrian
   npcPortrait: {fileID: 0}
+  serveFeedback: I'm... still not sure what I'll do. But I think I'll wait a bit
+    more before making such a big decision.
   possibleRecipes:
   - {fileID: 11400000, guid: 5aa8f15a919aeca4d9b4dd5da4d36921, type: 2}

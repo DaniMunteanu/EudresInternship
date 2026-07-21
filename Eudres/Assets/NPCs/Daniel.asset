@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Daniel
   npcPortrait: {fileID: 0}
+  serveFeedback: I forgot what it felt like to just sit somewhere and talk to someone,
+    actually see their face. Maybe I don't have to spend every evening behind a screen
+    after all. Thanks for the tea.
   possibleRecipes:
   - {fileID: 11400000, guid: 6870c03f56288cf4a80a1745871193cc, type: 2}

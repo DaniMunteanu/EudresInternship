@@ -33,6 +33,8 @@ public class DialogueManager : MonoBehaviour
     private string fullTextBuffer = "";
     private System.Action onTypingComplete;
 
+    private bool isServeComplete = false;
+
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -40,9 +42,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     void Start()
-    {   
-
-
+    {
         KeywordsTracker.Instance.ClearBubbles();
 
         if (TeaSession.IsReturningFromPreparation)
@@ -68,6 +68,7 @@ public class DialogueManager : MonoBehaviour
         TeaSession.CurrentNPC = npc;
         TeaSession.CurrentRecipe = recipe;
         TeaSession.IsReturningFromPreparation = false;
+        TeaSession.SelectedIngredients.Clear();
         currentSetIndex = 0;
 
         dialoguePanel.SetActive(true);
@@ -88,7 +89,16 @@ public class DialogueManager : MonoBehaviour
     public void OnClickToContinue()
     {
         clickToContinueOverlay.SetActive(false);
-        ShowQuestionSet(currentSetIndex);
+
+        if (isServeComplete)
+        {
+            isServeComplete = false;
+            FinishServingAndProceed();
+        }
+        else
+        {
+            ShowQuestionSet(currentSetIndex);
+        }
     }
 
     void ShowQuestionSet(int setIndex)
@@ -152,41 +162,41 @@ public class DialogueManager : MonoBehaviour
         makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene("TeaPreparation"));
     }
 
-    // Feedback dupa servire
     void ShowFeedbackAndServe()
     {
         TeaSession.IsReturningFromPreparation = false;
         dialoguePanel.SetActive(true);
         clickToContinueOverlay.SetActive(false);
+        makeTeaButton.gameObject.SetActive(false);
 
         npcNameText.text = TeaSession.CurrentNPC.npcName;
+        feedbackText.text = "";
 
-        bool isCorrect = TeaSession.SelectedIngredients.Count ==
-                         TeaSession.CurrentRecipe.requiredIngredients.Count;
-
-        if (isCorrect)
+        DisplayDialogue(TeaSession.CurrentNPC.serveFeedback, onComplete: () =>
         {
-            foreach (string required in TeaSession.CurrentRecipe.requiredIngredients)
-            {
-                if (!TeaSession.SelectedIngredients.Contains(required))
-                {
-                    isCorrect = false;
-                    break;
-                }
-            }
-        }
+            isServeComplete = true;
+            clickToContinueOverlay.SetActive(true);
+        });
+    }
 
-        if (isCorrect)
+    void FinishServingAndProceed()
+    {
+        TeaSession.ServedNPCsToday.Add(TeaSession.CurrentNPC);
+        TeaSession.NPCsServedToday++;
+
+        feedbackText.text = "";
+        ClearQuestionButtons();
+
+        if (TeaSession.NPCsServedToday >= TeaSession.NPCsPerDay)
         {
-            feedbackText.color = Color.green;
-            feedbackText.text = "Success! Perfect match.";
-            DisplayDialogue("Wow! It smells incredible and tastes exactly how I wanted. Thank you!");
+            TeaSession.NPCsServedToday = 0;
+            TeaSession.ServedNPCsToday.Clear();
+            SceneManager.LoadScene("MainMenu");
         }
         else
         {
-            feedbackText.color = Color.red;
-            feedbackText.text = "Failure... Recipe mismatch.";
-            DisplayDialogue("Uh... what did you put in this? It tastes a bit strange. Not what I asked for.");
+            dialoguePanel.SetActive(false);
+            NPCDialogueTrigger.Instance.SpawnNextNPC();
         }
     }
 
