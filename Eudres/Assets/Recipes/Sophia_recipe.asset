@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
   m_Name: Sophia_recipe
   m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
-  introText: "Hi\u2026 I'm Sophia. I don't usually come to places like this, but
-    I had to get out of my dorm for a bit."
+  introText: Hi... Could I get something warm? I've been studying all week, but honestly,
+    I'm not sure how much of it is actually sticking. My exam is in a few days and...
+    I don't know. It feels like my brain forgot how to slow down.
   questionSets:
   - exchanges:
     - playerQuestion: "You\u2019re a student, huh? Did you come here to study or
@@ -23,43 +24,55 @@ MonoBehaviour:
         studying anyway. It's like I can't stop overthinking everything.
       keyword: {fileID: 11400000, guid: d8bfe2c615da5aa429416c655b9905ae, type: 2}
     - playerQuestion: "You look tired\u2026 Hard time with the exams?"
-      npcResponse: Yeah. I keep imagining all the things that could go wrong before
-        I even sit down for the exam. Every day brings a new set of future worries.
-      keyword: {fileID: 11400000, guid: 0731f2d78effc9f499b7d773dbc9d489, type: 2}
+      npcResponse: Yeah. It's not even the studying itself anymore. My head feels
+        full of mental clutter, like there's never a moment of silence.
+      keyword: {fileID: 11400000, guid: 564f24d9d72494240a5ecbf00a30d9da, type: 2}
     - playerQuestion: You seem to need something warm and a good conversation.
-      npcResponse: Maybe. Lately my attention drifts away no matter what I'm doing.
-        Even during simple things, I notice my wandering mind pulling me somewhere
-        else.
-      keyword: {fileID: 11400000, guid: eccb87de510747a48ae2c283a6a57427, type: 2}
+      npcResponse: I think a conversation might help. Lately I've realized I don't
+        really know how to relax anymore.
+      keyword: {fileID: 11400000, guid: 158ca1e2965a0b5438c506c772e117ab, type: 2}
   - exchanges:
     - playerQuestion: Do you think more about what could happen than what you are
         doing now?
-      npcResponse: Definitely. I can be sitting in class and suddenly I'm ten steps
-        ahead, imagining problems that haven't happened. Sometimes I feel completely
-        detached from what's actually in front of me.
-      keyword: {fileID: 11400000, guid: e9b8056175022c94a9bd0cfa003aa8ed, type: 2}
+      npcResponse: Definitely. I can be sitting in class and suddenly I'm imagining
+        ten different things that could go wrong. Those future worries never seem
+        to stop.
+      keyword: {fileID: 11400000, guid: 0731f2d78effc9f499b7d773dbc9d489, type: 2}
     - playerQuestion: "It\u2019s only for this exam or is it always like that?"
       npcResponse: It's usually like this. Before anything important happens, my
         head starts building worst-case scenarios. The catastrophic thinking starts
         long before the event itself.
       keyword: {fileID: 11400000, guid: 3ed93b4d02912af408709965cd2457e7, type: 2}
     - playerQuestion: What is it that you think about so hard?
-      npcResponse: A bit of everything. Studying, deadlines, getting there on time...
-        my thoughts pile up until it's just mental clutter.
-      keyword: {fileID: 11400000, guid: 564f24d9d72494240a5ecbf00a30d9da, type: 2}
+      npcResponse: Honestly? One thought leads to another and suddenly there are
+        twenty more behind it. It's just constant racing thoughts.
+      keyword: {fileID: 11400000, guid: 33c5db5b2506e064d9fe35c725ef15d5, type: 2}
   - exchanges:
     - playerQuestion: "When you finally stop studying or thinking about it\u2026
         what happens in your head?"
-      npcResponse: That's the problem. Stopping doesn't really feel different. The
-        moment things get quiet, I notice my racing thoughts even more.
-      keyword: {fileID: 11400000, guid: 33c5db5b2506e064d9fe35c725ef15d5, type: 2}
+      npcResponse: That's the problem. Stopping doesn't really feel different. Even
+        when I'm doing something else, my mind wanders right back to the exam.
+      keyword: {fileID: 11400000, guid: eccb87de510747a48ae2c283a6a57427, type: 2}
     - playerQuestion: If you could remove one thing from all this pressure, what
         would it be?
-      npcResponse: I think I'd stop being so hard on myself. No matter how much I
-        do, it never feels like enough. The self-criticism gets exhausting.
+      npcResponse: Not as often as I'd like. Sometimes I'm sitting somewhere and
+        realize I feel completely detached from what's happening around me.
+      keyword: {fileID: 11400000, guid: e9b8056175022c94a9bd0cfa003aa8ed, type: 2}
+    - playerQuestion: What scares you the most about not being ready?
+      npcResponse: It feels like I'm always somewhere else mentally. My mind wanders
+        so much that entire conversations pass by without me noticing.
+      keyword: {fileID: 11400000, guid: eccb87de510747a48ae2c283a6a57427, type: 2}
+  - exchanges:
+    - playerQuestion: What would you change if you could?
+      npcResponse: I think I'd stop being so hard on myself. The self-criticism gets
+        exhausting after a while.
       keyword: {fileID: 11400000, guid: edff5e263ed54964cb6982b3cfb2c38f, type: 2}
+    - playerQuestion: Are you hard on yourself?
+      npcResponse: Probably. No matter how much I study, it never feels like enough.
+        I think my perfectionism makes everything harder.
+      keyword: {fileID: 11400000, guid: fb0dd24ec00b95a4ca229323989a7e49, type: 2}
     - playerQuestion: What scares you the most about not being ready?
       npcResponse: That I'll look back and realize I should have done more. That
-        perfectionism never really lets me rest.
+        feeling of perfectionism never really lets me rest.
       keyword: {fileID: 11400000, guid: fb0dd24ec00b95a4ca229323989a7e49, type: 2}
   requiredIngredients: []

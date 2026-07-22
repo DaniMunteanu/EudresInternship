@@ -836,6 +836,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 39d901e1629e5cd43bcbfaf7b509bdc0, type: 2}
   - {fileID: 11400000, guid: b254d6f2bbcd3da4986b2d12fcea8d73, type: 2}
   - {fileID: 11400000, guid: 9757925c35f3bb647b9eb77bd885f7cb, type: 2}
+  - {fileID: 11400000, guid: e6bcf83557c2f9f4f848c9c31091f855, type: 2}
   npcData: {fileID: 0}
 --- !u!4 &353409607
 Transform:
