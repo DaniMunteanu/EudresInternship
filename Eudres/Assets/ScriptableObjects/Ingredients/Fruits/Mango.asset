@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mango
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Mango
-  ingredientSprite: {fileID: 21300000, guid: ceeedeb80594ee74a88325d7b9eca836, type: 3}
+  ingredientSprite: {fileID: -3968840770022985357, guid: 2448c4a55781017439c6d222c5e3d1d6, type: 3}
   ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
   keywords:
   - {fileID: 11400000, guid: 55e65514ccca34140ad74edaae66ee99, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Apple
-  ingredientSprite: {fileID: 21300000, guid: 580565bcda8872b48b141f7cb41417aa, type: 3}
+  ingredientSprite: {fileID: 7293598183456022363, guid: 07f954f3d393e8246badd53bdbcf0690, type: 3}
   ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
   keywords:
   - {fileID: 11400000, guid: 44c2f4851c5b84147befdc1457500bcb, type: 2}

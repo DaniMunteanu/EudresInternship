@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Peach
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Peach
-  ingredientSprite: {fileID: 21300000, guid: 2c67eba42d80aef4da548b04130e410c, type: 3}
+  ingredientSprite: {fileID: -6182139567355005811, guid: a23ef765a9daada49b89d8dea7e4df2d, type: 3}
   ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
   keywords:
   - {fileID: 11400000, guid: ff555bbc08278814e9aead26cfc6f59e, type: 2}

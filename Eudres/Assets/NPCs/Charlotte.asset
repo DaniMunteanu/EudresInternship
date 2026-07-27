@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Charlotte
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Charlotte
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 428249918233935452, guid: fa75b6c5df41ffa47ad0f7c454c731a2, type: 3}
   serveFeedback: I think tomorrow I'll do something different... even if it's something
     small. It's been a while since I chose to do something instead of just letting
     it happen.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Black Tea
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Black Tea
-  ingredientSprite: {fileID: 21300000, guid: 3b5786e98bd76394b901fc6722dc513a, type: 3}
+  ingredientSprite: {fileID: -6176354512080373199, guid: 313a7f9db2c9ebf448567d33eb427690, type: 3}
   ingredientType: {fileID: 11400000, guid: b371ba27c66fb9346b19664588c30ff3, type: 2}
   keywords:
   - {fileID: 11400000, guid: e88bce65fae3e944fa73551f7e0079f5, type: 2}
