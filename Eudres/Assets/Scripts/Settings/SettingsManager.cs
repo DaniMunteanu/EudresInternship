@@ -1,21 +1,26 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // Added for TextMeshPro Dropdown support
 
 public class SettingsManager : MonoBehaviour
 {
     [Header("UI References (assign in Inspector)")]
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private Toggle musicToggle;
+    [SerializeField] private TMP_Dropdown musicDropdown; // <-- Added Dropdown reference
     [SerializeField] private GameObject settingsPanel;
 
     private const string VolumeKey = "MasterVolume";
     private const string MusicOnKey = "MusicOn";
+    private const string SelectedSongKey = "SelectedSongIndex"; // <-- Added key to save song choice
 
     private void Start()
     {
-        // Load saved values (default: full volume, music on)
+        // 1. Load saved volume & toggle values
         float savedVolume = PlayerPrefs.GetFloat(VolumeKey, 1f);
         bool musicOn = PlayerPrefs.GetInt(MusicOnKey, 1) == 1;
+
+        AudioListener.volume = musicOn ? savedVolume : 0f;
 
         if (volumeSlider != null)
         {
@@ -30,6 +35,21 @@ public class SettingsManager : MonoBehaviour
         }
 
         ApplyVolume(savedVolume, musicOn);
+
+        // 2. Setup Music Dropdown if MusicSelector exists in the scene
+        if (musicDropdown != null && MusicSelector.Instance != null)
+        {
+            // Populate options from the PersistentMusicManager
+            musicDropdown.ClearOptions();
+            musicDropdown.AddOptions(MusicSelector.Instance.GetSongNames());
+
+            // Set the saved option (default to 0)
+            int savedSongIndex = PlayerPrefs.GetInt(SelectedSongKey, 0);
+            musicDropdown.value = savedSongIndex;
+
+            // Listen for user changes
+            musicDropdown.onValueChanged.AddListener(OnSongChanged);
+        }
     }
 
     public void OnVolumeChanged(float value)
@@ -46,10 +66,20 @@ public class SettingsManager : MonoBehaviour
         ApplyVolume(volume, isOn);
     }
 
+    public void OnSongChanged(int songIndex)
+    {
+        // Save the chosen song index
+        PlayerPrefs.SetInt(SelectedSongKey, songIndex);
+
+        // Tell the persistent manager to switch tracks
+        if (MusicSelector.Instance != null)
+        {
+            MusicSelector.Instance.SelectSongByIndex(songIndex);
+        }
+    }
+
     private void ApplyVolume(float volume, bool musicOn)
     {
-        // Simple global volume control.
-        // If music later gets its own AudioSource, swap this for that source's volume/mute instead.
         AudioListener.volume = musicOn ? volume : 0f;
     }
 
