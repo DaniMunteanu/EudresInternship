@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cinnamon
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Cinnamon
-  ingredientSprite: {fileID: -6176264708628463375, guid: 361dacd69cfc03c4ba8709dab819ea36, type: 3}
+  ingredientSprite: {fileID: -6176264708628463375, guid: 43217ea455eceb04f9027311454e69af, type: 3}
   ingredientType: {fileID: 11400000, guid: 399045d3b9a482f4389b5436fa8af941, type: 2}
   keywords:
   - {fileID: 11400000, guid: bc1557b588cc32541beb7c75aba30e88, type: 2}

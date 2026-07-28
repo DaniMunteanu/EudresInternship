@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Adrian
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Adrian
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 6359908632143130753, guid: 850db9cd96220e94081db6ef82d99625, type: 3}
   serveFeedback: I'm... still not sure what I'll do. But I think I'll wait a bit
     more before making such a big decision.
   possibleRecipes:
