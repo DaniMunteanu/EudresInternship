@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class TooltipManager : MonoBehaviour
 {
-    [SerializeField] private Tooltip tooltip;
+    [SerializeField] public Tooltip tooltip;
+
+    private bool shouldHighlight = false;
+    private Keyword keywordToHighlight;
 
     public static TooltipManager Instance;
     void Awake()
@@ -32,6 +35,11 @@ public class TooltipManager : MonoBehaviour
         {
             tooltip.keywordTextFields[index].text = keywords[index];
         }
+
+        if (shouldHighlight)
+        {
+            tooltip.HighlightKeyword(keywordToHighlight);
+        }
     }
 
     public void Hide()
@@ -41,6 +49,13 @@ public class TooltipManager : MonoBehaviour
         {
             tooltip.keywordTextFields[index].text = "";
         }
+        shouldHighlight = false;
+    }
+
+    public void HighlightKeyword(Keyword keyword)
+    {
+        shouldHighlight = true;
+        keywordToHighlight = keyword;
     }
 
 }

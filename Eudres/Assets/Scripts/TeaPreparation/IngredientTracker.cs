@@ -4,9 +4,15 @@ using UnityEngine.UI;
 
 public class IngredientTracker : MonoBehaviour
 {
+    [Header("In case the scene is a tutorial")]
+    [SerializeField] GameObject tutorialStep1;
+    [SerializeField] GameObject tutorialStep2;
+
     [SerializeField] private KeywordGroup requiredKeywords;
     [SerializeField] private Recipe currentRecipe;
     [SerializeField] private GameObject ingredientTextsParent;
+    [SerializeField] private GameObject draggableIngredientsParent;
+    [SerializeField] private Ingredient tutorialIngredient;
 
     private TMP_Text[] ingredientTexts;
     private int currentIngredientIndex = 0;
@@ -14,6 +20,11 @@ public class IngredientTracker : MonoBehaviour
     
     void Start()
     {
+        if (tutorialStep1)
+            tutorialStep1.SetActive(true);
+            HighlightIngredient(tutorialIngredient);
+            TooltipManager.Instance.HighlightKeyword(requiredKeywords.keywords[0]);
+
         ingredientTexts = ingredientTextsParent.GetComponentsInChildren<TMP_Text>();
         maxIngredients = ingredientTexts.Length;
         Clear();
@@ -47,8 +58,14 @@ public class IngredientTracker : MonoBehaviour
                 if (requiredKeywords.keywords.Contains(ingredient.keywords[i]))
                 {
                     KeywordsTracker.Instance.PopBubble(ingredient.keywords[i]);
-                    return;
+                    break;
                 }
+            }
+
+            if (ingredient == tutorialIngredient && tutorialStep1)
+            {
+                ResetIngredientHighlights();
+                TooltipManager.Instance.tooltip.ResetHighlight();
             }
         }
     }
@@ -83,5 +100,42 @@ public class IngredientTracker : MonoBehaviour
         }
         
         return true;
+    }
+
+    void HighlightIngredient(Ingredient ingredient)
+    {
+        foreach (Transform subparent in draggableIngredientsParent.transform)
+        {
+            foreach (Transform child in subparent)
+            {
+                DraggableIngredient draggableIngredient = child.GetComponent<DraggableIngredient>();
+                if (draggableIngredient.ingredientData != ingredient)
+                {
+                    draggableIngredient.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.2f);
+                    draggableIngredient.tooltipTrigger.enabled = false;
+                }
+            }
+        }
+    }
+
+    void ResetIngredientHighlights()
+    {
+        foreach (Transform subparent in draggableIngredientsParent.transform)
+        {
+            foreach (Transform child in subparent)
+            {
+                DraggableIngredient draggableIngredient = child.GetComponent<DraggableIngredient>();
+                draggableIngredient.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                draggableIngredient.tooltipTrigger.enabled = true;
+            }
+        }
+    }
+
+    public void ClearTutorialStep()
+    {
+        if (tutorialStep1)
+            tutorialStep1.SetActive(false);
+        if (tutorialStep2)
+            tutorialStep2.SetActive(false);
     }
 }

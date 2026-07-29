@@ -3,10 +3,10 @@ using UnityEngine.EventSystems;
 
 public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [SerializeField] private Ingredient ingredientData;
+    [SerializeField] public Ingredient ingredientData;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Collider2D ingredientCollider;
-    [SerializeField] private TooltipTrigger tooltipTrigger;
+    [SerializeField] public TooltipTrigger tooltipTrigger;
 
     private Vector3 initialPosition;
 
