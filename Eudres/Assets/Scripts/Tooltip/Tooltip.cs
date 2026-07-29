@@ -39,4 +39,25 @@ public class Tooltip : MonoBehaviour
 
         transform.position = newPosition;
     }
+
+    public void HighlightKeyword(Keyword keyword)
+    {
+        foreach (var keywordTextField in keywordTextFields)
+        {
+            if (keywordTextField.text == keyword.name)
+            {
+                keywordTextField.color = Color.green;
+                return;
+            }
+        }
+    }
+
+    public void ResetHighlight()
+    {
+        foreach (var keywordTextField in keywordTextFields)
+        {
+            keywordTextField.color = Color.white;
+        }
+    }
+
 }

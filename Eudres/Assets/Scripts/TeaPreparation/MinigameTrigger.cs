@@ -3,6 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class MinigameTrigger : MonoBehaviour
 {
+    [Header("Check if the scene is a tutorial")]
+    [SerializeField] bool isTutorialScene = false;
+    [SerializeField] string shopCounterScene = "ShopCounter";
+    [SerializeField] string tutorialShopCounterScene = "TutorialShopCounter";
+
     [SerializeField] private BreathingMinigame minigame;
     private bool minigameStarted = false;
 
@@ -35,6 +40,9 @@ public class MinigameTrigger : MonoBehaviour
         minigame.gameObject.SetActive(false);
         minigameStarted = false;
         TeaSession.IsReturningFromPreparation = true;
-        SceneManager.LoadScene("ShopCounter");
+        if (isTutorialScene)
+            SceneManager.LoadScene(tutorialShopCounterScene);
+        else
+            SceneManager.LoadScene(shopCounterScene);
     }
 }
