@@ -831,7 +831,6 @@ GameObject:
   - component: {fileID: 949248039}
   - component: {fileID: 949248038}
   - component: {fileID: 949248037}
-  - component: {fileID: 949248036}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -839,21 +838,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &949248036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 949248035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0f06508b36af654c9045d66239952dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
-  gameplaySceneName: ShopCounter
-  tutorialSceneName: TutorialShopCounter
-  settingsPanel: {fileID: 0}
 --- !u!114 &949248037
 MonoBehaviour:
   m_ObjectHideFlags: 0

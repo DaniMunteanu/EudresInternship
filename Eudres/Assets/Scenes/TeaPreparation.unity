@@ -605,6 +605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d596143ec3b66954ca7a643b38587c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameTrigger
+  isTutorialScene: 0
+  shopCounterScene: ShopCounter
+  tutorialShopCounterScene: TutorialShopCounter
   minigame: {fileID: 468267669}
 --- !u!114 &242549896
 MonoBehaviour:
@@ -2113,6 +2116,10 @@ PrefabInstance:
       propertyPath: requiredKeywords
       value: 
       objectReference: {fileID: 11400000, guid: 5859986d43f709b48913662af03cf6f3, type: 2}
+    - target: {fileID: 5605918477166300384, guid: bb060a5e117d5b8448e0ac7f2eeabd6e, type: 3}
+      propertyPath: draggableIngredientsParent
+      value: 
+      objectReference: {fileID: 1442163297}
     - target: {fileID: 6162726776229482064, guid: bb060a5e117d5b8448e0ac7f2eeabd6e, type: 3}
       propertyPath: m_Name
       value: IngredientTracker
