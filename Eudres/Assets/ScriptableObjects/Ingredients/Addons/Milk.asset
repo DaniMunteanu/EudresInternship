@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Milk
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Milk
-  ingredientSprite: {fileID: 21300000, guid: 83c7cdd4ae6d6bf4794da81a85e2bc60, type: 3}
+  ingredientSprite: {fileID: -321318036669055807, guid: fd2b4896898e79e46900a923695c14c8, type: 3}
   ingredientType: {fileID: 11400000, guid: 399045d3b9a482f4389b5436fa8af941, type: 2}
   keywords:
   - {fileID: 11400000, guid: 1a31f6714614eec4ca8f961471f676e4, type: 2}

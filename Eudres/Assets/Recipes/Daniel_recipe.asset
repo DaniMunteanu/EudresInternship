@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
+  m_Name: Daniel_recipe
+  m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
+  introText: Uh... hey. I was hoping you could recommend something. I don't really
+    know much about tea...
+  questionSets:
+  - exchanges:
+    - playerQuestion: First time here?
+      npcResponse: Yeah. I spend a lot of time playing games. At some point I realized
+        I wasn't really playing just because it was fun anymore, it became a bit
+        of escapism from everything else going on.
+      keyword: {fileID: 11400000, guid: 55e65514ccca34140ad74edaae66ee99, type: 2}
+    - playerQuestion: Long day?
+      npcResponse: Not really. I was about to start another game, but then I caught
+        myself putting everything else off again. I've gotten pretty good at procrastination,
+        so I figured I'd come here instead.
+      keyword: {fileID: 11400000, guid: 31083b91fb82f314889acd5a566ee3a0, type: 2}
+    - playerQuestion: Looking for anything special today?
+      npcResponse: Not anything specific. I just wanted to get away from my screen
+        for a while. Games are great, but sometimes I use them as escapism instead
+        of dealing with what's actually on my mind.
+      keyword: {fileID: 11400000, guid: 55e65514ccca34140ad74edaae66ee99, type: 2}
+  - exchanges:
+    - playerQuestion: This place can get pretty busy. Does that bother you?
+      npcResponse: "Not really. Normally I like a more isolated environment, but
+        currently I\u2019m fine here."
+      keyword: {fileID: 11400000, guid: 7624dbd73c8564a449236cacbd1b26b0, type: 2}
+    - playerQuestion: Not one to go out in town often, huh?
+      npcResponse: "I only go out when I need something. Most of the time I keep
+        to myself. I guess I\u2019ve fallen into a habit of social withdrawal.\t"
+      keyword: {fileID: 11400000, guid: 530f546daa14db643af8c1b6e394a939, type: 2}
+    - playerQuestion: You seem pretty comfortable on your own.
+      npcResponse: "I am, mostly. Though sometimes I wonder if I\u2019ve gotten a
+        little too good at avoiding others."
+      keyword: {fileID: 11400000, guid: d4ac325e9cc8a684aa89a8409ebec0f8, type: 2}
+  - exchanges:
+    - playerQuestion: So what brought you here instead of staying home?
+      npcResponse: "I don\u2019t know\u2026 I guess I wanted to be somewhere people
+        actually talk to each other. I\u2019ve been wanting conversation lately.
+        That is, one that\u2019s outside of a game\u2019s chatroom."
+      keyword: {fileID: 11400000, guid: 065d6a09a93f2be4aaddb88398bb813e, type: 2}
+    - playerQuestion: Is my humble tea worth leaving the house for?
+      npcResponse: "The tea we shall see, but\u2026 Maybe it was the company. I\u2019ve
+        been feeling left out, to be honest. And in games there\u2019s no one to
+        make me feel like that."
+      keyword: {fileID: 11400000, guid: ff555bbc08278814e9aead26cfc6f59e, type: 2}
+    - playerQuestion: Finding what you were looking for so far?
+      npcResponse: "Kind of, I guess. It\u2019s nice hearing people chat. Sometimes
+        I end up feeling left out when I realize how little I do that."
+      keyword: {fileID: 11400000, guid: ff555bbc08278814e9aead26cfc6f59e, type: 2}
+  - exchanges:
+    - playerQuestion: Ever thought about joining some of those conversations?
+      npcResponse: A few times. I usually talk myself out of it. A little encouragement
+        would probably go a long way.
+      keyword: {fileID: 11400000, guid: ae962c1c8c6b0e14bb4c0dabbe47355d, type: 2}
+    - playerQuestion: "What\u2019s the worst that could happen if you\u2019d join
+        a conversation?"
+      npcResponse: I mean, nothing. Or some stares from the people, probably. Still,
+        part of me wants some reassurance before I put myself in that situation.
+      keyword: {fileID: 11400000, guid: e7a499c46dee9694fb2427ccc5ec9a5f, type: 2}
+    - playerQuestion: You strike me as someone who thinks things through.
+      npcResponse: "Maybe too much. Sometimes I wonder whether people actually want
+        me around. It\u2019s silly, but I guess I\u2019m looking for a bit of validation."
+      keyword: {fileID: 11400000, guid: 2be31dc8bd769d9428c706cf79ccb25c, type: 2}
+  - exchanges:
+    - playerQuestion: Not many people would admit that.
+      npcResponse: "Yeah\u2026 talking about it makes me feel a little too vulnerable,
+        to be honest."
+      keyword: {fileID: 11400000, guid: 1a31f6714614eec4ca8f961471f676e4, type: 2}
+    - playerQuestion: What do you think would make things easier?
+      npcResponse: "I don\u2019t need much. Just a bit of support every now and then."
+      keyword: {fileID: 11400000, guid: c32166d6b01f77143b7170c8b84b28e7, type: 2}
+    - playerQuestion: How are you liking the teahouse so far?
+      npcResponse: "It\u2019s nice. Quiet, but not lonely, like my apartment. There\u2019s
+        something really comforting about being here."
+      keyword: {fileID: 11400000, guid: 625f5205aabc3a742905577e444f9820, type: 2}
+  requiredIngredients: []

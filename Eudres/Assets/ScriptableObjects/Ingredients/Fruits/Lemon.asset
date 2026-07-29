@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lemon
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Lemon
-  ingredientSprite: {fileID: 21300000, guid: b5016402f9978244f9d8692b18bc3f00, type: 3}
+  ingredientSprite: {fileID: 8025649199667744028, guid: 7cb753a7aa1dbbe4cb9068065c209270, type: 3}
   ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
   keywords:
   - {fileID: 11400000, guid: 106172dfa5888804eafe39738397ee8c, type: 2}

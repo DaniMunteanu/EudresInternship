@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c1856cac5ce614280ef9d32b707814, type: 3}
+  m_Name: Reginald_recipe
+  m_EditorClassIdentifier: Assembly-CSharp::TeaRecipe
+  introText: "Good afternoon! I do hope your tea is brewed properly. A good cup deserves
+    patience\u2026 and unfortunately, patience seems rather uncommon these days."
+  questionSets:
+  - exchanges:
+    - playerQuestion: You seem to know your tea.
+      npcResponse: "I should hope so. Tea isn\u2019t something to be hurried. People
+        nowadays treat it as though it were merely another drink. Such urgency ruins
+        the experience! "
+      keyword: {fileID: 11400000, guid: 7272cd0d790f57b4fa9221fa86eccd5b, type: 2}
+    - playerQuestion: You sound very particular about it.
+      npcResponse: "Oh, not particular\u2026 simply respectful. One shouldn't make
+        rash decisions, especially when preparing a proper cup."
+      keyword: {fileID: 11400000, guid: e88bce65fae3e944fa73551f7e0079f5, type: 2}
+    - playerQuestion: "Does the way it\u2019s made matter so much to you?"
+      npcResponse: Very much so. If one begins rushing the little things, it becomes
+        terribly easy to rush the important ones as well. Urgency should be kept
+        for the things that actually deserve it.
+      keyword: {fileID: 11400000, guid: 7272cd0d790f57b4fa9221fa86eccd5b, type: 2}
+  - exchanges:
+    - playerQuestion: Do you always order the same thing?
+      npcResponse: Without fail. Some traditions are worth keeping, even if the world
+        insists on changing around them.
+      keyword: {fileID: 11400000, guid: 5a82941f92e60c5459f1a5f3f66fb894, type: 2}
+    - playerQuestion: Been drinking tea for years every day?
+      npcResponse: Without fail. Some traditions are worth keeping, even if the world
+        insists on changing around them.
+      keyword: {fileID: 11400000, guid: 43f0729bfbf155a4381598314ca041ff, type: 2}
+    - playerQuestion: Most people try something new.
+      npcResponse: "Oh, novelty has its place. But I find a certain comfort in familiar
+        habits.\t"
+      keyword: {fileID: 11400000, guid: a0bb02920dbb04046aa8073baa71257b, type: 2}
+  - exchanges:
+    - playerQuestion: 'Those rituals seem important to you. '
+      npcResponse: They are. Every cup reminds me of another time. I find myself
+        reminiscing more often than I used to.
+      keyword: {fileID: 11400000, guid: a3f9f1466b79c554f9c5bdcea89ab291, type: 2}
+    - playerQuestion: Did someone teach you all your tea knowledge?
+      npcResponse: "My wife had impeccable taste. I suppose I\u2019ve grown rather
+        attached to the way we used to share our afternoon tea and the way she spoke
+        about the tea."
+      keyword: {fileID: 11400000, guid: bb60e62d8789c5b4f9f3134a46927582, type: 2}
+    - playerQuestion: You speak about tea fondly.
+      npcResponse: "I do. Some memories refuse to fade, and I wouldn't wish them
+        to. They are fond memories and I\u2019m quite attached to them."
+      keyword: {fileID: 11400000, guid: bb60e62d8789c5b4f9f3134a46927582, type: 2}
+  - exchanges:
+    - playerQuestion: Do you still enjoy your days?
+      npcResponse: "I try to. Though if I\u2019m being honest, life has felt rather
+        stuck since she\u2019s not in the picture anymore."
+      keyword: {fileID: 11400000, guid: 54692ec9cafe8c5489ef5478c3a77dc9, type: 2}
+    - playerQuestion: I imagine mine is not the only tea shop you tried. What brings
+        you to tea shops so often?
+      npcResponse: "It\u2019s not. I suppose I\u2019m still searching for what comes
+        next. Since the tea shop we used to be regulars at closed, I've been uncertain
+        about where to go."
+      keyword: {fileID: 11400000, guid: d8b10c2e29caab1489c0c5f1bf463256, type: 2}
+    - playerQuestion: Do you ever think about changing your routine?
+      npcResponse: "I\u2019ve considered it. Yet without her, I sometimes struggle
+        to find any real direction. Plus, changing the tea shops I try in hopes of
+        finding a good one  is enough change."
+      keyword: {fileID: 11400000, guid: bca85ebb852d8394a8ef9d2af61e73f4, type: 2}
+  - exchanges:
+    - playerQuestion: Do people understand why this matters to you?
+      npcResponse: "Not always. Though I admit it\u2019s nice when someone understands
+        why these little things matter. That kind of validation means more than people
+        realize."
+      keyword: {fileID: 11400000, guid: 2be31dc8bd769d9428c706cf79ccb25c, type: 2}
+    - playerQuestion: Does it matter when someone remembers your order?
+      npcResponse: It does. It reminds me that some things are still worth remembering.
+        A little reassurance goes a surprisingly long way.
+      keyword: {fileID: 11400000, guid: e7a499c46dee9694fb2427ccc5ec9a5f, type: 2}
+    - playerQuestion: What do you think makes a teahouse special?
+      npcResponse: The people, more than the tea. A kind word or a bit of encouragement
+        can brighten an otherwise quiet afternoon.
+      keyword: {fileID: 11400000, guid: ae962c1c8c6b0e14bb4c0dabbe47355d, type: 2}
+  - exchanges:
+    - playerQuestion: You must miss those afternoons together.
+      npcResponse: "I do\u2026 more than I usually admit. It\u2019s rather a vulnerable
+        thing to say aloud."
+      keyword: {fileID: 11400000, guid: 1a31f6714614eec4ca8f961471f676e4, type: 2}
+    - playerQuestion: "I hope you\u2019ll be coming back here."
+      npcResponse: "I think I will. This place does indeed bring comfort and good
+        company reminds me that I don\u2019t have to carry every memory alone."
+      keyword: {fileID: 11400000, guid: 625f5205aabc3a742905577e444f9820, type: 2}
+    - playerQuestion: What does the perfect cup of tea mean to you?
+      npcResponse: "It reminds me that love can linger in the smallest rituals. And
+        somehow\u2026 that feels like support, even now."
+      keyword: {fileID: 11400000, guid: c32166d6b01f77143b7170c8b84b28e7, type: 2}
+  requiredIngredients: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Biscuit
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Biscuit
-  ingredientSprite: {fileID: 21300000, guid: 7a6ba0f92480b0d40a18738c80b3b31c, type: 3}
+  ingredientSprite: {fileID: 1970291717750316113, guid: 2d32c6b66318fe94fb9074cee0695a3e, type: 3}
   ingredientType: {fileID: 11400000, guid: 399045d3b9a482f4389b5436fa8af941, type: 2}
   keywords:
   - {fileID: 11400000, guid: a0bb02920dbb04046aa8073baa71257b, type: 2}
