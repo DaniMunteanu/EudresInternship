@@ -7,7 +7,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private string gameplaySceneName = "ShopCounter";
 
     [Header("Scene to load when Tutorial is pressed")]
-    [SerializeField] private string tutorialSceneName = "Tutorial";
+    [SerializeField] private string tutorialSceneName = "TutorialShopCounter";
 
     [Header("Settings Panel (assign in Inspector)")]
     [SerializeField] private GameObject settingsPanel;

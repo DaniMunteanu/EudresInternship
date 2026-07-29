@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
   gameplaySceneName: ShopCounter
-  tutorialSceneName: Tutorial
+  tutorialSceneName: TutorialShopCounter
   settingsPanel: {fileID: 624336214}
 --- !u!1 &358543495
 GameObject:
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
   gameplaySceneName: ShopCounter
-  tutorialSceneName: Tutorial
+  tutorialSceneName: TutorialShopCounter
   settingsPanel: {fileID: 0}
 --- !u!114 &949248037
 MonoBehaviour:

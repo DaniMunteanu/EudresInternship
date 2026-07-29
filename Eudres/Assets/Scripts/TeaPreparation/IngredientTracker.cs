@@ -4,9 +4,14 @@ using UnityEngine.UI;
 
 public class IngredientTracker : MonoBehaviour
 {
+    [Header("In case the scene is a tutorial")]
+    [SerializeField] GameObject tutorialStep1;
+    [SerializeField] GameObject tutorialStep2;
+
     [SerializeField] private KeywordGroup requiredKeywords;
     [SerializeField] private Recipe currentRecipe;
     [SerializeField] private GameObject ingredientTextsParent;
+    [SerializeField] private GameObject draggableIngredientsParent;
 
     private TMP_Text[] ingredientTexts;
     private int currentIngredientIndex = 0;
@@ -14,6 +19,9 @@ public class IngredientTracker : MonoBehaviour
     
     void Start()
     {
+        if (tutorialStep1)
+            tutorialStep1.SetActive(true);
+
         ingredientTexts = ingredientTextsParent.GetComponentsInChildren<TMP_Text>();
         maxIngredients = ingredientTexts.Length;
         Clear();
@@ -83,5 +91,18 @@ public class IngredientTracker : MonoBehaviour
         }
         
         return true;
+    }
+
+    void HighlightIngredient(Ingredient ingredient)
+    {
+        
+    }
+
+    public void ClearTutorialStep()
+    {
+        if (tutorialStep1)
+            tutorialStep1.SetActive(false);
+        if (tutorialStep2)
+            tutorialStep2.SetActive(false);
     }
 }
