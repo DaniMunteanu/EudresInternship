@@ -21,9 +21,11 @@ public class IngredientTracker : MonoBehaviour
     void Start()
     {
         if (tutorialStep1)
+        {
             tutorialStep1.SetActive(true);
             HighlightIngredient(tutorialIngredient);
             TooltipManager.Instance.HighlightKeyword(requiredKeywords.keywords[0]);
+        }
 
         ingredientTexts = ingredientTextsParent.GetComponentsInChildren<TMP_Text>();
         maxIngredients = ingredientTexts.Length;
