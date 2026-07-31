@@ -13,4 +13,14 @@ public class Bubble : MonoBehaviour
             bubbleText.text = keyword.name;
         }
     }
+
+    public void Highlight()
+    {
+        bubbleText.color = Color.green;
+    }
+
+    public void ResetHighlight()
+    {
+        bubbleText.color = Color.black;
+    }
 }

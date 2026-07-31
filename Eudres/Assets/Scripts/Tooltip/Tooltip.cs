@@ -12,6 +12,8 @@ public class Tooltip : MonoBehaviour
     public TMP_Text detailsTextField;
     public TMP_Text[] keywordTextFields;
 
+    public bool keepPosition = false;
+
     [SerializeField] private LayoutElement layoutElement;
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private InputSystemUIInputModule inputModule;
@@ -30,6 +32,11 @@ public class Tooltip : MonoBehaviour
 
     public void Update()
     {
+        if (keepPosition)
+        {
+            return;
+        }
+
         Vector2 newPosition = inputModule.point.action.ReadValue<Vector2>();
 
         float pivotX = newPosition.x / Screen.width;
