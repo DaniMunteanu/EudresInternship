@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Daniel
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Daniel
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 6359908632143130753, guid: 850db9cd96220e94081db6ef82d99625, type: 3}
+  talkingSprite: {fileID: 3383943017938051678, guid: ba783821a184f854daa36f7ac800e7d5, type: 3}
   serveFeedback: I forgot what it felt like to just sit somewhere and talk to someone,
     actually see their face. Maybe I don't have to spend every evening behind a screen
     after all. Thanks for the tea.

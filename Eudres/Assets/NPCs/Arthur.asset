@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Arthur
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Arthur
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: 5100235053143438022, guid: 9b97fe566d0c68844ba448966cf8d24f, type: 3}
+  talkingSprite: {fileID: 5100235053143438022, guid: 9b97fe566d0c68844ba448966cf8d24f, type: 3}
   serveFeedback: Perhaps I expect perfection from myself because I care so much.
     That doesn't mean I'm failing... Thank you for reminding me of that.
   possibleRecipes:

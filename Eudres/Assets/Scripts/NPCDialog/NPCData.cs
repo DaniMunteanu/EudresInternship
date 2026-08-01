@@ -6,11 +6,12 @@ public class NPCData : ScriptableObject
 {
     public string npcName;
     public Sprite npcPortrait;
+    public Sprite talkingSprite;
 
     [Header("Feedback dupa servire")]
     [TextArea(2, 4)] public string serveFeedback;
 
-    [Tooltip("2-3 retete posibile pentru acest NPC")]
+    [Tooltip("retete NPC")]
     public List<TeaRecipe> possibleRecipes;
 
     public TeaRecipe GetRandomRecipe()

@@ -10,17 +10,11 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
-    [Header("Check if the scene is a tutorial")]
-    [SerializeField] bool isTutorialScene = false;
-    [SerializeField] string teaPreparationScene = "TeaPreparation";
-    [SerializeField] string tutorialTeaPreparationScene = "TutorialTeaPreparation";
-    [SerializeField] private GameObject tutorialStepPanel;
-    [SerializeField] private GameObject tutorialOverPanel;
-
     [Header("UI References")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI npcNameText;
     public TextMeshProUGUI npcDialogueText;
+    public Image npcPortraitImage;
 
     [Header("Questions UI")]
     public Transform questionButtonContainer;
@@ -33,15 +27,24 @@ public class DialogueManager : MonoBehaviour
     [Header("Click To Continue")]
     public GameObject clickToContinueOverlay;
 
+    [Header("End Of Day UI")]
+    public GameObject endOfDayPanel;
+    public TextMeshProUGUI endOfDayText;
+    public GameObject endOfDayClickToContinueOverlay;
+    [TextArea(2, 4)] public List<string> endOfDayLines = new List<string>();
+
     private Coroutine typingCoroutine;
     private int currentSetIndex = 0;
 
     private bool isTyping = false;
+    private bool isTypingNpcSpeech = false;
     private string fullTextBuffer = "";
     private System.Action onTypingComplete;
-
+    private TextMeshProUGUI activeTypingTarget;
+    
     private bool isServeComplete = false;
-    private bool firstKeywordAdded = false;
+    
+    private int endOfDayLineIndex = 0;
 
     void Awake()
     {
@@ -51,15 +54,6 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        if (tutorialOverPanel)
-        {
-            tutorialOverPanel.SetActive(false);
-        }
-        if (tutorialStepPanel)
-        {
-            tutorialStepPanel.SetActive(false);
-        }
-
         KeywordsTracker.Instance.ClearBubbles();
 
         if (TeaSession.IsReturningFromPreparation)
@@ -71,8 +65,13 @@ public class DialogueManager : MonoBehaviour
         if (isTyping && Mouse.current.leftButton.wasPressedThisFrame)
         {
             if (typingCoroutine != null) StopCoroutine(typingCoroutine);
-            npcDialogueText.maxVisibleCharacters = fullTextBuffer.Length;
+            activeTypingTarget.maxVisibleCharacters = fullTextBuffer.Length;
             isTyping = false;
+
+            if (isTypingNpcSpeech)
+            {
+                npcPortraitImage.sprite = TeaSession.CurrentNPC.npcPortrait;
+            }
 
             System.Action callback = onTypingComplete;
             onTypingComplete = null;
@@ -94,6 +93,7 @@ public class DialogueManager : MonoBehaviour
         clickToContinueOverlay.SetActive(false);
 
         npcNameText.text = npc.npcName;
+        npcPortraitImage.sprite = npc.npcPortrait;
 
         ClearQuestionButtons();
 
@@ -105,11 +105,6 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClickToContinue()
     {
-        if (tutorialStepPanel)
-        {
-            tutorialStepPanel.SetActive(false);
-        }
-
         clickToContinueOverlay.SetActive(false);
 
         if (isServeComplete)
@@ -157,12 +152,6 @@ public class DialogueManager : MonoBehaviour
         if (keyword != null)
         {
             KeywordsTracker.Instance.AddBubble(keyword);
-            
-            if (isTutorialScene && !firstKeywordAdded && tutorialStepPanel != null)
-            {
-                firstKeywordAdded = true;
-                tutorialStepPanel.SetActive(true);
-            }
         }
 
         currentSetIndex++;
@@ -187,12 +176,9 @@ public class DialogueManager : MonoBehaviour
     {
         makeTeaButton.gameObject.SetActive(true);
         makeTeaButton.onClick.RemoveAllListeners();
-        if (isTutorialScene)
-            makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene(tutorialTeaPreparationScene));
-        else
-            makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene(teaPreparationScene));
+        makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene("TeaPreparation"));
     }
-
+    
     void ShowFeedbackAndServe()
     {
         TeaSession.IsReturningFromPreparation = false;
@@ -201,6 +187,7 @@ public class DialogueManager : MonoBehaviour
         makeTeaButton.gameObject.SetActive(false);
 
         npcNameText.text = TeaSession.CurrentNPC.npcName;
+        npcPortraitImage.sprite = TeaSession.CurrentNPC.npcPortrait;
         feedbackText.text = "";
 
         DisplayDialogue(TeaSession.CurrentNPC.serveFeedback, onComplete: () =>
@@ -209,7 +196,7 @@ public class DialogueManager : MonoBehaviour
             clickToContinueOverlay.SetActive(true);
         });
     }
-
+    
     void FinishServingAndProceed()
     {
         TeaSession.ServedNPCsToday.Add(TeaSession.CurrentNPC);
@@ -218,22 +205,9 @@ public class DialogueManager : MonoBehaviour
         feedbackText.text = "";
         ClearQuestionButtons();
 
-        if (isTutorialScene)
-        {
-            TeaSession.NPCsServedToday = 0;
-            TeaSession.ServedNPCsToday.Clear();
-            if (tutorialOverPanel)
-            {
-                tutorialOverPanel.SetActive(true);
-            }
-            return;
-        }
-
         if (TeaSession.NPCsServedToday >= TeaSession.NPCsPerDay)
         {
-            TeaSession.NPCsServedToday = 0;
-            TeaSession.ServedNPCsToday.Clear();
-            SceneManager.LoadScene("MainMenu");
+            ShowEndOfDayScreen();
         }
         else
         {
@@ -241,36 +215,106 @@ public class DialogueManager : MonoBehaviour
             NPCDialogueTrigger.Instance.SpawnNextNPC();
         }
     }
+    
+    void ShowEndOfDayScreen()
+    {
+        dialoguePanel.SetActive(false);
+        endOfDayPanel.SetActive(true);
+        endOfDayClickToContinueOverlay.SetActive(false);
+
+        endOfDayLineIndex = 0;
+        ShowNextEndOfDayLine();
+    }
+
+    void ShowNextEndOfDayLine()
+    {
+        if (endOfDayLines == null || endOfDayLineIndex >= endOfDayLines.Count)
+        {
+            FinishEndOfDay();
+            return;
+        }
+
+        DisplayDialogue(endOfDayLines[endOfDayLineIndex], endOfDayText, onComplete: () =>
+        {
+            endOfDayClickToContinueOverlay.SetActive(true);
+        });
+    }
+    
+    public void OnEndOfDayContinue()
+    {
+        endOfDayClickToContinueOverlay.SetActive(false);
+        endOfDayLineIndex++;
+
+        if (endOfDayLines != null && endOfDayLineIndex < endOfDayLines.Count)
+        {
+            ShowNextEndOfDayLine();
+        }
+        else
+        {
+            FinishEndOfDay();
+        }
+    }
+
+    void FinishEndOfDay()
+    {
+        endOfDayPanel.SetActive(false);
+
+        TeaSession.NPCsServedToday = 0;
+        TeaSession.ServedNPCsToday.Clear();
+
+        SceneManager.LoadScene("MainMenu");
+    }
 
     void ClearQuestionButtons()
     {
         foreach (Transform child in questionButtonContainer)
             Destroy(child.gameObject);
     }
-
+    
     void DisplayDialogue(string text, System.Action onComplete = null)
     {
-        if (typingCoroutine != null) StopCoroutine(typingCoroutine);
-        typingCoroutine = StartCoroutine(TypeText(text, onComplete));
+        DisplayDialogue(text, npcDialogueText, onComplete);
     }
 
-    IEnumerator TypeText(string text, System.Action onComplete)
+    void DisplayDialogue(string text, TextMeshProUGUI target, System.Action onComplete = null)
+    {
+        if (typingCoroutine != null) StopCoroutine(typingCoroutine);
+        typingCoroutine = StartCoroutine(TypeText(text, target, onComplete));
+    }
+
+    IEnumerator TypeText(string text, TextMeshProUGUI target, System.Action onComplete)
     {
         isTyping = true;
         fullTextBuffer = text;
         onTypingComplete = onComplete;
+        activeTypingTarget = target;
 
-        npcDialogueText.text = text;
-        npcDialogueText.maxVisibleCharacters = 0;
+        isTypingNpcSpeech = target == npcDialogueText && TeaSession.CurrentNPC != null;
+        if (isTypingNpcSpeech)
+        {
+            Sprite talking = TeaSession.CurrentNPC.talkingSprite != null
+                ? TeaSession.CurrentNPC.talkingSprite
+                : TeaSession.CurrentNPC.npcPortrait;
+            npcPortraitImage.sprite = talking;
+        }
+
+        target.text = text;
+        target.maxVisibleCharacters = 0;
 
         for (int i = 0; i <= text.Length; i++)
         {
-            npcDialogueText.maxVisibleCharacters = i;
+            target.maxVisibleCharacters = i;
             yield return new WaitForSeconds(0.03f);
         }
 
         isTyping = false;
         onTypingComplete = null;
+
+        if (isTypingNpcSpeech)
+        {
+            npcPortraitImage.sprite = TeaSession.CurrentNPC.npcPortrait;
+        }
+
         onComplete?.Invoke();
     }
 }

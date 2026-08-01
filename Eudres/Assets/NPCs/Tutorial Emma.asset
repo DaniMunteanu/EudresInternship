@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Tutorial Emma
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Emma
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -6338446713044204392, guid: 0f704f19a78f77c4fb2ac6a847cc58a1, type: 3}
+  talkingSprite: {fileID: 591141393264774478, guid: e4763702b1996ae4698a8c3bcb0f5c59, type: 3}
   serveFeedback: This is really good! Thanks... I think tomorrow won't feel quite
     as intimidating anymore.
   possibleRecipes:
