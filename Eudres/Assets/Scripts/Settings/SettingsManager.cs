@@ -1,26 +1,32 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Added for TextMeshPro Dropdown support
+using TMPro;
 
 public class SettingsManager : MonoBehaviour
 {
-    [Header("UI References (assign in Inspector)")]
+    [Header("UI References")]
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private Toggle musicToggle;
-    [SerializeField] private TMP_Dropdown musicDropdown; // <-- Added Dropdown reference
     [SerializeField] private GameObject settingsPanel;
+
+    [Header("Music Selector UI")]
+    [SerializeField] private TextMeshProUGUI songTitleText; // Text in the middle
+    [SerializeField] private Button prevButton;            // '<' Button
+    [SerializeField] private Button nextButton;            // '>' Button
 
     private const string VolumeKey = "MasterVolume";
     private const string MusicOnKey = "MusicOn";
-    private const string SelectedSongKey = "SelectedSongIndex"; // <-- Added key to save song choice
+    private const string SelectedSongKey = "SelectedSongIndex";
+
+    private List<string> songNames = new List<string>();
+    private int currentSongIndex = 0;
 
     private void Start()
     {
         // 1. Load saved volume & toggle values
         float savedVolume = PlayerPrefs.GetFloat(VolumeKey, 1f);
         bool musicOn = PlayerPrefs.GetInt(MusicOnKey, 1) == 1;
-
-        AudioListener.volume = musicOn ? savedVolume : 0f;
 
         if (volumeSlider != null)
         {
@@ -36,19 +42,86 @@ public class SettingsManager : MonoBehaviour
 
         ApplyVolume(savedVolume, musicOn);
 
-        // 2. Setup Music Dropdown if MusicSelector exists in the scene
-        if (musicDropdown != null && MusicSelector.Instance != null)
+        // 2. Setup Music Selector UI
+        if (MusicSelector.Instance != null)
         {
-            // Populate options from the PersistentMusicManager
-            musicDropdown.ClearOptions();
-            musicDropdown.AddOptions(MusicSelector.Instance.GetSongNames());
+            songNames = MusicSelector.Instance.GetSongNames();
 
-            // Set the saved option (default to 0)
-            int savedSongIndex = PlayerPrefs.GetInt(SelectedSongKey, 0);
-            musicDropdown.value = savedSongIndex;
+            if (songNames.Count > 0)
+            {
+                // Retrieve saved index
+                currentSongIndex = PlayerPrefs.GetInt(SelectedSongKey, 0);
 
-            // Listen for user changes
-            musicDropdown.onValueChanged.AddListener(OnSongChanged);
+                // Ensure the index stays in bounds
+                if (currentSongIndex < 0 || currentSongIndex >= songNames.Count)
+                {
+                    currentSongIndex = 0;
+                }
+
+                UpdateSongDisplay();
+            }
+        }
+
+        // Setup Button Listeners
+        if (prevButton != null)
+        {
+            prevButton.onClick.AddListener(OnPrevSongPressed);
+        }
+
+        if (nextButton != null)
+        {
+            nextButton.onClick.AddListener(OnNextSongPressed);
+        }
+    }
+
+    public void OnPrevSongPressed()
+    {
+        if (songNames.Count == 0) return;
+
+        currentSongIndex--;
+        // Loop back to the end if going past index 0
+        if (currentSongIndex < 0)
+        {
+            currentSongIndex = songNames.Count - 1;
+        }
+
+        ChangeSong(currentSongIndex);
+    }
+
+    public void OnNextSongPressed()
+    {
+        if (songNames.Count == 0) return;
+
+        currentSongIndex++;
+        // Loop around to 0 if reaching past the end
+        if (currentSongIndex >= songNames.Count)
+        {
+            currentSongIndex = 0;
+        }
+
+        ChangeSong(currentSongIndex);
+    }
+
+    private void ChangeSong(int index)
+    {
+        // Save choice
+        PlayerPrefs.SetInt(SelectedSongKey, index);
+
+        // Update UI Text
+        UpdateSongDisplay();
+
+        // Switch song audio
+        if (MusicSelector.Instance != null)
+        {
+            MusicSelector.Instance.SelectSongByIndex(index);
+        }
+    }
+
+    private void UpdateSongDisplay()
+    {
+        if (songTitleText != null && songNames.Count > currentSongIndex)
+        {
+            songTitleText.text = songNames[currentSongIndex];
         }
     }
 
@@ -64,18 +137,6 @@ public class SettingsManager : MonoBehaviour
         PlayerPrefs.SetInt(MusicOnKey, isOn ? 1 : 0);
         float volume = volumeSlider != null ? volumeSlider.value : 1f;
         ApplyVolume(volume, isOn);
-    }
-
-    public void OnSongChanged(int songIndex)
-    {
-        // Save the chosen song index
-        PlayerPrefs.SetInt(SelectedSongKey, songIndex);
-
-        // Tell the persistent manager to switch tracks
-        if (MusicSelector.Instance != null)
-        {
-            MusicSelector.Instance.SelectSongByIndex(songIndex);
-        }
     }
 
     private void ApplyVolume(float volume, bool musicOn)
