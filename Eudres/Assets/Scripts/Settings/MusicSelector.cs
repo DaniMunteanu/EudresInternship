@@ -1,32 +1,49 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class MusicSelector : MonoBehaviour
 {
-    public static MusicSelector Instance { get; private set; }
+    public static MusicSelector Instance;
 
-    [Header("Components")]
-    [SerializeField] private AudioSource audioSource;
-
-    [Header("Audio Tracks")]
-    [SerializeField] private List<AudioClip> musicTracks = new List<AudioClip>();
+    public List<AudioClip> musicTracks;
+    private int currentIndex = 0;
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
         {
             Destroy(gameObject);
-            return;
         }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
-        int savedSongIndex = PlayerPrefs.GetInt("SelectedSongIndex", 0);
-        PlaySong(savedSongIndex);
+        currentIndex = PlayerPrefs.GetInt("SelectedSongIndex", 0);
+        PlaySong(currentIndex);
+    }
+
+    private void Update()
+    {
+        if (AudioManager.Instance != null && !AudioManager.Instance.musicSource.isPlaying)
+        {
+            PlayNextSong();
+        }
+    }
+
+    // Metoda nouă cerută de SettingsManager
+    public List<string> GetSongNames()
+    {
+        List<string> names = new List<string>();
+        foreach (var clip in musicTracks)
+        {
+            if (clip != null)
+                names.Add(clip.name);
+        }
+        return names;
     }
 
     public void SelectSongByIndex(int index)
@@ -38,19 +55,17 @@ public class MusicSelector : MonoBehaviour
     {
         if (index >= 0 && index < musicTracks.Count && musicTracks[index] != null)
         {
-            audioSource.Stop();
-            audioSource.clip = musicTracks[index];
-            audioSource.Play();
+            currentIndex = index;
+            AudioManager.Instance.PlayMusic(musicTracks[currentIndex]);
+            PlayerPrefs.SetInt("SelectedSongIndex", currentIndex);
         }
     }
 
-    public List<string> GetSongNames()
+    private void PlayNextSong()
     {
-        List<string> names = new List<string>();
-        foreach (AudioClip clip in musicTracks)
-        {
-            if (clip != null) names.Add(clip.name);
-        }
-        return names;
+        if (musicTracks.Count == 0) return;
+
+        currentIndex = (currentIndex + 1) % musicTracks.Count;
+        PlaySong(currentIndex);
     }
 }
