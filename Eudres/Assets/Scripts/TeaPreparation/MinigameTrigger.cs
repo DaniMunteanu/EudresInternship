@@ -5,6 +5,7 @@ public class MinigameTrigger : MonoBehaviour
 {
     [Header("Check if the scene is a tutorial")]
     [SerializeField] bool isTutorialScene = false;
+    [SerializeField] GameObject tutorialStepBreathingMinigame;
     [SerializeField] string shopCounterScene = "ShopCounter";
     [SerializeField] string tutorialShopCounterScene = "TutorialShopCounter";
 
@@ -31,6 +32,11 @@ public class MinigameTrigger : MonoBehaviour
 
     public void StartMinigame()
     {
+        if (isTutorialScene)
+        {
+            tutorialStepBreathingMinigame.SetActive(true);
+        }
+
         minigame.gameObject.SetActive(true); 
         minigameStarted = true;
     }

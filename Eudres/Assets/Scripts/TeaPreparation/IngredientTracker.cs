@@ -5,8 +5,11 @@ using UnityEngine.UI;
 public class IngredientTracker : MonoBehaviour
 {
     [Header("In case the scene is a tutorial")]
-    [SerializeField] GameObject tutorialStep1;
-    [SerializeField] GameObject tutorialStep2;
+    [SerializeField] GameObject tutorialStepKeywordDescription;
+    [SerializeField] GameObject tutorialStepKeywordFound;
+    [SerializeField] GameObject tutorialStepIngredientDrag;
+    [SerializeField] GameObject tutorialStepIngredientAdded;
+    [SerializeField] GameObject tutorialStepBreathingMinigame;
 
     [SerializeField] private KeywordGroup requiredKeywords;
     [SerializeField] private Recipe currentRecipe;
@@ -17,13 +20,19 @@ public class IngredientTracker : MonoBehaviour
     private TMP_Text[] ingredientTexts;
     private int currentIngredientIndex = 0;
     private int maxIngredients = 6;
+    private bool tutorialIngredientAlreadyAdded = false;
     
     void Start()
     {
-        if (tutorialStep1)
-            tutorialStep1.SetActive(true);
+        if (tutorialStepKeywordDescription)
+        {
+            ClearTutorialSteps();
+            tutorialStepKeywordDescription.SetActive(true);
+            tutorialStepIngredientDrag.SetActive(true);
+
             HighlightIngredient(tutorialIngredient);
             TooltipManager.Instance.HighlightKeyword(requiredKeywords.keywords[0]);
+        }
 
         ingredientTexts = ingredientTextsParent.GetComponentsInChildren<TMP_Text>();
         maxIngredients = ingredientTexts.Length;
@@ -62,10 +71,16 @@ public class IngredientTracker : MonoBehaviour
                 }
             }
 
-            if (ingredient == tutorialIngredient && tutorialStep1)
+            if (ingredient == tutorialIngredient && tutorialStepKeywordDescription && tutorialIngredientAlreadyAdded == false)
             {
                 ResetIngredientHighlights();
                 TooltipManager.Instance.tooltip.ResetHighlight();
+                TooltipManager.Instance.shouldHighlight = false;
+
+                tutorialStepIngredientDrag.SetActive(false);
+                tutorialStepIngredientAdded.SetActive(true);
+
+                tutorialIngredientAlreadyAdded = true;
             }
         }
     }
@@ -131,11 +146,18 @@ public class IngredientTracker : MonoBehaviour
         }
     }
 
-    public void ClearTutorialStep()
+    public void ClearTutorialSteps()
     {
-        if (tutorialStep1)
-            tutorialStep1.SetActive(false);
-        if (tutorialStep2)
-            tutorialStep2.SetActive(false);
+        TooltipManager.Instance.tutorialStepShowing = false;
+        TooltipManager.Instance.Hide();
+
+        if (tutorialStepKeywordDescription)
+            tutorialStepKeywordDescription.SetActive(false);
+        if (tutorialStepKeywordFound)
+            tutorialStepKeywordFound.SetActive(false);
+        if (tutorialStepIngredientAdded)
+            tutorialStepIngredientAdded.SetActive(false);
+        if (tutorialStepBreathingMinigame)
+            tutorialStepBreathingMinigame.SetActive(false);
     }
 }
