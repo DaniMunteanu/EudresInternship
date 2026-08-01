@@ -96,4 +96,27 @@ public class KeywordsTracker : MonoBehaviour
 
         return true;
     }
+
+    public void HighlightBubble(Keyword keyword)
+    {
+        for (int index = 0; index < bubbles.Length; index++)
+        {
+            if (bubbles[index].keyword == keyword)
+            {
+                bubbles[index].Highlight();
+                break;
+            }
+        }
+    }
+
+    public void ResetBubbleHighlights()
+    {
+        for (int index = 0; index < bubbles.Length; index++)
+        {
+            if (bubbles[index].keyword != null)
+            {
+                bubbles[index].ResetHighlight();
+            }
+        }
+    }
 }
