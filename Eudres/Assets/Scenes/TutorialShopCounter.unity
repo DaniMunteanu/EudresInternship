@@ -2769,6 +2769,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_margin.z
+      value: -645.13477
+      objectReference: {fileID: 0}
+    - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -317.59375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 36.65625
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3534,14 +3546,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_text
-      value: Customers usually have something on their mind. Troughout every conversation,
-        they will share some of their struggles. These keywords will pop up to help
-        you prepare just the right cup of tea that will bring them even a couple
-        of peaceful moments
+      value: "    Customers usually have something on their mind. Troughout every
+        conversation, they will share some of their struggles.       \n    These
+        keywords will pop up to help you prepare just the right cup of tea that will
+        bring them even a couple of peaceful moments"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_margin.w
+      value: -167.27832
       objectReference: {fileID: 0}
     - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_margin.z
       value: -754.4486
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 412.40625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 155.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3549,7 +3589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 237.875
+      value: 260
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
