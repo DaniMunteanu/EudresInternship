@@ -62,15 +62,6 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        if (tutorialOverPanel)
-        {
-            tutorialOverPanel.SetActive(false);
-        }
-        if (tutorialStepPanel)
-        {
-            tutorialStepPanel.SetActive(false);
-        }
-
         KeywordsTracker.Instance.ClearBubbles();
 
         if (TeaSession.IsReturningFromPreparation)
@@ -124,11 +115,6 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClickToContinue()
     {
-        if (tutorialStepPanel)
-        {
-            tutorialStepPanel.SetActive(false);
-        }
-
         clickToContinueOverlay.SetActive(false);
 
         if (isServeComplete)
@@ -206,10 +192,7 @@ public class DialogueManager : MonoBehaviour
     {
         makeTeaButton.gameObject.SetActive(true);
         makeTeaButton.onClick.RemoveAllListeners();
-        if (isTutorialScene)
-            makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene(tutorialTeaPreparationScene));
-        else
-            makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene(teaPreparationScene));
+        makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene("TeaPreparation"));
     }
     
     void ShowFeedbackAndServe()
@@ -239,17 +222,6 @@ public class DialogueManager : MonoBehaviour
         feedbackText.text = "";
         ClearQuestionButtons();
 
-        if (isTutorialScene)
-        {
-            TeaSession.NPCsServedToday = 0;
-            TeaSession.ServedNPCsToday.Clear();
-            if (tutorialOverPanel)
-            {
-                tutorialOverPanel.SetActive(true);
-            }
-            return;
-        }
-
         if (TeaSession.NPCsServedToday >= TeaSession.NPCsPerDay)
         {
             ShowEndOfDayScreen();
@@ -258,6 +230,34 @@ public class DialogueManager : MonoBehaviour
         {
             dialoguePanel.SetActive(false);
             NPCDialogueTrigger.Instance.SpawnNextNPC();
+        }
+    }
+    
+    void ShowEndOfDayScreen()
+    {
+        dialoguePanel.SetActive(false);
+        endOfDayPanel.SetActive(true);
+        endOfDayClickToContinueOverlay.SetActive(false);
+
+        endOfDayLineIndex = 0;
+        ShowNextEndOfDayLine();
+    }
+
+    void ShowNextEndOfDayLine()
+    {
+        if (endOfDayLines == null || endOfDayLineIndex >= endOfDayLines.Count)
+        {
+            FinishEndOfDay();
+            return;
+        }
+
+        DisplayDialogue(endOfDayLines[endOfDayLineIndex], endOfDayText, onComplete: () =>
+        {
+            ShowEndOfDayScreen();
+        }
+        else
+        {
+            FinishEndOfDay();
         }
     }
     
@@ -298,6 +298,16 @@ public class DialogueManager : MonoBehaviour
         {
             FinishEndOfDay();
         }
+    }
+
+    void FinishEndOfDay()
+    {
+        endOfDayPanel.SetActive(false);
+
+        TeaSession.NPCsServedToday = 0;
+        TeaSession.ServedNPCsToday.Clear();
+
+        SceneManager.LoadScene("MainMenu");
     }
 
     void FinishEndOfDay()
