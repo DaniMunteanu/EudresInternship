@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Audio; // Adăugat pentru AudioMixer
+using UnityEngine.Audio;
 using TMPro;
 
 public class SettingsManager : MonoBehaviour
@@ -10,11 +10,11 @@ public class SettingsManager : MonoBehaviour
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider sfxSlider;
-    [SerializeField] private Toggle musicToggle;
+    [SerializeField] private Toggle repeatToggle;
     [SerializeField] private GameObject settingsPanel;
 
     [Header("Audio Mixer")]
-    [SerializeField] private AudioMixer mainMixer; // Tragi AudioMixer-ul aici dacă folosiți unul
+    [SerializeField] private AudioMixer mainMixer;
 
     [Header("Music Selector UI")]
     [SerializeField] private TextMeshProUGUI songTitleText;
@@ -24,96 +24,125 @@ public class SettingsManager : MonoBehaviour
     private const string MasterKey = "MasterVolume";
     private const string MusicKey = "MusicVolume";
     private const string SFXKey = "SFXVolume";
-    private const string MusicOnKey = "MusicOn";
-    private const string SelectedSongKey = "SelectedSongIndex";
+    private const string RepeatKey = "RepeatOne";
 
     private List<string> songNames = new List<string>();
-    private int currentSongIndex = 0;
+    private bool isInitializing = true;
+
+    private void OnEnable()
+    {
+        AudioManager.OnSongChanged += OnSongChangedHandler;
+        if (AudioManager.Instance != null)
+        {
+            UpdateSongDisplay();
+        }
+    }
+
+    private void OnDisable()
+    {
+        AudioManager.OnSongChanged -= OnSongChangedHandler;
+    }
 
     private void Start()
     {
-        // 1. Încarcă valorile salvate
+        isInitializing = true;
+
         float savedMaster = PlayerPrefs.GetFloat(MasterKey, 1f);
         float savedMusic = PlayerPrefs.GetFloat(MusicKey, 1f);
         float savedSFX = PlayerPrefs.GetFloat(SFXKey, 1f);
-        bool musicOn = PlayerPrefs.GetInt(MusicOnKey, 1) == 1;
+        bool repeatOn = PlayerPrefs.GetInt(RepeatKey, 0) == 1;
 
         if (masterSlider != null)
         {
             masterSlider.value = savedMaster;
+            masterSlider.onValueChanged.RemoveAllListeners();
             masterSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
         }
 
         if (musicSlider != null)
         {
             musicSlider.value = savedMusic;
+            musicSlider.onValueChanged.RemoveAllListeners();
             musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
         }
 
         if (sfxSlider != null)
         {
             sfxSlider.value = savedSFX;
+            sfxSlider.onValueChanged.RemoveAllListeners();
             sfxSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
         }
 
-        if (musicToggle != null)
+        if (repeatToggle != null)
         {
-            musicToggle.isOn = musicOn;
-            musicToggle.onValueChanged.AddListener(OnMusicToggleChanged);
+            repeatToggle.isOn = repeatOn;
+            repeatToggle.onValueChanged.RemoveAllListeners();
+            repeatToggle.onValueChanged.AddListener(OnRepeatToggleChanged);
         }
 
-        ApplyVolumes(savedMaster, savedMusic, savedSFX, musicOn);
+        ApplyVolumes(savedMaster, savedMusic, savedSFX);
 
-        // 2. Setup Music Selector UI
-        if (MusicSelector.Instance != null)
+        if (AudioManager.Instance != null)
         {
-            songNames = MusicSelector.Instance.GetSongNames();
-
-            if (songNames.Count > 0)
-            {
-                currentSongIndex = PlayerPrefs.GetInt(SelectedSongKey, 0);
-                if (currentSongIndex < 0 || currentSongIndex >= songNames.Count)
-                {
-                    currentSongIndex = 0;
-                }
-                UpdateSongDisplay();
-            }
+            songNames = AudioManager.Instance.GetSongNames();
+            UpdateSongDisplay();
         }
 
-        if (prevButton != null) prevButton.onClick.AddListener(OnPrevSongPressed);
-        if (nextButton != null) nextButton.onClick.AddListener(OnNextSongPressed);
+        if (prevButton != null)
+        {
+            prevButton.onClick.RemoveAllListeners();
+            prevButton.onClick.AddListener(OnPrevSongPressed);
+        }
+
+        if (nextButton != null)
+        {
+            nextButton.onClick.RemoveAllListeners();
+            nextButton.onClick.AddListener(OnNextSongPressed);
+        }
+
+        isInitializing = false;
+    }
+
+    private void OnSongChangedHandler(int newIndex)
+    {
+        UpdateSongDisplay();
+    }
+
+    public void OnRepeatToggleChanged(bool isLooping)
+    {
+        if (isInitializing) return;
+        PlayerPrefs.SetInt(RepeatKey, isLooping ? 1 : 0);
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.SetLoop(isLooping);
+        }
     }
 
     public void OnMasterVolumeChanged(float value)
     {
+        if (isInitializing) return;
         PlayerPrefs.SetFloat(MasterKey, value);
         SetVolume("Master", value);
     }
 
     public void OnMusicVolumeChanged(float value)
     {
+        if (isInitializing) return;
         PlayerPrefs.SetFloat(MusicKey, value);
-        bool musicOn = musicToggle == null || musicToggle.isOn;
-        if (musicOn) SetVolume("Music", value);
+        SetVolume("Music", value);
     }
 
     public void OnSFXVolumeChanged(float value)
     {
+        if (isInitializing) return;
         PlayerPrefs.SetFloat(SFXKey, value);
         SetVolume("SFX", value);
     }
 
-    public void OnMusicToggleChanged(bool isOn)
-    {
-        PlayerPrefs.SetInt(MusicOnKey, isOn ? 1 : 0);
-        float musicVol = musicSlider != null ? musicSlider.value : 1f;
-        SetVolume("Music", isOn ? musicVol : 0.0001f);
-    }
-
-    private void ApplyVolumes(float master, float music, float sfx, bool musicOn)
+    private void ApplyVolumes(float master, float music, float sfx)
     {
         SetVolume("Master", master);
-        SetVolume("Music", musicOn ? music : 0.0001f);
+        SetVolume("Music", music);
         SetVolume("SFX", sfx);
     }
 
@@ -121,47 +150,37 @@ public class SettingsManager : MonoBehaviour
     {
         if (mainMixer != null)
         {
-            // Convertește valoarea slider-ului (0.0001 - 1) în decibeli (-80dB la 0dB)
             float dB = linearValue > 0.0001f ? Mathf.Log10(linearValue) * 20f : -80f;
             mainMixer.SetFloat(parameterName, dB);
-        }
-        else if (parameterName == "Master")
-        {
-            AudioListener.volume = linearValue;
         }
     }
 
     public void OnPrevSongPressed()
     {
-        if (songNames.Count == 0) return;
-        currentSongIndex--;
-        if (currentSongIndex < 0) currentSongIndex = songNames.Count - 1;
-        ChangeSong(currentSongIndex);
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayPrevSong();
+        }
     }
 
     public void OnNextSongPressed()
     {
-        if (songNames.Count == 0) return;
-        currentSongIndex++;
-        if (currentSongIndex >= songNames.Count) currentSongIndex = 0;
-        ChangeSong(currentSongIndex);
-    }
-
-    private void ChangeSong(int index)
-    {
-        PlayerPrefs.SetInt(SelectedSongKey, index);
-        UpdateSongDisplay();
-        if (MusicSelector.Instance != null)
+        if (AudioManager.Instance != null)
         {
-            MusicSelector.Instance.SelectSongByIndex(index);
+            AudioManager.Instance.PlayNextSong();
         }
     }
 
     private void UpdateSongDisplay()
     {
-        if (songTitleText != null && songNames.Count > currentSongIndex)
+        if (songTitleText != null && AudioManager.Instance != null)
         {
-            songTitleText.text = songNames[currentSongIndex];
+            int index = AudioManager.Instance.GetCurrentSongIndex();
+            songNames = AudioManager.Instance.GetSongNames();
+            if (songNames.Count > index && index >= 0)
+            {
+                songTitleText.text = songNames[index];
+            }
         }
     }
 
