@@ -1005,11 +1005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b5e9ae2f5a1f54db3b58222d27cf9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BreathingMinigame
---- !u!1 &504114001 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3564323919685019404, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
-  m_PrefabInstance: {fileID: 1133514826}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &653226473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1835,7 +1830,11 @@ PrefabInstance:
     - target: {fileID: 4573620669735543617, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
       propertyPath: settingsPanel
       value: 
-      objectReference: {fileID: 504114001}
+      objectReference: {fileID: 1133514827}
+    - target: {fileID: 6966094133751031193, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7670239131599090214, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1853,6 +1852,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
+--- !u!1 &1133514827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2700316467605404166, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
+  m_PrefabInstance: {fileID: 1133514826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1252509390
 PrefabInstance:
   m_ObjectHideFlags: 0
