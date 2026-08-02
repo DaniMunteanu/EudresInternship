@@ -1043,6 +1043,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 701715542}
     m_Modifications:
+    - target: {fileID: 66514488660373440, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 188197406240619462, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
       propertyPath: m_fontSize
       value: 11
@@ -1163,6 +1167,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5712959122012955994, guid: 08d626bb6c6bfa74589f5748a723df8b, type: 3}
+    - target: {fileID: 2159920899568298551, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2272425025207172657, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
       propertyPath: m_fontSize
       value: 11
@@ -1198,6 +1206,14 @@ PrefabInstance:
     - target: {fileID: 3126684084706066593, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397912845229700304, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4695217960222077946, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4889848740612702324, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1243,6 +1259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KeywordsTracker
       objectReference: {fileID: 0}
+    - target: {fileID: 6174588402970817541, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6288277622377727883, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 45
@@ -1266,6 +1286,10 @@ PrefabInstance:
     - target: {fileID: 6795311497141084683, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
       propertyPath: m_fontSizeBase
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966121719009915377, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8207899833105047552, guid: 270dcd302b5e5754bb734a74b5477c4b, type: 3}
       propertyPath: m_fontSize
@@ -1477,7 +1501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1676,11 +1700,28 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1896063252}
   npcNameText: {fileID: 108373727}
   npcDialogueText: {fileID: 684685367}
+  npcPortraitImage: {fileID: 0}
   questionButtonContainer: {fileID: 635704704}
   questionButtonPrefab: {fileID: 8698579832377765160, guid: 51c197a4a7bbfad46826022ce4d2f390, type: 3}
   makeTeaButton: {fileID: 1335304382}
   feedbackText: {fileID: 1068430099}
   clickToContinueOverlay: {fileID: 43455009}
+  endOfDayPanel: {fileID: 0}
+  endOfDayText: {fileID: 0}
+  endOfDayClickToContinueOverlay: {fileID: 0}
+  endOfDayLines:
+  - Every cup I served today was different. Different ingredients, different stories,
+    different people.
+  - But behind every order was someone carrying something.
+  - "Fear. Loneliness. Doubt. Grief\u2026"
+  - The feeling of being stuck.
+  - It's easy to think these things only happen to other people... until one day
+    they happen to you.
+  - I've learned that no one is immune to them...  including me.
+  - Maybe we can't solve someone's problems with a cup of tea, but no one has to
+    face them alone.
+  - Well tomorrow is a new day and new challenges await for me. Still, I hope it
+    will be just a bit easier.
 --- !u!4 &1938134609
 Transform:
   m_ObjectHideFlags: 0
