@@ -40,6 +40,9 @@ public class AudioManager : MonoBehaviour
             // Alege un index cu adevărat random
             currentSongIndex = UnityEngine.Random.Range(0, musicTracks.Count);
 
+            bool repeatOn = PlayerPrefs.GetInt("RepeatOne", 0) == 1;
+            SetLoop(repeatOn);
+
             PlaySong(currentSongIndex);
         }
     }
