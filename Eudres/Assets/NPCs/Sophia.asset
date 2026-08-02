@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Sophia
   npcPortrait: {fileID: -6338446713044204392, guid: 0f704f19a78f77c4fb2ac6a847cc58a1, type: 3}
+  talkingSprite: {fileID: 591141393264774478, guid: e4763702b1996ae4698a8c3bcb0f5c59, type: 3}
   serveFeedback: "I don't think my exam feels any smaller... but somehow my thoughts
     do. Maybe I don't have to solve every problem before it even arrives. Thank you!
     For the tea\u2026 and for the conversation."

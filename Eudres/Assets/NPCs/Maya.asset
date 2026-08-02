@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Maya
   npcPortrait: {fileID: 4210928459173610927, guid: 02d32e6e89434dd49b8871c92fd07a92, type: 3}
+  talkingSprite: {fileID: 4210928459173610927, guid: 02d32e6e89434dd49b8871c92fd07a92, type: 3}
   serveFeedback: "Wow! My breathing's finally slowing down... Funny how I spend every
     day reminding other people they'll be okay. Maybe I should try believing it when
     it's about me too. You\u2019re right, this tea was far better for me than my
