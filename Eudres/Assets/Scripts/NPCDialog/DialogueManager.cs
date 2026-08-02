@@ -71,6 +71,7 @@ public class DialogueManager : MonoBehaviour
             if (isTypingNpcSpeech)
             {
                 npcPortraitImage.sprite = TeaSession.CurrentNPC.npcPortrait;
+                npcPortraitImage.SetNativeSize();
             }
 
             System.Action callback = onTypingComplete;
@@ -94,6 +95,7 @@ public class DialogueManager : MonoBehaviour
 
         npcNameText.text = npc.npcName;
         npcPortraitImage.sprite = npc.npcPortrait;
+        npcPortraitImage.SetNativeSize();
 
         ClearQuestionButtons();
 
@@ -188,6 +190,7 @@ public class DialogueManager : MonoBehaviour
 
         npcNameText.text = TeaSession.CurrentNPC.npcName;
         npcPortraitImage.sprite = TeaSession.CurrentNPC.npcPortrait;
+        npcPortraitImage.SetNativeSize();
         feedbackText.text = "";
 
         DisplayDialogue(TeaSession.CurrentNPC.serveFeedback, onComplete: () =>
@@ -296,6 +299,7 @@ public class DialogueManager : MonoBehaviour
                 ? TeaSession.CurrentNPC.talkingSprite
                 : TeaSession.CurrentNPC.npcPortrait;
             npcPortraitImage.sprite = talking;
+            npcPortraitImage.SetNativeSize();
         }
 
         target.text = text;
@@ -313,6 +317,7 @@ public class DialogueManager : MonoBehaviour
         if (isTypingNpcSpeech)
         {
             npcPortraitImage.sprite = TeaSession.CurrentNPC.npcPortrait;
+            npcPortraitImage.SetNativeSize();
         }
 
         onComplete?.Invoke();
