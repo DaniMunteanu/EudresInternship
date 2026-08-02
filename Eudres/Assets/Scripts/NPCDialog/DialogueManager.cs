@@ -10,6 +10,13 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
+    [Header("Check if the scene is a tutorial")]
+    [SerializeField] private bool isTutorialScene = false;
+    [SerializeField] string teaPreparationScene = "TeaPreparation";
+    [SerializeField] string tutorialTeaPreparationScene = "TutorialTeaPreparation";
+    [SerializeField] private GameObject tutorialStepPanel;
+    [SerializeField] private GameObject tutorialOverPanel;
+
     [Header("UI References")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI npcNameText;
@@ -45,6 +52,7 @@ public class DialogueManager : MonoBehaviour
     private bool isServeComplete = false;
     
     private int endOfDayLineIndex = 0;
+    private bool firstKeywordAdded = false;
 
     void Awake()
     {
@@ -154,6 +162,12 @@ public class DialogueManager : MonoBehaviour
         if (keyword != null)
         {
             KeywordsTracker.Instance.AddBubble(keyword);
+
+            if (isTutorialScene && !firstKeywordAdded && tutorialStepPanel != null)
+            {
+                firstKeywordAdded = true;
+                tutorialStepPanel.SetActive(true);
+            }
         }
 
         currentSetIndex++;
@@ -239,6 +253,34 @@ public class DialogueManager : MonoBehaviour
 
         DisplayDialogue(endOfDayLines[endOfDayLineIndex], endOfDayText, onComplete: () =>
         {
+            ShowEndOfDayScreen();
+        }
+        else
+        {
+            FinishEndOfDay();
+        }
+    }
+    
+    void ShowEndOfDayScreen()
+    {
+        dialoguePanel.SetActive(false);
+        endOfDayPanel.SetActive(true);
+        endOfDayClickToContinueOverlay.SetActive(false);
+
+        endOfDayLineIndex = 0;
+        ShowNextEndOfDayLine();
+    }
+
+    void ShowNextEndOfDayLine()
+    {
+        if (endOfDayLines == null || endOfDayLineIndex >= endOfDayLines.Count)
+        {
+            FinishEndOfDay();
+            return;
+        }
+
+        DisplayDialogue(endOfDayLines[endOfDayLineIndex], endOfDayText, onComplete: () =>
+        {
             endOfDayClickToContinueOverlay.SetActive(true);
         });
     }
@@ -256,6 +298,16 @@ public class DialogueManager : MonoBehaviour
         {
             FinishEndOfDay();
         }
+    }
+
+    void FinishEndOfDay()
+    {
+        endOfDayPanel.SetActive(false);
+
+        TeaSession.NPCsServedToday = 0;
+        TeaSession.ServedNPCsToday.Clear();
+
+        SceneManager.LoadScene("MainMenu");
     }
 
     void FinishEndOfDay()
