@@ -13,7 +13,7 @@ public class IngredientDragAnimation : MonoBehaviour
 
     public void PlayTween()
     {
-        transform.DOMove(target.position, 3.0f).SetLoops(-1, LoopType.Restart);
+        transform.DOMove(target.position, 3.0f).SetLoops(-1, LoopType.Restart).SetLink(gameObject);
     }
 
 }
