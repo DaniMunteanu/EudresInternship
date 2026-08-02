@@ -115,13 +115,13 @@ public class CupController : MonoBehaviour
         switch (currentPhase)
         {
             case Phase.WaitingToInhale:
-                instructionText.text = "Hold to inhale...";
+                instructionText.text = "Press the screen while inhaling...";
                 break;
             case Phase.Inhaling:
                 instructionText.text = "Inhaling...";
                 break;
             case Phase.WaitingToExhale:
-                instructionText.text = "Release to exhale...";
+                instructionText.text = "Release while exhaling...";
                 break;
             case Phase.Exhaling:
                 instructionText.text = "Exhaling...";

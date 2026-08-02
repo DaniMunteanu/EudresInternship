@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0492f33db6ab2c6449fd982ed008fcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cup
-  currentRecipe: {fileID: 11400000, guid: c6de172f1c8d9394ca6ae90cc951ad5c, type: 2}
+  ingredientTracker: {fileID: 0}
   cupCollider: {fileID: 2735753146658377903}
   cupSpriteRenderer: {fileID: 4021006327690819052}
   emptyCupSprite: {fileID: -4805852644142616309, guid: 92d724402555f4b4bad9fbd44ff3cb98, type: 3}
@@ -98,7 +98,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4805852644142616309, guid: 92d724402555f4b4bad9fbd44ff3cb98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
