@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -8,6 +9,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Clips")]
     public AudioClip ingredientDrop;
+    public List<AudioClip> musicTracks;
 
     public static AudioManager Instance;
 
@@ -15,6 +17,16 @@ public class AudioManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+    }
+
+    void Start()
+    {
+        // Încarcă melodia selectată din PlayerPrefs
+        int selectedSongIndex = PlayerPrefs.GetInt("SelectedSongIndex", 0);
+        if (selectedSongIndex >= 0 && selectedSongIndex < musicTracks.Count)
+        {
+            PlayMusic(musicTracks[selectedSongIndex]);
+        }
     }
 
     public void PlaySFX(AudioClip clip)

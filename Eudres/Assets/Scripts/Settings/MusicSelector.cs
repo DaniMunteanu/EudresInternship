@@ -23,7 +23,7 @@ public class MusicSelector : MonoBehaviour
     private void Start()
     {
         currentIndex = PlayerPrefs.GetInt("SelectedSongIndex", 0);
-        PlaySong(currentIndex);
+        //PlaySong(currentIndex);
     }
 
     private void Update()
