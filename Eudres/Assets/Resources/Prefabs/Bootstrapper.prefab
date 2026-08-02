@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 164547040723276949, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
+      propertyPath: 'musicTracks.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4dff243065945bf4887d32ce8d0b89d8, type: 3}
     - target: {fileID: 2038007718479794569, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

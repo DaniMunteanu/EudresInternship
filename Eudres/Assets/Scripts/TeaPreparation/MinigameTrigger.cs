@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MinigameTrigger : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class MinigameTrigger : MonoBehaviour
     [SerializeField] string tutorialShopCounterScene = "TutorialShopCounter";
 
     [SerializeField] private BreathingMinigame minigame;
+    [SerializeField] private Button serveButton;
+    [SerializeField] private Button resetButton;
     private bool minigameStarted = false;
 
     void Start()
@@ -36,6 +39,9 @@ public class MinigameTrigger : MonoBehaviour
         {
             tutorialStepBreathingMinigame.SetActive(true);
         }
+
+        serveButton.interactable = false;
+        resetButton.interactable = false;
 
         minigame.gameObject.SetActive(true); 
         minigameStarted = true;

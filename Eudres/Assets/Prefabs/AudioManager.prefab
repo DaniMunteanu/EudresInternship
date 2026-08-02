@@ -177,8 +177,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 3344739152675717369}
   sfxSource: {fileID: 7932238425062183981}
-  background: {fileID: 8300000, guid: b011a6bb82bae9943bbfa65a0ce24b89, type: 3}
   ingredientDrop: {fileID: 8300000, guid: 8d9a04bc1a46c09408e54572cc8ef4b2, type: 3}
+  musicTracks:
+  - {fileID: 8300000, guid: 4dff243065945bf4887d32ce8d0b89d8, type: 3}
+  - {fileID: 8300000, guid: 1dad36d011016644b9cb391c6b1d4aca, type: 3}
+  - {fileID: 8300000, guid: 79074f77c95462d46bb77c793ac22852, type: 3}
+  - {fileID: 8300000, guid: b8580f690de971c41b6eb486737bbc7f, type: 3}
 --- !u!1 &7333766962839129392
 GameObject:
   m_ObjectHideFlags: 0
