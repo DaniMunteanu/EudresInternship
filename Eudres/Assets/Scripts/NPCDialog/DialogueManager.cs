@@ -10,6 +10,13 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
+    [Header("Check if the scene is a tutorial")]
+    [SerializeField] private bool isTutorialScene = false;
+    [SerializeField] string teaPreparationScene = "TeaPreparation";
+    [SerializeField] string tutorialTeaPreparationScene = "TutorialTeaPreparation";
+    [SerializeField] private GameObject tutorialStepPanel;
+    [SerializeField] private GameObject tutorialOverPanel;
+
     [Header("UI References")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI npcNameText;
@@ -45,6 +52,7 @@ public class DialogueManager : MonoBehaviour
     private bool isServeComplete = false;
     
     private int endOfDayLineIndex = 0;
+    private bool firstKeywordAdded = false;
 
     void Awake()
     {
@@ -54,6 +62,15 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        if (tutorialOverPanel)
+        {
+            tutorialOverPanel.SetActive(false);
+        }
+        if (tutorialStepPanel)
+        {
+            tutorialStepPanel.SetActive(false);
+        }
+
         KeywordsTracker.Instance.ClearBubbles();
 
         if (TeaSession.IsReturningFromPreparation)
@@ -107,6 +124,11 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClickToContinue()
     {
+        if (tutorialStepPanel)
+        {
+            tutorialStepPanel.SetActive(false);
+        }
+
         clickToContinueOverlay.SetActive(false);
 
         if (isServeComplete)
@@ -154,6 +176,12 @@ public class DialogueManager : MonoBehaviour
         if (keyword != null)
         {
             KeywordsTracker.Instance.AddBubble(keyword);
+
+            if (isTutorialScene && !firstKeywordAdded && tutorialStepPanel != null)
+            {
+                firstKeywordAdded = true;
+                tutorialStepPanel.SetActive(true);
+            }
         }
 
         currentSetIndex++;
@@ -178,7 +206,10 @@ public class DialogueManager : MonoBehaviour
     {
         makeTeaButton.gameObject.SetActive(true);
         makeTeaButton.onClick.RemoveAllListeners();
-        makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene("TeaPreparation"));
+        if (isTutorialScene)
+            makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene(tutorialTeaPreparationScene));
+        else
+            makeTeaButton.onClick.AddListener(() => SceneManager.LoadScene(teaPreparationScene));
     }
     
     void ShowFeedbackAndServe()
@@ -207,6 +238,17 @@ public class DialogueManager : MonoBehaviour
 
         feedbackText.text = "";
         ClearQuestionButtons();
+
+        if (isTutorialScene)
+        {
+            TeaSession.NPCsServedToday = 0;
+            TeaSession.ServedNPCsToday.Clear();
+            if (tutorialOverPanel)
+            {
+                tutorialOverPanel.SetActive(true);
+            }
+            return;
+        }
 
         if (TeaSession.NPCsServedToday >= TeaSession.NPCsPerDay)
         {
