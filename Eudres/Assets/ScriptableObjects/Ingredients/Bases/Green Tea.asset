@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Green Tea
   ingredientSprite: {fileID: 2638323562310102114, guid: 47db9326aa510bb40a2563a8e34cdf8b, type: 3}
+  cupChangeSprite: {fileID: -4659399385545007997, guid: 054df546f1d58094e908de658646b18e, type: 3}
   ingredientType: {fileID: 11400000, guid: b371ba27c66fb9346b19664588c30ff3, type: 2}
   keywords:
   - {fileID: 11400000, guid: 530f546daa14db643af8c1b6e394a939, type: 2}

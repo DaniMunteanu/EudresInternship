@@ -33,4 +33,9 @@ public class MainMenuManager : MonoBehaviour
             Debug.LogWarning("Settings panel not assigned on MainMenuManager.");
         }
     }
+
+    public void OnQuitPressed()
+    {
+        Application.Quit();
+    }
 }

@@ -4544,7 +4544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 298.5625
+      value: 26.375
       objectReference: {fileID: 0}
     - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -4556,7 +4556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 394.84375
+      value: 122.65625
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
