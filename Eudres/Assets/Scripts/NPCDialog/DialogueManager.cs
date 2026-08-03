@@ -53,6 +53,7 @@ public class DialogueManager : MonoBehaviour
     
     private int endOfDayLineIndex = 0;
     private bool firstKeywordAdded = false;
+    private bool touchscreenEnabled = false;
 
     void Awake()
     {
@@ -62,6 +63,11 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        if (Touchscreen.current != null)
+        {
+            touchscreenEnabled = true;
+        }
+
         if (tutorialOverPanel)
         {
             tutorialOverPanel.SetActive(false);
@@ -79,7 +85,17 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (isTyping && Mouse.current.leftButton.wasPressedThisFrame)
+        bool wasTapped = false;
+        if(touchscreenEnabled)
+        {
+            wasTapped = Touchscreen.current.primaryTouch.press.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame;
+        }
+        else
+        {
+            wasTapped = Mouse.current.leftButton.wasPressedThisFrame;
+        }
+
+        if (isTyping && wasTapped)
         {
             if (typingCoroutine != null) StopCoroutine(typingCoroutine);
             activeTypingTarget.maxVisibleCharacters = fullTextBuffer.Length;

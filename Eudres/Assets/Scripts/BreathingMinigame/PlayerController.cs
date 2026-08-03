@@ -12,9 +12,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float spawnY;
     private float minY;
+    private bool touchscreenEnabled = false;
 
     void Start()
     {
+        if (Touchscreen.current != null)
+        {
+            touchscreenEnabled = true;
+        }
+
         rb = GetComponent<Rigidbody2D>();
         spawnY = transform.position.y;
         minY = cup != null ? cup.position.y : spawnY - 3f;
@@ -22,7 +28,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        IsHeld = Mouse.current.leftButton.isPressed;
+        if (touchscreenEnabled)
+        {
+            IsHeld = Touchscreen.current.primaryTouch.press.isPressed || Mouse.current.leftButton.isPressed;
+        }
+        else
+        {
+            IsHeld = Mouse.current.leftButton.isPressed;
+        }
 
         float targetY = IsHeld
             ? Mathf.Max(transform.position.y - moveSpeed * Time.deltaTime, minY)

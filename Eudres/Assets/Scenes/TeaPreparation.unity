@@ -3988,7 +3988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2487237945001060849, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: moveSpeed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3089778685824169348, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_fontSize

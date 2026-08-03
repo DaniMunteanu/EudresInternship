@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerClickHandler, IBeginDragHandler, IEndDragHandler
+public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public string text;
     public string details = "Especially helpful for those suffering from:";
@@ -32,5 +32,15 @@ public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, I
     {
         TooltipManager.Instance.Hide();
         eventData.selectedObject = null;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        TooltipManager.Instance.Show(text, details, keywords, transform.position);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        TooltipManager.Instance.Hide();
     }
 }
