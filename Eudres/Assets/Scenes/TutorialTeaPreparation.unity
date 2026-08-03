@@ -280,6 +280,7 @@ MonoBehaviour:
   tutorialStepBreathingMinigame: {fileID: 1215643545}
   shopCounterScene: ShopCounter
   tutorialShopCounterScene: TutorialShopCounter
+  ingredientTracker: {fileID: 1800232863}
   minigame: {fileID: 1856907879}
   serveButton: {fileID: 96632527}
   resetButton: {fileID: 1800232865}
@@ -1585,7 +1586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 108.625
+      value: -57.03125
       objectReference: {fileID: 0}
     - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -1597,7 +1598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 153
+      value: -12.65625
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4667,6 +4668,10 @@ PrefabInstance:
       propertyPath: inputModule
       value: 
       objectReference: {fileID: 882488772}
+    - target: {fileID: 3264804662832530254, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1178297787}
     - target: {fileID: 3264804662832530254, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
       propertyPath: tutorialStepKeywordFound
       value: 

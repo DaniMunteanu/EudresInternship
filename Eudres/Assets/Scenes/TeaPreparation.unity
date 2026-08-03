@@ -609,6 +609,7 @@ MonoBehaviour:
   tutorialStepBreathingMinigame: {fileID: 0}
   shopCounterScene: ShopCounter
   tutorialShopCounterScene: TutorialShopCounter
+  ingredientTracker: {fileID: 1349762509}
   minigame: {fileID: 468267669}
   serveButton: {fileID: 242549896}
   resetButton: {fileID: 1349762510}
@@ -3967,7 +3968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 963282198894305473, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 963282198894305473, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3979,7 +3980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1819532961850098776, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1819532961850098776, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4059,7 +4060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877899965214917301, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7749195082452645510, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4443,6 +4444,10 @@ PrefabInstance:
       propertyPath: inputModule
       value: 
       objectReference: {fileID: 654576006}
+    - target: {fileID: 3264804662832530254, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1862778423}
     - target: {fileID: 3468027875839300949, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4872,8 +4877,8 @@ SceneRoots:
   - {fileID: 1797664086}
   - {fileID: 5611403581785793612}
   - {fileID: 654576008}
-  - {fileID: 2167399088407501199}
   - {fileID: 1442163298}
   - {fileID: 2244296812457264989}
+  - {fileID: 2167399088407501199}
   - {fileID: 1929302105}
   - {fileID: 1133514826}

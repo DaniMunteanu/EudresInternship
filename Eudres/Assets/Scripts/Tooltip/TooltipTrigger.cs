@@ -2,36 +2,35 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerClickHandler, IBeginDragHandler, IEndDragHandler
 {
     public string text;
     public string details = "Especially helpful for those suffering from:";
     public string[] keywords = new string[3];
 
-    private IEnumerator tooltipShowCoroutine;
-
-    void Start()
+    public void OnSelect(BaseEventData eventData)
     {
-        tooltipShowCoroutine = ShowText(3.0f);
+        TooltipManager.Instance.Show(text, details, keywords, transform.position);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void OnDeselect(BaseEventData eventData)
     {
-        //I tried displaying the tooltip with a small delay, doesn't work properly yet
-        //StartCoroutine(tooltipShowCoroutine);
-
-        TooltipManager.Instance.Show(text, details, keywords);
-    }
-
-    IEnumerator ShowText(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        TooltipManager.Instance.Show(text, details, keywords);
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        StopCoroutine(tooltipShowCoroutine);
         TooltipManager.Instance.Hide();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        eventData.selectedObject = gameObject;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        TooltipManager.Instance.Hide();
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        TooltipManager.Instance.Hide();
+        eventData.selectedObject = null;
     }
 }
