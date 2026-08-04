@@ -117,7 +117,7 @@ public class IngredientTracker : MonoBehaviour
         return true;
     }
 
-    void HighlightIngredient(Ingredient ingredient)
+    public void HighlightIngredient(Ingredient ingredient)
     {
         foreach (Transform subparent in draggableIngredientsParent.transform)
         {
@@ -128,6 +128,7 @@ public class IngredientTracker : MonoBehaviour
                 {
                     draggableIngredient.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.2f);
                     draggableIngredient.tooltipTrigger.enabled = false;
+                    draggableIngredient.isDraggable = false;
                 }
             }
         }
@@ -142,6 +143,7 @@ public class IngredientTracker : MonoBehaviour
                 DraggableIngredient draggableIngredient = child.GetComponent<DraggableIngredient>();
                 draggableIngredient.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
                 draggableIngredient.tooltipTrigger.enabled = true;
+                draggableIngredient.isDraggable = true;
             }
         }
     }

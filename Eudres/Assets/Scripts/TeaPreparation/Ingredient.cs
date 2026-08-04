@@ -5,6 +5,7 @@ public class Ingredient : ScriptableObject
 {
     public string ingredientName;
     public Sprite ingredientSprite;
+    public Sprite cupChangeSprite;
     public IngredientType ingredientType;
     public Keyword[] keywords;
 }

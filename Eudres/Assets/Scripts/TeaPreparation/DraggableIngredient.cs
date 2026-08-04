@@ -9,6 +9,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
     [SerializeField] public TooltipTrigger tooltipTrigger;
 
     private Vector3 initialPosition;
+    public bool isDraggable = true;
 
     void Start()
     {
@@ -35,6 +36,9 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!isDraggable)
+            return;
+
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
         worldPos.z = 0f;
         transform.position = worldPos;

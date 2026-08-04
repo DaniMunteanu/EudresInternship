@@ -1,6 +1,5 @@
 using System;
 using TMPro;
-using UnityEditor.EventSystems;
 using UnityEngine;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
@@ -32,19 +31,7 @@ public class Tooltip : MonoBehaviour
 
     public void Update()
     {
-        if (keepPosition)
-        {
-            return;
-        }
-
-        Vector2 newPosition = inputModule.point.action.ReadValue<Vector2>();
-
-        float pivotX = newPosition.x / Screen.width;
-        float pivotY = newPosition.y / Screen.height;
-
-        rectTransform.pivot = new Vector2(pivotX, pivotY);
-
-        transform.position = newPosition;
+        
     }
 
     public void HighlightKeyword(Keyword keyword)

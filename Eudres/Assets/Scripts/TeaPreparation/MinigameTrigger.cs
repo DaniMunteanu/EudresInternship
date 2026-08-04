@@ -10,6 +10,7 @@ public class MinigameTrigger : MonoBehaviour
     [SerializeField] string shopCounterScene = "ShopCounter";
     [SerializeField] string tutorialShopCounterScene = "TutorialShopCounter";
 
+    [SerializeField] private IngredientTracker ingredientTracker;
     [SerializeField] private BreathingMinigame minigame;
     [SerializeField] private Button serveButton;
     [SerializeField] private Button resetButton;
@@ -35,6 +36,11 @@ public class MinigameTrigger : MonoBehaviour
 
     public void StartMinigame()
     {
+        if (ingredientTracker)
+        {
+            ingredientTracker.HighlightIngredient(null);
+        }
+
         if (isTutorialScene)
         {
             tutorialStepBreathingMinigame.SetActive(true);

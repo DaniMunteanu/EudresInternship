@@ -10,6 +10,7 @@ public class TooltipManager : MonoBehaviour
     public bool tutorialStepShowing = false;
 
     [SerializeField] public Tooltip tooltip;
+    [SerializeField] private Camera mainCamera;
 
     public bool shouldHighlight = false;
     private Keyword keywordToHighlight;
@@ -32,11 +33,14 @@ public class TooltipManager : MonoBehaviour
         Hide();
     }
 
-    public void Show(string text, string details, string[] keywords)
+    public void Show(string text, string details, string[] keywords, Vector3 position = default)
     {
         tooltip.keepPosition = false;
         tooltip.SetText(text, details);
         tooltip.gameObject.SetActive(true);
+
+        tooltip.transform.position = mainCamera.WorldToScreenPoint(position) + new Vector3(0, -50, 0);
+
         for (int index = 0; index < keywords.Length; index++)
         {
             tooltip.keywordTextFields[index].text = keywords[index];
@@ -50,7 +54,7 @@ public class TooltipManager : MonoBehaviour
 
         if (tutorialStepShown == false && tutorialStepKeywordFound)
         {
-            Invoke(nameof(ShowTutorialStep), 1.0f);
+            ShowTutorialStep();
         }
     }
 

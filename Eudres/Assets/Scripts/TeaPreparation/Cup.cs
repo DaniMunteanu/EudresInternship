@@ -3,28 +3,26 @@ using UnityEngine;
 public class Cup : MonoBehaviour, IDropArea
 {
     [SerializeField] IngredientTracker ingredientTracker;
-
-    [SerializeField] private Collider2D cupCollider;
-    [SerializeField] private SpriteRenderer cupSpriteRenderer;
-    [SerializeField] private Sprite emptyCupSprite;
-    [SerializeField] private Sprite filledCupSprite;
+    [SerializeField] private SpriteRenderer fillingSpriteRenderer;
 
     void Start()
     {
-        if (cupSpriteRenderer != null)
-            cupSpriteRenderer.sprite = emptyCupSprite;
+        if (fillingSpriteRenderer != null)
+            fillingSpriteRenderer.sprite = null;
     }
 
     public void OnIngredientDropped(Ingredient ingredient)
     {
-        if (cupSpriteRenderer != null)
-            cupSpriteRenderer.sprite = filledCupSprite;
-
+        if (ingredient.ingredientType.typeName == "Base" && fillingSpriteRenderer.sprite == null)
+        {
+            fillingSpriteRenderer.sprite = ingredient.cupChangeSprite;
+        }
+        
         ingredientTracker.AddIngredient(ingredient);
     }
 
     public void ClearCup()
     {
-        cupSpriteRenderer.sprite = emptyCupSprite;
+        fillingSpriteRenderer.sprite = null;
     }
 }
