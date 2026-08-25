@@ -45,6 +45,7 @@ public class DialogueManager : MonoBehaviour
 
     private bool isTyping = false;
     private bool isTypingNpcSpeech = false;
+    private bool isServingContext = false;
     private string fullTextBuffer = "";
     private System.Action onTypingComplete;
     private TextMeshProUGUI activeTypingTarget;
@@ -120,6 +121,7 @@ public class DialogueManager : MonoBehaviour
         TeaSession.IsReturningFromPreparation = false;
         TeaSession.SelectedIngredients.Clear();
         currentSetIndex = 0;
+        isServingContext = false;
 
         dialoguePanel.SetActive(true);
         feedbackText.text = "";
@@ -240,6 +242,8 @@ public class DialogueManager : MonoBehaviour
         npcPortraitImage.SetNativeSize();
         feedbackText.text = "";
 
+        isServingContext = true;
+
         DisplayDialogue(TeaSession.CurrentNPC.serveFeedback, onComplete: () =>
         {
             isServeComplete = true;
@@ -353,10 +357,20 @@ public class DialogueManager : MonoBehaviour
         isTypingNpcSpeech = target == npcDialogueText && TeaSession.CurrentNPC != null;
         if (isTypingNpcSpeech)
         {
-            Sprite talking = TeaSession.CurrentNPC.talkingSprite != null
-                ? TeaSession.CurrentNPC.talkingSprite
-                : TeaSession.CurrentNPC.npcPortrait;
-            npcPortraitImage.sprite = talking;
+            Sprite speakingSprite;
+            if (isServingContext && TeaSession.CurrentNPC.happySprite != null)
+            {
+                speakingSprite = TeaSession.CurrentNPC.happySprite;
+            }
+            else if (TeaSession.CurrentNPC.talkingSprite != null)
+            {
+                speakingSprite = TeaSession.CurrentNPC.talkingSprite;
+            }
+            else
+            {
+                speakingSprite = TeaSession.CurrentNPC.npcPortrait;
+            }
+            npcPortraitImage.sprite = speakingSprite;
             npcPortraitImage.SetNativeSize();
         }
 
