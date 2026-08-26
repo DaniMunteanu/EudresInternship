@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Transform cup;
+    [SerializeField] private RectTransform cup;
     [SerializeField] private float moveSpeed = 4f;
 
     public bool IsHeld { get; private set; } = false;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         }
 
         rb = GetComponent<Rigidbody2D>();
-        spawnY = transform.position.y;
+        spawnY = GetComponent<RectTransform>().position.y;
         minY = cup != null ? cup.position.y : spawnY - 3f;
     }
 
@@ -38,14 +38,14 @@ public class PlayerController : MonoBehaviour
         }
 
         float targetY = IsHeld
-            ? Mathf.Max(transform.position.y - moveSpeed * Time.deltaTime, minY)
-            : Mathf.Min(transform.position.y + moveSpeed * Time.deltaTime, spawnY);
+            ? Mathf.Max(GetComponent<RectTransform>().position.y - moveSpeed * Time.deltaTime, minY)
+            : Mathf.Min(GetComponent<RectTransform>().position.y + moveSpeed * Time.deltaTime, spawnY);
 
-        rb.MovePosition(new Vector2(transform.position.x, targetY));
+        rb.MovePosition(new Vector2(GetComponent<RectTransform>().position.x, targetY));
 
-        NormalizedPosition = Mathf.InverseLerp(minY, spawnY, transform.position.y);
+        NormalizedPosition = Mathf.InverseLerp(minY, spawnY, GetComponent<RectTransform>().position.y);
     }
 
-    public bool IsAtBottom() => transform.position.y <= minY + 0.05f;
-    public bool IsAtTop() => transform.position.y >= spawnY - 0.05f;
+    public bool IsAtBottom() => GetComponent<RectTransform>().position.y <= minY + 0.05f;
+    public bool IsAtTop() => GetComponent<RectTransform>().position.y >= spawnY - 0.05f;
 }

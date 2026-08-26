@@ -25,7 +25,10 @@ public class CupController : MonoBehaviour
     {
         completedCycles = 0;
         currentPhase = Phase.WaitingToInhale;
-        progressBar.value = 1f;
+        if (progressBar != null)
+        {
+            progressBar.value = 1f;
+        }
         UpdateUI();
     }
 
@@ -89,6 +92,7 @@ public class CupController : MonoBehaviour
     {
         if (progressBar == null) return;
         progressBar.value = teaBag.NormalizedPosition;
+        //print($"Progress Bar Value: {progressBar.value}, Normalized Position: {teaBag.NormalizedPosition}");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

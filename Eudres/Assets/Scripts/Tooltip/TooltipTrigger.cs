@@ -26,7 +26,7 @@ public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, I
             return;
         if (eventData is PointerEventData pointerEventData)
         {
-            TooltipManager.Instance.Show(text, details, keywords, pointerEventData.position);
+            TooltipManager.Instance.Show(text, details, keywords, rectTransform.position);
         }
     }
 
@@ -63,7 +63,7 @@ public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, I
         if (touchscreenEnabled || isDragging)
             return;
         
-        TooltipManager.Instance.Show(text, details, keywords, eventData.position);
+        TooltipManager.Instance.Show(text, details, keywords, rectTransform.position);
     }
 
     public void OnPointerExit(PointerEventData eventData)

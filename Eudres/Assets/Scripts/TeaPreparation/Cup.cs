@@ -1,21 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cup : MonoBehaviour, IDropArea
 {
     [SerializeField] IngredientTracker ingredientTracker;
-    [SerializeField] private SpriteRenderer fillingSpriteRenderer;
+    [SerializeField] private Image fillingImage;
 
     void Start()
     {
-        if (fillingSpriteRenderer != null)
-            fillingSpriteRenderer.sprite = null;
+        if (fillingImage != null)
+        {   
+            ClearCup();
+        }
     }
 
     public void OnIngredientDropped(Ingredient ingredient)
     {
-        if (ingredient.ingredientType.typeName == "Base" && fillingSpriteRenderer.sprite == null)
+        if (ingredient.ingredientType.typeName == "Base" && fillingImage.sprite == null)
         {
-            fillingSpriteRenderer.sprite = ingredient.cupChangeSprite;
+            fillingImage.sprite = ingredient.cupChangeSprite;
+            fillingImage.color = Color.white; // Make the image visible
+            fillingImage.SetNativeSize(); // Adjust the size of the image to match the sprite
         }
         
         ingredientTracker.AddIngredient(ingredient);
@@ -23,6 +28,7 @@ public class Cup : MonoBehaviour, IDropArea
 
     public void ClearCup()
     {
-        fillingSpriteRenderer.sprite = null;
+        fillingImage.sprite = null;
+        fillingImage.color = new Color(1f, 1f, 1f, 0f); // Make the image transparent
     }
 }
