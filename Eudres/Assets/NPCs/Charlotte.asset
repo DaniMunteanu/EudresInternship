@@ -15,6 +15,8 @@ MonoBehaviour:
   npcName: Charlotte
   npcPortrait: {fileID: 428249918233935452, guid: fa75b6c5df41ffa47ad0f7c454c731a2, type: 3}
   talkingSprite: {fileID: 7324278548118935167, guid: c5a4724c925e830488dd98bfdb7883b7, type: 3}
+  happySprite: {fileID: -7041544995125327475, guid: 8e27015a794b81d46a2db59c1ce9585c, type: 3}
+  stressedSprite: {fileID: 1627703709133352820, guid: d0c82203b06e75140b37bafc4ba796fd, type: 3}
   serveFeedback: I think tomorrow I'll do something different... even if it's something
     small. It's been a while since I chose to do something instead of just letting
     it happen.

@@ -7,6 +7,8 @@ public class NPCData : ScriptableObject
     public string npcName;
     public Sprite npcPortrait;
     public Sprite talkingSprite;
+    public Sprite happySprite;
+    public Sprite stressedSprite;
 
     [Header("Feedback dupa servire")]
     [TextArea(2, 4)] public string serveFeedback;

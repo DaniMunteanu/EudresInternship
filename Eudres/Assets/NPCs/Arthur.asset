@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   npcName: Arthur
   npcPortrait: {fileID: 5100235053143438022, guid: 9b97fe566d0c68844ba448966cf8d24f, type: 3}
-  talkingSprite: {fileID: 5100235053143438022, guid: 9b97fe566d0c68844ba448966cf8d24f, type: 3}
+  talkingSprite: {fileID: -252452820229153287, guid: 2b1f3c8654064bf43aebf88dd0319e27, type: 3}
+  happySprite: {fileID: 9062476828575266529, guid: 1a97999b6c00046499c9a050414fb2ad, type: 3}
+  stressedSprite: {fileID: 9062476828575266529, guid: 1a97999b6c00046499c9a050414fb2ad, type: 3}
   serveFeedback: Perhaps I expect perfection from myself because I care so much.
     That doesn't mean I'm failing... Thank you for reminding me of that.
   possibleRecipes:
