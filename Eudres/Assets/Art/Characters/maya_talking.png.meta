@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 7a6ba0f92480b0d40a18738c80b3b31c
+guid: 96182a0acd12bfe40aab2b112d014908
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1496470901751430683
-    second: Biscuit_Innit_0
+      213: 2052896660546745621
+    second: maya_talking_0
+  - first:
+      213: 5712420133027164186
+    second: maya_talking_1
+  - first:
+      213: 8419352765775237295
+    second: maya_talking_2
+  - first:
+      213: -3149197093135753518
+    second: maya_talking_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Biscuit_Innit_0
+      name: maya_talking_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1280
-        height: 1177
+        width: 2136
+        height: 3771
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e1c56cb4a77b3be0800000000000000
-      internalID: -1496470901751430683
+      spriteID: 5157974d2aa5d7c10800000000000000
+      internalID: 2052896660546745621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maya_talking_1
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 3764
+        width: 26
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10bfd468d7964f40800000000000000
+      internalID: 5712420133027164186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maya_talking_2
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 3759
+        width: 62
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa05cba9bbc87d470800000000000000
+      internalID: 8419352765775237295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maya_talking_3
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 3746
+        width: 105
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de53ffcdedcb44d0800000000000000
+      internalID: -3149197093135753518
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Biscuit_Innit_0: -1496470901751430683
+      maya_talking_0: 2052896660546745621
+      maya_talking_1: 5712420133027164186
+      maya_talking_2: 8419352765775237295
+      maya_talking_3: -3149197093135753518
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
