@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1224beccc0a7494bbb7d3b947dfc332, type: 3}
   m_Name: Lavender Tea
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
-  ingredientName: Lavender Tea
+  ingredientName: Lavender
   ingredientSprite: {fileID: 8597265555138175851, guid: c3a28a63c212fce43bd01d160f134fb7, type: 3}
   cupChangeSprite: {fileID: 8597265555138175851, guid: 734db47ee93b547458a45d6d7ae7834d, type: 3}
   ingredientType: {fileID: 11400000, guid: b371ba27c66fb9346b19664588c30ff3, type: 2}
