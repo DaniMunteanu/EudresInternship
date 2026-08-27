@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] private RectTransform rectTransform;
     public string text;
     public string details = "Especially helpful for those suffering from:";
     public string[] keywords = new string[3];
@@ -23,7 +24,10 @@ public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, I
     {
         if (isDragging)
             return;
-        TooltipManager.Instance.Show(text, details, keywords, transform.position);
+        if (eventData is PointerEventData pointerEventData)
+        {
+            TooltipManager.Instance.Show(text, details, keywords, rectTransform.position);
+        }
     }
 
     public void OnDeselect(BaseEventData eventData)
@@ -59,7 +63,7 @@ public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, I
         if (touchscreenEnabled || isDragging)
             return;
         
-        TooltipManager.Instance.Show(text, details, keywords, transform.position);
+        TooltipManager.Instance.Show(text, details, keywords, rectTransform.position);
     }
 
     public void OnPointerExit(PointerEventData eventData)

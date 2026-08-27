@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] public Ingredient ingredientData;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Image image;
+    [SerializeField] private RectTransform rectTransform;
     [SerializeField] private Collider2D ingredientCollider;
     [SerializeField] public TooltipTrigger tooltipTrigger;
 
@@ -13,11 +15,11 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     void Start()
     {
-        initialPosition = transform.position;
+        initialPosition = rectTransform.position;
 
-        if (spriteRenderer != null && ingredientData != null)
+        if (image != null && ingredientData != null)
         {
-            spriteRenderer.sprite = ingredientData.ingredientSprite;
+            image.sprite = ingredientData.ingredientSprite;
             tooltipTrigger.text = ingredientData.ingredientName;
 
             for (int i = 0; i < ingredientData.keywords.Length; i++)
@@ -39,22 +41,24 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         if (!isDraggable)
             return;
 
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
-        worldPos.z = 0f;
-        transform.position = worldPos;
+        //Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
+        Vector3 screenPos = eventData.position;
+        screenPos.z = 0f;
+        rectTransform.position = screenPos;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
-        worldPos.z = 0f;
-        transform.position = worldPos;
+        //Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
+        Vector3 screenPos = eventData.position;
+        screenPos.z = 0f;
+        rectTransform.position = screenPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         ingredientCollider.enabled = false;
-        Collider2D hitCollider = Physics2D.OverlapPoint(transform.position);
+        Collider2D hitCollider = Physics2D.OverlapPoint(rectTransform.position);
         ingredientCollider.enabled = true;
 
         if (hitCollider != null && hitCollider.TryGetComponent<IDropArea>(out IDropArea dropArea))
@@ -62,6 +66,6 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
             dropArea.OnIngredientDropped(ingredientData);
         }
 
-        transform.position = initialPosition;
+        rectTransform.position = initialPosition;
     }
 }
