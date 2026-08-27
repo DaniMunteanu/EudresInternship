@@ -123,6 +123,8 @@ public class IngredientTracker : MonoBehaviour
         {
             foreach (Transform child in subparent)
             {
+                if (child.GetComponent<DraggableIngredient>() == null)
+                    continue;
                 DraggableIngredient draggableIngredient = child.GetComponent<DraggableIngredient>();
                 if (draggableIngredient.ingredientData != ingredient)
                 {
@@ -140,6 +142,8 @@ public class IngredientTracker : MonoBehaviour
         {
             foreach (Transform child in subparent)
             {
+                if (child.GetComponent<DraggableIngredient>() == null)
+                    continue;
                 DraggableIngredient draggableIngredient = child.GetComponent<DraggableIngredient>();
                 draggableIngredient.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
                 draggableIngredient.tooltipTrigger.enabled = true;
