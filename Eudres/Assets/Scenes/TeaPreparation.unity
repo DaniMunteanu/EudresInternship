@@ -6233,7 +6233,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
       propertyPath: m_text
-      value: 
+      value: askdljlkasdjklasjdaskldjalksdjkl
+      objectReference: {fileID: 0}
+    - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
+      propertyPath: m_fontSize
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
       propertyPath: m_margin.w
@@ -6246,6 +6250,26 @@ PrefabInstance:
     - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
       propertyPath: m_margin.z
       value: -614.3608
+      objectReference: {fileID: 0}
+    - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d9ac7eee0d81d204186a9edae4e5020e, type: 2}
+    - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2013541191569824514, guid: d9ac7eee0d81d204186a9edae4e5020e, type: 2}
+    - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
