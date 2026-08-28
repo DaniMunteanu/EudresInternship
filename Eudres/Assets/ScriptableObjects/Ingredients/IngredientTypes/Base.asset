@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Base
   m_EditorClassIdentifier: Assembly-CSharp::IngredientType
   typeName: Base
-  maxIngredients: 2
+  maxIngredients: 1

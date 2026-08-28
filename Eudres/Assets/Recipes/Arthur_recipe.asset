@@ -31,19 +31,6 @@ MonoBehaviour:
         the idea of relaxing anymore."
       keyword: {fileID: 11400000, guid: 158ca1e2965a0b5438c506c772e117ab, type: 2}
   - exchanges:
-    - playerQuestion: Something keeps bugging you?
-      npcResponse: "I keep wondering what tomorrow\u2019s lesson will be like. My
-        future worries tend to follow me home more often than not."
-      keyword: {fileID: 11400000, guid: 0731f2d78effc9f499b7d773dbc9d489, type: 2}
-    - playerQuestion: Do you enjoy teaching?
-      npcResponse: "I do\u2026 but I always imagine something going terribly wrong.
-        All those thoughts of something catastrophic happening are difficult to ignore."
-      keyword: {fileID: 11400000, guid: 3ed93b4d02912af408709965cd2457e7, type: 2}
-    - playerQuestion: What keeps you awake at night?
-      npcResponse: "My racing thoughts. One question leads to another until it\u2019s
-        suddenly two in the morning and I haven\u2019t caught a glimpse of sleep."
-      keyword: {fileID: 11400000, guid: 33c5db5b2506e064d9fe35c725ef15d5, type: 2}
-  - exchanges:
     - playerQuestion: 'You seem hard on yourself. '
       npcResponse: "I suppose I am. Sometimes I wonder if I\u2019m as capable as
         everyone believes. I feel inadequate."

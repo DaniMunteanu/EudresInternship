@@ -17,21 +17,6 @@ MonoBehaviour:
     I don't know. It feels like my brain forgot how to slow down.
   questionSets:
   - exchanges:
-    - playerQuestion: "You\u2019re a student, huh? Did you come here to study or
-        to take a break?"
-      npcResponse: I've tried both, honestly. When I study, I keep going over the
-        same things again and again. And when I take a break, I end up thinking about
-        studying anyway. It's like I can't stop overthinking everything.
-      keyword: {fileID: 11400000, guid: d8bfe2c615da5aa429416c655b9905ae, type: 2}
-    - playerQuestion: "You look tired\u2026 Hard time with the exams?"
-      npcResponse: Yeah. It's not even the studying itself anymore. My head feels
-        full of mental clutter, like there's never a moment of silence.
-      keyword: {fileID: 11400000, guid: 564f24d9d72494240a5ecbf00a30d9da, type: 2}
-    - playerQuestion: You seem to need something warm and a good conversation.
-      npcResponse: I think a conversation might help. Lately I've realized I don't
-        really know how to relax anymore.
-      keyword: {fileID: 11400000, guid: 158ca1e2965a0b5438c506c772e117ab, type: 2}
-  - exchanges:
     - playerQuestion: Do you think more about what could happen than what you are
         doing now?
       npcResponse: Definitely. I can be sitting in class and suddenly I'm imagining
