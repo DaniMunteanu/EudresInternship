@@ -15,7 +15,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     void Start()
     {
-        initialPosition = rectTransform.position;
+        initialPosition = rectTransform.anchoredPosition;
 
         if (image != null && ingredientData != null)
         {
@@ -66,6 +66,6 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
             dropArea.OnIngredientDropped(ingredientData);
         }
 
-        rectTransform.position = initialPosition;
+        rectTransform.anchoredPosition = initialPosition;
     }
 }

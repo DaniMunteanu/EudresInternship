@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -60,7 +61,14 @@ public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, I
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (touchscreenEnabled || isDragging)
+        if (eventData is ExtendedPointerEventData extendedPointerEventData)
+        {
+            if (extendedPointerEventData.device is Touchscreen)
+            {
+                return;
+            }
+        }
+        if (isDragging)
             return;
         
         TooltipManager.Instance.Show(text, details, keywords, rectTransform.position);
@@ -68,8 +76,13 @@ public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, I
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (touchscreenEnabled)
-            return;
+        if (eventData is ExtendedPointerEventData extendedPointerEventData)
+        {
+            if (extendedPointerEventData.device is Touchscreen)
+            {
+                return;
+            }
+        }
 
         TooltipManager.Instance.Hide();
     }
