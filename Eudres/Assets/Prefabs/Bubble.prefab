@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bubble
   bubbleText: {fileID: 6750949252083507420}
+  rectTransform: {fileID: 4815817523914780973}
   keyword: {fileID: 0}
 --- !u!1 &8347485136167749454
 GameObject:
