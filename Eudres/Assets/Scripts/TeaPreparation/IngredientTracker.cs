@@ -128,7 +128,8 @@ public class IngredientTracker : MonoBehaviour
                 DraggableIngredient draggableIngredient = child.GetComponent<DraggableIngredient>();
                 if (draggableIngredient.ingredientData != ingredient)
                 {
-                    draggableIngredient.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.2f);
+                    draggableIngredient.GetComponent<Image>().color = new Color(1, 1, 1, 0.2f);
+                    draggableIngredient.GetComponent<ResizeOnHover>().isResizable = false;
                     draggableIngredient.tooltipTrigger.enabled = false;
                     draggableIngredient.isDraggable = false;
                 }
@@ -145,7 +146,8 @@ public class IngredientTracker : MonoBehaviour
                 if (child.GetComponent<DraggableIngredient>() == null)
                     continue;
                 DraggableIngredient draggableIngredient = child.GetComponent<DraggableIngredient>();
-                draggableIngredient.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                draggableIngredient.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                draggableIngredient.GetComponent<ResizeOnHover>().isResizable = true;
                 draggableIngredient.tooltipTrigger.enabled = true;
                 draggableIngredient.isDraggable = true;
             }
