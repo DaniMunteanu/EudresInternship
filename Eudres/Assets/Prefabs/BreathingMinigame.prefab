@@ -1203,8 +1203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77bc891ea0d184945ab603962678036e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  cup: {fileID: 0}
-  moveSpeed: 1000
+  cup: {fileID: 366086263208242770}
+  stopOffset: 0.9
+  breathDuration: 3
 --- !u!212 &6974209623275483846
 SpriteRenderer:
   serializedVersion: 2
