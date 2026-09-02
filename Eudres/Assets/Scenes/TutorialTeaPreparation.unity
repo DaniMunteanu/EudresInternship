@@ -872,9 +872,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 636796355836533416, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
+      propertyPath: inputModule
+      value: 
+      objectReference: {fileID: 2139198535}
     - target: {fileID: 1288462420967150025, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
       propertyPath: m_fontSize
-      value: 52.2
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3264804662832530254, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
       propertyPath: mainCamera
@@ -912,13 +916,17 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4154410234438614755, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4783234971726520165, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
       propertyPath: m_Name
       value: TooltipCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 6123853355497854594, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
       propertyPath: m_fontSize
-      value: 25.9
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6135703962328370946, guid: 3702523e2450e77408581f176a0c0dba, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6518,7 +6526,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!1 &1775987212
 GameObject:
