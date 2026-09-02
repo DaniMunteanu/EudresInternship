@@ -12,6 +12,11 @@ public class MainMenuManager : MonoBehaviour
     [Header("Settings Panel (assign in Inspector)")]
     [SerializeField] private GameObject settingsPanel;
 
+    void Start()
+    {
+        TeaSession.NPCsServedToday = 0;
+        TeaSession.ServedNPCsToday.Clear();
+    }
     public void OnStartPressed()
     {
         SceneManager.LoadScene(gameplaySceneName);

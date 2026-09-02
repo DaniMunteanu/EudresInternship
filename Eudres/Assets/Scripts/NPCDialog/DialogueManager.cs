@@ -324,7 +324,8 @@ public class DialogueManager : MonoBehaviour
 
     void FinishEndOfDay()
     {
-        endOfDayPanel.SetActive(false);
+        //No need for this anymore since we are now loading the main menu scene directly
+        //endOfDayPanel.SetActive(false);
 
         TeaSession.NPCsServedToday = 0;
         TeaSession.ServedNPCsToday.Clear();
