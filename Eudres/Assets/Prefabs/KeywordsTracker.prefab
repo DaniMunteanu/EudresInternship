@@ -163,6 +163,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6750949252083507420, guid: 04713dfb25fa9ca4c8cb406d2e1d92bf, type: 3}
+      propertyPath: m_text
+      value: Future worries
+      objectReference: {fileID: 0}
+    - target: {fileID: 6750949252083507420, guid: 04713dfb25fa9ca4c8cb406d2e1d92bf, type: 3}
+      propertyPath: m_fontSize
+      value: 18.65
+      objectReference: {fileID: 0}
     - target: {fileID: 6868579922446995516, guid: 04713dfb25fa9ca4c8cb406d2e1d92bf, type: 3}
       propertyPath: m_Name
       value: Bubble (1)

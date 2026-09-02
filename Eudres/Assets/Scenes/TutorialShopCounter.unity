@@ -532,6 +532,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3192538681288521950, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.11635208
+      objectReference: {fileID: 0}
     - target: {fileID: 4436673695605157229, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -654,8 +658,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.034523, y: -3.9870949}
-  m_SizeDelta: {x: 200.69995, y: 30}
+  m_AnchoredPosition: {x: 0, y: 1.9935083}
+  m_SizeDelta: {x: 165.247, y: 46.272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487671304
 MonoBehaviour:
@@ -679,15 +683,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Go to Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d9ac7eee0d81d204186a9edae4e5020e, type: 2}
+  m_sharedMaterial: {fileID: -2013541191569824514, guid: d9ac7eee0d81d204186a9edae4e5020e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280824370
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.15686275, a: 1}
+    rgba: 4281745505
+  m_fontColor: {r: 0.38039216, g: 0.2509804, b: 0.21176471, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -704,13 +708,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 24.2
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -743,7 +747,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -23.583008, y: 0, z: -21.085815, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1864,8 +1868,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_fontSize
+      value: 34.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_margin.z
-      value: -645.13477
+      value: -0.7788086
       objectReference: {fileID: 0}
     - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1892,12 +1900,16 @@ PrefabInstance:
       value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 773.3439
+      objectReference: {fileID: 0}
+    - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -317.59375
+      value: -5.46875
       objectReference: {fileID: 0}
     - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 36.65625
+      value: 20.15625
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2539,15 +2551,19 @@ PrefabInstance:
       value: "    Customers usually have something on their mind. Troughout every
         conversation, they will share some of their struggles.       \n    These
         keywords will pop up to help you prepare just the right cup of tea that will
-        bring them even a couple of peaceful moments"
+        bring them even a couple of peaceful moments."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_fontSize
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_margin.w
-      value: -167.27832
+      value: 1.277771
       objectReference: {fileID: 0}
     - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_margin.z
-      value: -754.4486
+      value: 1.7757568
       objectReference: {fileID: 0}
     - target: {fileID: 5975141593322735171, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_LocalScale.x
@@ -2574,12 +2590,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 910.4376
+      objectReference: {fileID: 0}
+    - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 225.2012
+      objectReference: {fileID: 0}
+    - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -171.5889
+      value: 182.45804
       objectReference: {fileID: 0}
     - target: {fileID: 7631499538222568362, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 260
+      value: 148.5711
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
