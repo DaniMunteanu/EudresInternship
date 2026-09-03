@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
     void Update()
     {
         bool wasTapped = false;
-        if(touchscreenEnabled)
+        if(touchscreenEnabled && Touchscreen.current != null)
         {
             //wasTapped = (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame) || (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame);
             wasTapped = Touchscreen.current.primaryTouch.press.wasPressedThisFrame;
