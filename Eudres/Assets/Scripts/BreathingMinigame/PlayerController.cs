@@ -3,16 +3,28 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private RectTransform cup;
-    [SerializeField] private float moveSpeed = 4f;
+    [Header("References")]
+    [SerializeField] private Transform cup;
+
+    [Header("Settings")]
+    [Tooltip("Cât de sus față de centrul cănii se oprește plicul. Mărește valoarea dacă trece de cană.")]
+    [SerializeField] private float stopOffset = 1.2f;
+
+    [Header("Breathing Duration")]
+    [SerializeField] private float breathDuration = 3.0f; // Fix 3 secunde
 
     public bool IsHeld { get; private set; } = false;
     public float NormalizedPosition { get; private set; } = 1f;
 
     private Rigidbody2D rb;
     private float spawnY;
-    private float minY;
+    private float progress = 0f; // 0 = sus, 1 = în cană
     private bool touchscreenEnabled = false;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Start()
     {
@@ -21,31 +33,48 @@ public class PlayerController : MonoBehaviour
             touchscreenEnabled = true;
         }
 
-        rb = GetComponent<Rigidbody2D>();
-        spawnY = GetComponent<RectTransform>().position.y;
-        minY = cup != null ? cup.position.y : spawnY - 3f;
+        spawnY = transform.position.y;
     }
 
     void Update()
     {
-        if (touchscreenEnabled)
+        // 1. Detectare Input
+        if (touchscreenEnabled && Touchscreen.current != null)
         {
-            IsHeld = Touchscreen.current.primaryTouch.press.isPressed || Mouse.current.leftButton.isPressed;
+            IsHeld = Touchscreen.current.primaryTouch.press.isPressed || (Mouse.current != null && Mouse.current.leftButton.isPressed);
         }
-        else
+        else if (Mouse.current != null)
         {
             IsHeld = Mouse.current.leftButton.isPressed;
         }
 
-        float targetY = IsHeld
-            ? Mathf.Max(GetComponent<RectTransform>().position.y - moveSpeed * Time.deltaTime, minY)
-            : Mathf.Min(GetComponent<RectTransform>().position.y + moveSpeed * Time.deltaTime, spawnY);
+        // 2. Progres fix în timp (exact 3 secunde)
+        if (IsHeld)
+        {
+            progress = Mathf.MoveTowards(progress, 1f, Time.unscaledDeltaTime / breathDuration);
+        }
+        else
+        {
+            progress = Mathf.MoveTowards(progress, 0f, Time.unscaledDeltaTime / breathDuration);
+        }
 
-        rb.MovePosition(new Vector2(GetComponent<RectTransform>().position.x, targetY));
+        // 3. Calcul punct de oprire cu offset
+        float currentMinY = (cup != null) ? (cup.position.y + stopOffset) : (spawnY - 3f);
+        float targetY = Mathf.Lerp(spawnY, currentMinY, progress);
 
-        NormalizedPosition = Mathf.InverseLerp(minY, spawnY, GetComponent<RectTransform>().position.y);
+        if (rb != null)
+        {
+            rb.MovePosition(new Vector2(transform.position.x, targetY));
+        }
+        else
+        {
+            transform.position = new Vector3(transform.position.x, targetY, transform.position.z);
+        }
+
+        // 4. Progres normalizat pentru CupController
+        NormalizedPosition = 1f - progress;
     }
 
-    public bool IsAtBottom() => GetComponent<RectTransform>().position.y <= minY + 0.05f;
-    public bool IsAtTop() => GetComponent<RectTransform>().position.y >= spawnY - 0.05f;
+    public bool IsAtBottom() => progress >= 0.95f;
+    public bool IsAtTop() => progress <= 0.05f;
 }
