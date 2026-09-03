@@ -5,10 +5,11 @@ public class Cup : MonoBehaviour, IDropArea
 {
     [SerializeField] IngredientTracker ingredientTracker;
     [SerializeField] private Image fillingImage;
+    [SerializeField] private Image frontFillingImage;
 
     void Start()
     {
-        if (fillingImage != null)
+        if (fillingImage != null && frontFillingImage != null)
         {   
             ClearCup();
         }
@@ -21,6 +22,10 @@ public class Cup : MonoBehaviour, IDropArea
             fillingImage.sprite = ingredient.cupChangeSprite;
             fillingImage.color = Color.white; // Make the image visible
             fillingImage.SetNativeSize(); // Adjust the size of the image to match the sprite
+
+            frontFillingImage.sprite = ingredient.cupChangeSprite;
+            frontFillingImage.color = Color.white; // Make the image visible
+            frontFillingImage.SetNativeSize(); // Adjust the size of the image to match the sprite
         }
         
         ingredientTracker.AddIngredient(ingredient);
@@ -30,5 +35,8 @@ public class Cup : MonoBehaviour, IDropArea
     {
         fillingImage.sprite = null;
         fillingImage.color = new Color(1f, 1f, 1f, 0f); // Make the image transparent
+
+        frontFillingImage.sprite = null;
+        frontFillingImage.color = new Color(1f, 1f, 1f, 0f); // Make the image transparent
     }
 }
