@@ -89,9 +89,11 @@ public class DialogueManager : MonoBehaviour
         bool wasTapped = false;
         if(touchscreenEnabled)
         {
-            wasTapped = Touchscreen.current.primaryTouch.press.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame;
+            //wasTapped = (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame) || (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame);
+            wasTapped = Touchscreen.current.primaryTouch.press.wasPressedThisFrame;
         }
-        else
+        
+        if (!wasTapped && Mouse.current != null)
         {
             wasTapped = Mouse.current.leftButton.wasPressedThisFrame;
         }
@@ -322,7 +324,8 @@ public class DialogueManager : MonoBehaviour
 
     void FinishEndOfDay()
     {
-        endOfDayPanel.SetActive(false);
+        //No need for this anymore since we are now loading the main menu scene directly
+        //endOfDayPanel.SetActive(false);
 
         TeaSession.NPCsServedToday = 0;
         TeaSession.ServedNPCsToday.Clear();

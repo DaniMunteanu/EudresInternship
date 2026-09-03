@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3213c801a4424a5499395dbc0e964f79, type: 3}
-  m_Name: Impulsiveness
+  m_Name: Short of breath
   m_EditorClassIdentifier: Assembly-CSharp::Keyword
-  keywordName: Impulsiveness
+  keywordName: Short of breath

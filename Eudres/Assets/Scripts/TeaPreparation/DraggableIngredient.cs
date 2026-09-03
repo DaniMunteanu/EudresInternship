@@ -15,7 +15,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     void Start()
     {
-        initialPosition = rectTransform.position;
+        initialPosition = rectTransform.anchoredPosition;
 
         if (image != null && ingredientData != null)
         {
@@ -49,6 +49,9 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!isDraggable)
+            return;
+
         //Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
         Vector3 screenPos = eventData.position;
         screenPos.z = 0f;
@@ -57,6 +60,9 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!isDraggable)
+            return;
+
         ingredientCollider.enabled = false;
         Collider2D hitCollider = Physics2D.OverlapPoint(rectTransform.position);
         ingredientCollider.enabled = true;
@@ -66,6 +72,6 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
             dropArea.OnIngredientDropped(ingredientData);
         }
 
-        rectTransform.position = initialPosition;
+        rectTransform.anchoredPosition = initialPosition;
     }
 }

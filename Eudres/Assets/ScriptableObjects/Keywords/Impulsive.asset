@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3213c801a4424a5499395dbc0e964f79, type: 3}
-  m_Name: Repetitiveness
+  m_Name: Impulsive
   m_EditorClassIdentifier: Assembly-CSharp::Keyword
-  keywordName: Repetitiveness
+  keywordName: Impulsive

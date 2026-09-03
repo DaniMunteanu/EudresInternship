@@ -5,10 +5,14 @@ using UnityEngine;
 public class Bubble : MonoBehaviour
 {
     [SerializeField] private TMP_Text bubbleText;
+    [SerializeField] private RectTransform rectTransform;
     public Keyword keyword;
+
+    private Vector3 initialPosition;
 
     void OnEnable()
     {
+        initialPosition = rectTransform.anchoredPosition;
         if (keyword)
         {
             bubbleText.text = keyword.name;
@@ -31,7 +35,8 @@ public class Bubble : MonoBehaviour
         float xDuration = Random.Range(2.0f, 4.0f);
         float yDuration = Random.Range(2.0f, 4.0f);
 
-        transform.DOMoveX(transform.position.x + 5f, xDuration).SetLoops(-1, LoopType.Yoyo).SetLink(gameObject);
-        transform.DOMoveY(transform.position.y + 10f, yDuration).SetLoops(-1, LoopType.Yoyo).SetLink(gameObject);
+        rectTransform.DOAnchorPosX(initialPosition.x + 5f, xDuration).SetLoops(-1, LoopType.Yoyo).SetLink(gameObject);
+        rectTransform.DOAnchorPosY(initialPosition.y + 10f, yDuration).SetLoops(-1, LoopType.Yoyo).SetLink(gameObject);
     }
+    
 }

@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.27058825}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bubble
   bubbleText: {fileID: 6750949252083507420}
+  rectTransform: {fileID: 4815817523914780973}
   keyword: {fileID: 0}
 --- !u!1 &8347485136167749454
 GameObject:
@@ -125,8 +126,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44.31875, y: 4.4343753}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 44.31875, y: -0.765152}
+  m_SizeDelta: {x: 200, y: 60.3991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7954038041160636993
 CanvasRenderer:
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Need of reassurance
+  m_text: Wanting conversation
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9ac7eee0d81d204186a9edae4e5020e, type: 2}
   m_sharedMaterial: {fileID: -2013541191569824514, guid: d9ac7eee0d81d204186a9edae4e5020e, type: 2}
@@ -183,11 +184,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
+  m_fontSize: 13.7
   m_fontSizeBase: 13
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 5
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -222,7 +223,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 18.449074, y: 0, z: 109.42802, w: 0}
+  m_margin: {x: 10.861107, y: 0, z: 99.04425, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
