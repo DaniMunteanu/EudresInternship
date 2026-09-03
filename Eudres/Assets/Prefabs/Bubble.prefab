@@ -89,9 +89,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2addab0f4467342a3da7df789114fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bubble
+  bubbleImage: {fileID: 6628216899812063536}
   bubbleText: {fileID: 6750949252083507420}
   rectTransform: {fileID: 4815817523914780973}
   keyword: {fileID: 0}
+  currentPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &8347485136167749454
 GameObject:
   m_ObjectHideFlags: 0

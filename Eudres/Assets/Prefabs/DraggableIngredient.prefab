@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TooltipTrigger
   rectTransform: {fileID: 213484532705230685}
   text: 
-  details: 'Especially helpful for those suffering from:'
+  details: 'Especially helpful for the following: '
   keywords:
   - 
   - 
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6308cb8290b7ea4b85475577adb0b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResizeOnHover
+  isResizable: 1
 --- !u!114 &6747656836965657306
 MonoBehaviour:
   m_ObjectHideFlags: 0

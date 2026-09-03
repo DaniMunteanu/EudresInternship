@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5464331073084688385}
   - component: {fileID: 8380973369332095920}
   - component: {fileID: 7321264258788085823}
+  - component: {fileID: 8054027695287197078}
+  - component: {fileID: 5899540060856231425}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -133,6 +135,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8054027695287197078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39161813637396173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6308cb8290b7ea4b85475577adb0b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnHover
+  isResizable: 1
+--- !u!114 &5899540060856231425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39161813637396173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8836c0b00a3cd8942a55200beca40be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnEnable
+  delay: 0.25
 --- !u!1 &671604708074116805
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +388,8 @@ GameObject:
   - component: {fileID: 5377965555062773881}
   - component: {fileID: 790872302568327873}
   - component: {fileID: 1820772511531267058}
+  - component: {fileID: 3141655527292313012}
+  - component: {fileID: 8129471171345147845}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -481,6 +511,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3141655527292313012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3662073637342335056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6308cb8290b7ea4b85475577adb0b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnHover
+  isResizable: 1
+--- !u!114 &8129471171345147845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3662073637342335056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8836c0b00a3cd8942a55200beca40be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnEnable
+  delay: 0
 --- !u!1 &3892849058023354684
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,6 +827,8 @@ GameObject:
   - component: {fileID: 7184105894054899446}
   - component: {fileID: 7425614423019711612}
   - component: {fileID: 6359840008899996714}
+  - component: {fileID: 5284516336728054450}
+  - component: {fileID: 4828970727841743223}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -892,3 +950,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5284516336728054450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700903520592686530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6308cb8290b7ea4b85475577adb0b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnHover
+  isResizable: 1
+--- !u!114 &4828970727841743223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700903520592686530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8836c0b00a3cd8942a55200beca40be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnEnable
+  delay: 0.5

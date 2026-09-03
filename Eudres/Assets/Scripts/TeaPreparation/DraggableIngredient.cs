@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -55,6 +56,27 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         //Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
         Vector3 screenPos = eventData.position;
         screenPos.z = 0f;
+
+        //Check if the ingredient is over the cup
+        ingredientCollider.enabled = false;
+        Collider2D hitCollider = Physics2D.OverlapPoint(rectTransform.position);
+        ingredientCollider.enabled = true;
+
+        if (hitCollider != null && hitCollider.TryGetComponent<IDropArea>(out IDropArea dropArea))
+        {
+            rectTransform.DORotate(new Vector3(0, 0, 45f), 0.2f)
+                .SetEase(Ease.InOutSine)
+                .SetLink(gameObject)
+                .SetUpdate(true);
+        }
+        else
+        {
+            rectTransform.DORotate(Vector3.zero, 0.2f)
+                .SetEase(Ease.InOutSine)
+                .SetLink(gameObject)
+                .SetUpdate(true);
+        }
+
         rectTransform.position = screenPos;
     }
 
@@ -63,6 +85,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         if (!isDraggable)
             return;
 
+        //Check if the ingredient is over the cup
         ingredientCollider.enabled = false;
         Collider2D hitCollider = Physics2D.OverlapPoint(rectTransform.position);
         ingredientCollider.enabled = true;
@@ -73,5 +96,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         }
 
         rectTransform.anchoredPosition = initialPosition;
+        rectTransform.DOKill();
+        rectTransform.rotation = Quaternion.identity;
     }
 }

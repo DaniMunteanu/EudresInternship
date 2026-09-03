@@ -80,7 +80,8 @@ public class SettingsManager : MonoBehaviour
             repeatToggle.onValueChanged.AddListener(OnRepeatToggleChanged);
         }
 
-        ApplyVolumes(savedMaster, savedMusic, savedSFX);
+        // Asta se intampla acum in AudioManager, deci nu mai e nevoie aici
+        //ApplyVolumes(savedMaster, savedMusic, savedSFX);
 
         if (AudioManager.Instance != null)
         {
