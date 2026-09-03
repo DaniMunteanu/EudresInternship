@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -27,6 +28,12 @@ public class IndicationText : MonoBehaviour
 
     public void DisplayText(string text)
     {
+        transform.DOScale(transform.localScale * 1.1f, 0.5f)
+                    .SetEase(Ease.InOutSine)
+                    .SetLoops(2, LoopType.Yoyo)
+                    .SetLink(gameObject)
+                    .SetUpdate(true);
+        
         if (currentCoroutine != null)
         {
             StopCoroutine(currentCoroutine);

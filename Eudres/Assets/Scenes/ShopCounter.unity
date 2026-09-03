@@ -1796,6 +1796,8 @@ GameObject:
   - component: {fileID: 1326832731}
   - component: {fileID: 1326832730}
   - component: {fileID: 1326832732}
+  - component: {fileID: 1326832734}
+  - component: {fileID: 1326832733}
   m_Layer: 5
   m_Name: MakeTeaButton
   m_TagString: Untagged
@@ -1904,6 +1906,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1326832733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326832728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8836c0b00a3cd8942a55200beca40be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnEnable
+  delay: 0
+  multiplier: 1.2
+--- !u!114 &1326832734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326832728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6308cb8290b7ea4b85475577adb0b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnHover
+  isResizable: 1
 --- !u!1 &1896063252
 GameObject:
   m_ObjectHideFlags: 0

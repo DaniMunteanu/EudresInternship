@@ -577,6 +577,8 @@ GameObject:
   - component: {fileID: 715625739}
   - component: {fileID: 715625738}
   - component: {fileID: 715625737}
+  - component: {fileID: 715625742}
+  - component: {fileID: 715625741}
   m_Layer: 5
   m_Name: MakeTeaButton
   m_TagString: Untagged
@@ -685,6 +687,33 @@ RectTransform:
   m_AnchoredPosition: {x: 106.40112, y: 134.6605}
   m_SizeDelta: {x: 161.1979, y: 201.2504}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &715625741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715625736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8836c0b00a3cd8942a55200beca40be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnEnable
+  delay: 0
+  multiplier: 1.2
+--- !u!114 &715625742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715625736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6308cb8290b7ea4b85475577adb0b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnHover
+  isResizable: 1
 --- !u!1 &851446137
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,6 +2106,7 @@ GameObject:
   - component: {fileID: 2065542840}
   - component: {fileID: 2065542839}
   - component: {fileID: 2065542838}
+  - component: {fileID: 2065542841}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2198,6 +2228,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065542836}
   m_CullTransparentMesh: 1
+--- !u!114 &2065542841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065542836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8836c0b00a3cd8942a55200beca40be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResizeOnEnable
+  delay: 0.25
+  multiplier: 1.1
 --- !u!1001 &6533394666185852292
 PrefabInstance:
   m_ObjectHideFlags: 0
