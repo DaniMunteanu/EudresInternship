@@ -112,7 +112,7 @@ public class CupController : MonoBehaviour
     void UpdateUI()
     {
         if (cycleCounterText != null)
-            cycleCounterText.text = $"{completedCycles} / {requiredCycles}";
+            cycleCounterText.text = $"{completedCycles} / {requiredCycles} dips";
 
         if (instructionText == null) return;
 
