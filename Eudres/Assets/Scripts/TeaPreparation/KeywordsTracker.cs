@@ -57,7 +57,7 @@ public class KeywordsTracker : MonoBehaviour
 
     public void PopBubble(Keyword keyword)
     {
-        for (int index = 0; index < requiredKeywords.keywords.Count; index++)
+        for (int index = 0; index < bubbles.Length; index++)
         {
             if (bubbles[index].keyword == keyword)
             {
@@ -75,7 +75,7 @@ public class KeywordsTracker : MonoBehaviour
             return;
         }
 
-        for (int index = poppedIndex + 1; index < requiredKeywords.keywords.Count; index++)
+        for (int index = poppedIndex + 1; index < bubbles.Length; index++)
         {
             // skip inactive bubbles to avoid shifting them
             if (!bubbles[index].isActiveAndEnabled)
