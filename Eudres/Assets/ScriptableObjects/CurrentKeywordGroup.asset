@@ -12,7 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d104120df2d4d5f48b31eac1e653ba9d, type: 3}
   m_Name: CurrentKeywordGroup
   m_EditorClassIdentifier: Assembly-CSharp::KeywordGroup
-  keywords:
-  - {fileID: 11400000, guid: d4ac325e9cc8a684aa89a8409ebec0f8, type: 2}
-  - {fileID: 11400000, guid: c32166d6b01f77143b7170c8b84b28e7, type: 2}
-  - {fileID: 11400000, guid: 7624dbd73c8564a449236cacbd1b26b0, type: 2}
+  keywords: []

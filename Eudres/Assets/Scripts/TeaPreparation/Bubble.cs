@@ -12,7 +12,7 @@ public class Bubble : MonoBehaviour
 
     private Vector3 initialPosition;
 
-    void Start()
+    void Awake()
     {
         initialPosition = rectTransform.anchoredPosition;
     }
@@ -22,8 +22,8 @@ public class Bubble : MonoBehaviour
         // We set this only once when the bubble is enabled, so we don't reset the position every time we pop a bubble.
         //initialPosition = rectTransform.anchoredPosition;
 
-        bubbleImage.color = new Color(255, 255, 255, 0);
-        bubbleText.color = new Color(0, 0, 0, 0);
+        bubbleImage.color = new Color(1, 1, 1, 0);
+        bubbleText.color = Color.clear;
 
         if (keyword)
         {
@@ -32,13 +32,20 @@ public class Bubble : MonoBehaviour
 
         bubbleImage.DOFade(1, 1).SetLink(gameObject);
         bubbleText.DOFade(1, 1).SetLink(gameObject);
+
+        Debug.Log(
+            $"{name}: " +
+            $"local={rectTransform.localPosition}, " +
+            $"anchored={rectTransform.anchoredPosition}, " +
+            $"parent={rectTransform.parent.name}"
+        );
     }
 
     void OnDisable()
     {
-        rectTransform.DOKill();
-        bubbleImage.DOKill();
-        bubbleText.DOKill();
+        //rectTransform.DOKill();
+        //bubbleImage.DOKill();
+        //bubbleText.DOKill();
     }
 
     public void Highlight()
