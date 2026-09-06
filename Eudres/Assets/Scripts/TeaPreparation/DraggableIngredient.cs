@@ -11,12 +11,14 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
     [SerializeField] private Collider2D ingredientCollider;
     [SerializeField] public TooltipTrigger tooltipTrigger;
 
-    private Vector3 initialPosition;
+    private Vector2 initialPosition;
+    private Quaternion initialRotation;
     public bool isDraggable = true;
 
     void Start()
     {
         initialPosition = rectTransform.anchoredPosition;
+        initialRotation = rectTransform.rotation;
 
         if (image != null && ingredientData != null)
         {
@@ -30,22 +32,21 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         }
     }
 
-    public Vector3 GetMousePositionInWorldSpace()
-    {
-        Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        position.z = 0f;
-        return position;
-    }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (!isDraggable)
             return;
 
-        //Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
-        Vector3 screenPos = eventData.position;
-        screenPos.z = 0f;
-        rectTransform.position = screenPos;
+        RectTransform parentRect = rectTransform.parent as RectTransform;
+
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentRect,
+            eventData.position,
+            eventData.pressEventCamera,
+            out Vector2 localPoint))
+        {
+            rectTransform.anchoredPosition = localPoint;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -53,9 +54,16 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         if (!isDraggable)
             return;
 
-        //Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
-        Vector3 screenPos = eventData.position;
-        screenPos.z = 0f;
+        RectTransform parentRect = rectTransform.parent as RectTransform;
+
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentRect,
+            eventData.position,
+            eventData.pressEventCamera,
+            out Vector2 localPoint))
+        {
+            rectTransform.anchoredPosition = localPoint;
+        }
 
         //Check if the ingredient is over the cup
         ingredientCollider.enabled = false;
@@ -76,8 +84,6 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
                 .SetLink(gameObject)
                 .SetUpdate(true);
         }
-
-        rectTransform.position = screenPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -95,8 +101,9 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
             dropArea.OnIngredientDropped(ingredientData);
         }
 
-        rectTransform.anchoredPosition = initialPosition;
         rectTransform.DOKill();
-        rectTransform.rotation = Quaternion.identity;
+
+        rectTransform.anchoredPosition = initialPosition;
+        rectTransform.rotation = initialRotation;
     }
 }
