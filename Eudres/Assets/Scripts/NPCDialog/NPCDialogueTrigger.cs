@@ -30,6 +30,7 @@ public class NPCDialogueTrigger : MonoBehaviour
     {
         if (npcData != null)
         {
+            AudioManager.Instance.PlayDoorbell();
             TeaRecipe recipe = npcData.GetRandomRecipe();
             if (recipe != null)
             {

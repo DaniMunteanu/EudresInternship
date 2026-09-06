@@ -784,6 +784,7 @@ GameObject:
   - component: {fileID: 122815437}
   - component: {fileID: 122815436}
   - component: {fileID: 122815435}
+  - component: {fileID: 122815439}
   m_Layer: 5
   m_Name: MinigameTrigger
   m_TagString: Untagged
@@ -925,6 +926,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122815433}
   m_CullTransparentMesh: 1
+--- !u!114 &122815439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122815433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba5c113aea11dc4caf91245e3130cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1 &139303509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,6 +1679,7 @@ GameObject:
   - component: {fileID: 421584896}
   - component: {fileID: 421584895}
   - component: {fileID: 421584894}
+  - component: {fileID: 421584898}
   m_Layer: 5
   m_Name: Reset
   m_TagString: Untagged
@@ -1799,6 +1813,18 @@ RectTransform:
   m_AnchoredPosition: {x: -0.7121582, y: 55}
   m_SizeDelta: {x: 890, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &421584898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421584893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba5c113aea11dc4caf91245e3130cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1001 &423960338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4958,8 +4984,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4100330337084871952, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1129577832}
   m_SourcePrefab: {fileID: 100100000, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
+--- !u!1 &1129577831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4100330337084871952, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
+  m_PrefabInstance: {fileID: 1129577830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1129577832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129577831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bff080b4e3bae64c80b54402ced6cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.UI.DebugUIHandlerButton
+  colorDefault: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  colorSelected: {r: 0.25, g: 0.65, b: 0.8, a: 1}
+  nameLabel: {fileID: 0}
 --- !u!1001 &1184786665
 PrefabInstance:
   m_ObjectHideFlags: 0

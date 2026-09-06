@@ -16,7 +16,7 @@ MonoBehaviour:
   npcPortrait: {fileID: 3817972469890336379, guid: e162ce30b05ca934faffa602aaaf0fc2, type: 3}
   talkingSprite: {fileID: 3432613315824202060, guid: fece93819ddda6649a8d73f6a84be4ba, type: 3}
   happySprite: {fileID: 7384930921997937897, guid: ca2fe37265b31484b910708974d9a5d8, type: 3}
-  stressedSprite: {fileID: 7384930921997937897, guid: ca2fe37265b31484b910708974d9a5d8, type: 3}
+  stressedSprite: {fileID: -6703890751447511704, guid: d6adc23221695a84882de7900eca3351, type: 3}
   serveFeedback: Remarkable. You prepared it exactly as it ought to be. My wife used
     to say that a proper cup of tea doesn't make the world better... it simply reminds
     you there's still goodness left in it. Thank you, my dear.

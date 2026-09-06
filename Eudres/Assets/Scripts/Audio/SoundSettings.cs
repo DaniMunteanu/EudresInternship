@@ -27,21 +27,27 @@ public class SoundSettings : MonoBehaviour
     public void SetMasterVolume()
     {
         float volume = masterSlider.value;
-        audioMixer.SetFloat("masterVolume", Mathf.Log10(volume)*20);
+        float dB = volume > 0.0001f ? Mathf.Log10(volume) * 20f : -80f;
+
+        audioMixer.SetFloat("masterVolume", dB);
         PlayerPrefs.SetFloat("masterVolume", volume);
     }
 
     public void SetMusicVolume()
     {
         float volume = musicSlider.value;
-        audioMixer.SetFloat("musicVolume", Mathf.Log10(volume)*20);
+        float dB = volume > 0.0001f ? Mathf.Log10(volume) * 20f : -80f;
+
+        audioMixer.SetFloat("musicVolume", dB);
         PlayerPrefs.SetFloat("musicVolume", volume);
     }
 
     public void SetSFXVolume()
     {
         float volume = sfxSlider.value;
-        audioMixer.SetFloat("sfxVolume", Mathf.Log10(volume)*20);
+        float dB = volume > 0.0001f ? Mathf.Log10(volume) * 20f : -80f;
+
+        audioMixer.SetFloat("sfxVolume", dB);
         PlayerPrefs.SetFloat("sfxVolume", volume);
     }
 

@@ -49,7 +49,9 @@ public class DialogueManager : MonoBehaviour
     private string fullTextBuffer = "";
     private System.Action onTypingComplete;
     private TextMeshProUGUI activeTypingTarget;
-    
+    private bool isLastNpcResponse = false;
+    private Sprite pendingIdleSprite;
+
     private bool isServeComplete = false;
     
     private int endOfDayLineIndex = 0;
@@ -89,7 +91,6 @@ public class DialogueManager : MonoBehaviour
         bool wasTapped = false;
         if(touchscreenEnabled && Touchscreen.current != null)
         {
-            //wasTapped = (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame) || (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame);
             wasTapped = Touchscreen.current.primaryTouch.press.wasPressedThisFrame;
         }
         
@@ -106,9 +107,11 @@ public class DialogueManager : MonoBehaviour
 
             if (isTypingNpcSpeech)
             {
-                npcPortraitImage.sprite = TeaSession.CurrentNPC.npcPortrait;
+                npcPortraitImage.sprite = pendingIdleSprite;
                 npcPortraitImage.SetNativeSize();
             }
+
+            AudioManager.Instance.StopTypingSound();
 
             System.Action callback = onTypingComplete;
             onTypingComplete = null;
@@ -124,6 +127,7 @@ public class DialogueManager : MonoBehaviour
         TeaSession.SelectedIngredients.Clear();
         currentSetIndex = 0;
         isServingContext = false;
+        isLastNpcResponse = false;
 
         dialoguePanel.SetActive(true);
         feedbackText.text = "";
@@ -172,6 +176,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        bool isLastSet = (setIndex == sets.Count - 1);
+
         npcDialogueText.text = "";
         ClearQuestionButtons();
 
@@ -186,6 +192,7 @@ public class DialogueManager : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 ClearQuestionButtons();
+                isLastNpcResponse = isLastSet;
                 DisplayDialogue(response, onComplete: () => AdvanceToNextSet(exchange.keyword));
             });
         }
@@ -324,8 +331,6 @@ public class DialogueManager : MonoBehaviour
 
     void FinishEndOfDay()
     {
-        //No need for this anymore since we are now loading the main menu scene directly
-        //endOfDayPanel.SetActive(false);
 
         TeaSession.NPCsServedToday = 0;
         TeaSession.ServedNPCsToday.Clear();
@@ -355,7 +360,10 @@ public class DialogueManager : MonoBehaviour
         isTyping = true;
         fullTextBuffer = text;
         onTypingComplete = onComplete;
+
         activeTypingTarget = target;
+
+        AudioManager.Instance.StartTypingSound();
 
         isTypingNpcSpeech = target == npcDialogueText && TeaSession.CurrentNPC != null;
         if (isTypingNpcSpeech)
@@ -375,6 +383,16 @@ public class DialogueManager : MonoBehaviour
             }
             npcPortraitImage.sprite = speakingSprite;
             npcPortraitImage.SetNativeSize();
+            
+            if (isLastNpcResponse && TeaSession.CurrentNPC.stressedSprite != null)
+            {
+                pendingIdleSprite = TeaSession.CurrentNPC.stressedSprite;
+            }
+            else
+            {
+                pendingIdleSprite = TeaSession.CurrentNPC.npcPortrait;
+            }
+            isLastNpcResponse = false;
         }
 
         target.text = text;
@@ -391,10 +409,11 @@ public class DialogueManager : MonoBehaviour
 
         if (isTypingNpcSpeech)
         {
-            npcPortraitImage.sprite = TeaSession.CurrentNPC.npcPortrait;
+            npcPortraitImage.sprite = pendingIdleSprite;
             npcPortraitImage.SetNativeSize();
         }
 
+        AudioManager.Instance.StopTypingSound();
         onComplete?.Invoke();
     }
 }
