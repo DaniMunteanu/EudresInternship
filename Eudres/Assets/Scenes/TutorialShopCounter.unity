@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 715625737}
   - component: {fileID: 715625742}
   - component: {fileID: 715625741}
+  - component: {fileID: 715625743}
   m_Layer: 5
   m_Name: MakeTeaButton
   m_TagString: Untagged
@@ -714,6 +715,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResizeOnHover
   isResizable: 1
+--- !u!114 &715625743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715625736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba5c113aea11dc4caf91245e3130cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1 &851446137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1411,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4100330337084871952, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1594299197}
   m_SourcePrefab: {fileID: 100100000, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
 --- !u!114 &1594299195 stripped
 MonoBehaviour:
@@ -1411,6 +1427,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ce0f63dde66be443b5b8a86c35d06f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuManager
+--- !u!1 &1594299196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4100330337084871952, guid: 2b2d834f1f4dea14a8fc619c474f2e8d, type: 3}
+  m_PrefabInstance: {fileID: 1594299194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1594299197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594299196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba5c113aea11dc4caf91245e3130cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1 &1636137224
 GameObject:
   m_ObjectHideFlags: 0

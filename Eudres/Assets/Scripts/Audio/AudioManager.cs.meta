@@ -1,2 +1,19 @@
 fileFormatVersion: 2
 guid: 034d79f572eaa5c459a7474ad8425ad1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mainMixer: {fileID: 24100000, guid: 6e8acd36ffa8c8042b5eae37fb89e63c, type: 2}
+  - musicSource: {instanceID: 0}
+  - sfxSource: {instanceID: 0}
+  - typingLoopSource: {instanceID: 0}
+  - ingredientDrop: {fileID: 8300000, guid: 8d9a04bc1a46c09408e54572cc8ef4b2, type: 3}
+  - doorbell: {fileID: 8300000, guid: 8352da8e64a947040a61deae45868010, type: 3}
+  - buttonClick: {fileID: 8300000, guid: 43e55653e4e446a4b9da6e8c0aa79b24, type: 3}
+  - keyboardTyping: {fileID: 8300000, guid: 2fce7db2e0254c249a7bffd30245cc39, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

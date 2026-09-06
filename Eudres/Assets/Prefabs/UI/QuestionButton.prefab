@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 4787101488120066155}
   - component: {fileID: 769829173688631114}
   - component: {fileID: 4052739279740610339}
+  - component: {fileID: -3519759368584604581}
   m_Layer: 5
   m_Name: QuestionButton
   m_TagString: Untagged
@@ -273,3 +274,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
   m_HorizontalFit: 0
   m_VerticalFit: 0
+--- !u!114 &-3519759368584604581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698579832377765160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba5c113aea11dc4caf91245e3130cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX

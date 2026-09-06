@@ -14,9 +14,13 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Sources")]
     public AudioSource musicSource;
     public AudioSource sfxSource;
+    public AudioSource typingLoopSource;
 
     [Header("Audio Clips & Playlist")]
     public AudioClip ingredientDrop;
+    public AudioClip doorbell;
+    public AudioClip[] buttonClick;
+    public AudioClip[] keyboardTyping;
     public List<AudioClip> musicTracks;
 
     private const string MasterKey = "MasterVolume";
@@ -41,6 +45,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+
         float savedMaster = PlayerPrefs.GetFloat(MasterKey, 1f);
         float savedMusic = PlayerPrefs.GetFloat(MusicKey, 1f);
         float savedSFX = PlayerPrefs.GetFloat(SFXKey, 1f);
@@ -50,10 +55,8 @@ public class AudioManager : MonoBehaviour
 
         if (musicSource != null && musicTracks != null && musicTracks.Count > 0)
         {
-            // Resetăm seed-ul aleatoriu folosind timpul curent (Ticks)
             UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
 
-            // Alege un index cu adevărat random
             currentSongIndex = UnityEngine.Random.Range(0, musicTracks.Count);
 
             SetLoop(repeatOn);
@@ -86,6 +89,41 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource.PlayOneShot(clip);
         }
+    }
+
+    public void PlayDoorbell()
+    {
+        PlaySFX(doorbell);
+    }
+
+    public void PlayButtonClick()
+    {
+        PlaySFX(GetRandomClip(buttonClick));
+    }
+
+    public void StartTypingSound()
+    {
+        AudioClip clip = GetRandomClip(keyboardTyping);
+        if (typingLoopSource == null || clip == null) return;
+
+        if (typingLoopSource.clip != clip)
+            typingLoopSource.clip = clip;
+
+        if (!typingLoopSource.isPlaying)
+            typingLoopSource.Play();
+    }
+
+    public void StopTypingSound()
+    {
+        if (typingLoopSource != null && typingLoopSource.isPlaying)
+            typingLoopSource.Stop();
+    }
+
+    private AudioClip GetRandomClip(AudioClip[] clips)
+    {
+        if (clips == null || clips.Length == 0) return null;
+        if (clips.Length == 1) return clips[0];
+        return clips[UnityEngine.Random.Range(0, clips.Length)];
     }
 
     public void PlaySong(int index)

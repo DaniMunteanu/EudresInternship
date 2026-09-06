@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResizeOnEnable
   delay: 0.25
+  multiplier: 1.2
 --- !u!1 &671604708074116805
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResizeOnEnable
   delay: 0
+  multiplier: 1.2
 --- !u!1 &3892849058023354684
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,3 +978,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResizeOnEnable
   delay: 0.5
+  multiplier: 1.2
