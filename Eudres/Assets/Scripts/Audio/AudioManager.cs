@@ -19,6 +19,9 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips & Playlist")]
     public AudioClip ingredientDrop;
     public AudioClip doorbell;
+    public AudioClip prepareTeaButtonClick;
+    public AudioClip breatheInQueue;
+    public AudioClip breatheOutQueue;
     public AudioClip[] buttonClick;
     public AudioClip[] keyboardTyping;
     public List<AudioClip> musicTracks;
