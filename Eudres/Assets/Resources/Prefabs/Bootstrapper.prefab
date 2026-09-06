@@ -282,6 +282,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 24100000, guid: 6e8acd36ffa8c8042b5eae37fb89e63c, type: 2}
     - target: {fileID: 164547040723276949, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
+      propertyPath: breatheInQueue
+      value: 
+      objectReference: {fileID: 8300000, guid: a0ce714961755174c89dcec5d87371b5, type: 3}
+    - target: {fileID: 164547040723276949, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
+      propertyPath: ingredientDrop
+      value: 
+      objectReference: {fileID: 8300000, guid: 309119a3e8a677841819f5e0f0462c7c, type: 3}
+    - target: {fileID: 164547040723276949, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
+      propertyPath: breatheOutQueue
+      value: 
+      objectReference: {fileID: 8300000, guid: af9402318454c664b967a91d8a1f414f, type: 3}
+    - target: {fileID: 164547040723276949, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
+      propertyPath: prepareTeaButtonClick
+      value: 
+      objectReference: {fileID: 8300000, guid: 88ebb6f416585c7408c7483274d72385, type: 3}
+    - target: {fileID: 164547040723276949, guid: 78e166e2eef0c7d4fa079e2d0c9c5342, type: 3}
       propertyPath: musicTracks.Array.size
       value: 5
       objectReference: {fileID: 0}

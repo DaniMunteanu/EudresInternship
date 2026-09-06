@@ -231,6 +231,7 @@ public class DialogueManager : MonoBehaviour
 
     void ShowMakeTeaButton()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.prepareTeaButtonClick);
         makeTeaButton.gameObject.SetActive(true);
         makeTeaButton.onClick.RemoveAllListeners();
         if (isTutorialScene)

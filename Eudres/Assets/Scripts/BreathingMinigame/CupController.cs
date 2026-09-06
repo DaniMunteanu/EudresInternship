@@ -68,7 +68,10 @@ public class CupController : MonoBehaviour
 
             case Phase.Inhaling:
                 if (teaBag.IsAtBottom())
+                {
+                    AudioManager.Instance.PlaySFX(AudioManager.Instance.breatheOutQueue);
                     currentPhase = Phase.WaitingToExhale;
+                }
                 break;
 
             case Phase.WaitingToExhale:
@@ -80,6 +83,7 @@ public class CupController : MonoBehaviour
                 if (teaBag.IsAtTop())
                 {
                     completedCycles++;
+                    AudioManager.Instance.PlaySFX(AudioManager.Instance.breatheInQueue);
                     currentPhase = completedCycles >= requiredCycles
                         ? Phase.Complete
                         : Phase.WaitingToInhale;
