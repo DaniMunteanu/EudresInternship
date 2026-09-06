@@ -16,7 +16,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     void Start()
     {
-        initialPosition = rectTransform.anchoredPosition;
+        initialPosition = rectTransform.position;
 
         if (image != null && ingredientData != null)
         {
@@ -42,10 +42,12 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         if (!isDraggable)
             return;
 
-        //Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
-        Vector3 screenPos = eventData.position;
-        screenPos.z = 0f;
-        rectTransform.position = screenPos;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
+        //Vector3 screenPos = eventData.position;
+        //screenPos.z = 0f;
+        worldPos.z = 0f;
+        //rectTransform.position = screenPos;
+        rectTransform.position = worldPos;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -53,9 +55,10 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
         if (!isDraggable)
             return;
 
-        //Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
-        Vector3 screenPos = eventData.position;
-        screenPos.z = 0f;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(eventData.position);
+        //Vector3 screenPos = eventData.position;
+        //screenPos.z = 0f;
+        worldPos.z = 0f;
 
         //Check if the ingredient is over the cup
         ingredientCollider.enabled = false;
@@ -77,7 +80,8 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
                 .SetUpdate(true);
         }
 
-        rectTransform.position = screenPos;
+        //rectTransform.position = screenPos;
+        rectTransform.position = worldPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -95,7 +99,7 @@ public class DraggableIngredient : MonoBehaviour, IBeginDragHandler, IDragHandle
             dropArea.OnIngredientDropped(ingredientData);
         }
 
-        rectTransform.anchoredPosition = initialPosition;
+        rectTransform.position = initialPosition;
         rectTransform.DOKill();
         rectTransform.rotation = Quaternion.identity;
     }

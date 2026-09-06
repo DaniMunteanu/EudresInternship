@@ -311,6 +311,7 @@ MonoBehaviour:
   ingredientTracker: {fileID: 0}
   fillingImage: {fileID: 8979476201858493685}
   frontFillingImage: {fileID: 4188341275637642204}
+  teaParticles: {fileID: 0}
 --- !u!114 &3593146042295468984
 MonoBehaviour:
   m_ObjectHideFlags: 0

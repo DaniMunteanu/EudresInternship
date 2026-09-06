@@ -28,6 +28,7 @@ public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, I
         if (eventData is PointerEventData pointerEventData)
         {
             TooltipManager.Instance.Show(text, details, keywords, rectTransform.position);
+            //TooltipManager.Instance.Show(text, details, keywords, pointerEventData.position);
         }
     }
 
@@ -72,6 +73,7 @@ public class TooltipTrigger : MonoBehaviour, ISelectHandler, IDeselectHandler, I
             return;
         
         TooltipManager.Instance.Show(text, details, keywords, rectTransform.position);
+        //TooltipManager.Instance.Show(text, details, keywords, eventData.position);
     }
 
     public void OnPointerExit(PointerEventData eventData)

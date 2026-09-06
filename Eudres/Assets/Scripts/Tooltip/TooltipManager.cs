@@ -41,6 +41,7 @@ public class TooltipManager : MonoBehaviour
 
         //tooltip.transform.position = mainCamera.WorldToScreenPoint(position) + new Vector3(0, -50, 0);
         tooltip.GetComponent<RectTransform>().position = position + new Vector3(0, 0, 0);
+        //tooltip.GetComponent<RectTransform>().position = mainCamera.ScreenToWorldPoint(screenPosition) + new Vector3(0, 0, 0);
 
         for (int index = 0; index < keywords.Length; index++)
         {
