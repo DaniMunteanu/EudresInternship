@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Sugar
   ingredientSprite: {fileID: 943231683519144238, guid: 967f37e9046da8d4cb2a11bf0110a9f0, type: 3}
+  cupChangeSprite: {fileID: 0}
+  particleSprite: {fileID: 21300000, guid: 984df3d73b49023459cf74cdbe659199, type: 3}
   ingredientType: {fileID: 11400000, guid: 399045d3b9a482f4389b5436fa8af941, type: 2}
   keywords:
   - {fileID: 11400000, guid: e7a499c46dee9694fb2427ccc5ec9a5f, type: 2}

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Pear
   ingredientSprite: {fileID: -5670339388207800344, guid: 919ba8798d927e34093c5f373a9ea430, type: 3}
+  cupChangeSprite: {fileID: 0}
+  particleSprite: {fileID: 21300000, guid: 2dce78929731a2540af5307d9917dec9, type: 3}
   ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
   keywords:
   - {fileID: 11400000, guid: a6d618367d853374e88283aa5f1fcd4c, type: 2}

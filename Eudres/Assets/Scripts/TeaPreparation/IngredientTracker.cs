@@ -50,15 +50,20 @@ public class IngredientTracker : MonoBehaviour
 
         currentRecipe.ingredients.Clear();
         KeywordsTracker.Instance.ShowBubbles();
+        teaParticles.HideBiscuit();
     }
 
     public void AddIngredient(Ingredient ingredient)
     {
         if (IsIngredientValid(ingredient))
         {
-            if (ingredient.ingredientType.typeName != "Base")
+            if (ingredient.name == "Biscuit")
             {
-                teaParticles.PlayParticles(Color.white);
+                teaParticles.ShowBiscuit();
+            }
+            else if (ingredient.ingredientType.typeName != "Base")
+            {
+                teaParticles.PlayParticles(ingredient.particleSprite);
             }
 
             ingredientTexts[currentIngredientIndex].text = ingredient.ingredientName;

@@ -15,6 +15,7 @@ MonoBehaviour:
   ingredientName: Chamomile
   ingredientSprite: {fileID: -4897717107445516267, guid: 1fc9ebdd8e0a7b647912cae94a585511, type: 3}
   cupChangeSprite: {fileID: 3799732201302224909, guid: 4b28c273edc0da84fa851193cbf02583, type: 3}
+  particleSprite: {fileID: -4897717107445516267, guid: 1fc9ebdd8e0a7b647912cae94a585511, type: 3}
   ingredientType: {fileID: 11400000, guid: b371ba27c66fb9346b19664588c30ff3, type: 2}
   keywords:
   - {fileID: 11400000, guid: d8bfe2c615da5aa429416c655b9905ae, type: 2}

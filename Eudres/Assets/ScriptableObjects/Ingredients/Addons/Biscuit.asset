@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Biscuit
   ingredientSprite: {fileID: 1970291717750316113, guid: 2d32c6b66318fe94fb9074cee0695a3e, type: 3}
+  cupChangeSprite: {fileID: 0}
+  particleSprite: {fileID: 1970291717750316113, guid: 2d32c6b66318fe94fb9074cee0695a3e, type: 3}
   ingredientType: {fileID: 11400000, guid: 399045d3b9a482f4389b5436fa8af941, type: 2}
   keywords:
   - {fileID: 11400000, guid: a0bb02920dbb04046aa8073baa71257b, type: 2}

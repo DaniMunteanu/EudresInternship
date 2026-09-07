@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   ingredientName: Raisins
   ingredientSprite: {fileID: -1564328774176073943, guid: c5b60df313389d84f9a25d77982c7478, type: 3}
+  cupChangeSprite: {fileID: 0}
+  particleSprite: {fileID: 21300000, guid: 530274a3c5b8ba943a63e227e9e1f59f, type: 3}
   ingredientType: {fileID: 11400000, guid: 3d7a349944c49e544b66fb1d57a744c1, type: 2}
   keywords:
   - {fileID: 11400000, guid: a3f9f1466b79c554f9c5bdcea89ab291, type: 2}

@@ -15,6 +15,7 @@ MonoBehaviour:
   ingredientName: Black Tea
   ingredientSprite: {fileID: -6176354512080373199, guid: 313a7f9db2c9ebf448567d33eb427690, type: 3}
   cupChangeSprite: {fileID: 8814032686750216385, guid: 99eba8bb1feea0a41ad0db2b147a5d3e, type: 3}
+  particleSprite: {fileID: -6176354512080373199, guid: 313a7f9db2c9ebf448567d33eb427690, type: 3}
   ingredientType: {fileID: 11400000, guid: b371ba27c66fb9346b19664588c30ff3, type: 2}
   keywords:
   - {fileID: 11400000, guid: e88bce65fae3e944fa73551f7e0079f5, type: 2}

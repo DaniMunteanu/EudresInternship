@@ -15,6 +15,7 @@ MonoBehaviour:
   ingredientName: Mint
   ingredientSprite: {fileID: -8409635689750005401, guid: 2f744eb02a48ed74880aa93a256c6f03, type: 3}
   cupChangeSprite: {fileID: 2273360168872336747, guid: 80ff96465a518e947b0bb64314dde1c1, type: 3}
+  particleSprite: {fileID: -8409635689750005401, guid: 2f744eb02a48ed74880aa93a256c6f03, type: 3}
   ingredientType: {fileID: 11400000, guid: b371ba27c66fb9346b19664588c30ff3, type: 2}
   keywords:
   - {fileID: 11400000, guid: 5e2c32077427cb44ea32c3aa9c1789b0, type: 2}
