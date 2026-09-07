@@ -39,7 +39,7 @@ public class TooltipManager : MonoBehaviour
         tooltip.SetText(text, details);
         tooltip.gameObject.SetActive(true);
 
-        tooltip.GetComponent<RectTransform>().position = mainCamera.WorldToScreenPoint(position) + new Vector3(0, -50, 0);
+        tooltip.GetComponent<RectTransform>().position = mainCamera.WorldToScreenPoint(position);
         //tooltip.GetComponent<RectTransform>().position = position + new Vector3(0, 0, 0);
         //tooltip.GetComponent<RectTransform>().position = mainCamera.ScreenToWorldPoint(screenPosition) + new Vector3(0, 0, 0);
 

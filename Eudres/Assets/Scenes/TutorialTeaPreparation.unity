@@ -1580,7 +1580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7953491, y: 347.18326}
+  m_AnchoredPosition: {x: -1.7953491, y: 185.18324}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396037951
@@ -1655,7 +1655,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.31250003}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1665,7 +1665,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.37499994}
   m_EdgeRadius: 0
 --- !u!1 &421584893
 GameObject:
@@ -2409,7 +2409,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!1 &581261481
 GameObject:
@@ -4187,6 +4187,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8374970719808006864, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 139303510}
     - target: {fileID: 9145042058863019749, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_Value
       value: 0
@@ -6141,8 +6145,8 @@ PrefabInstance:
       propertyPath: m_text
       value: "    To create the right tea, you have to pick the right ingredients.
         Each ingredient has properties that help with certain issues customers might
-        have.\n    There are plenty of ingredients here, but for now select the <b><color=#006400>
-        Green Tea</color></b> leaves. They might have useful properties."
+        have.\n    There are plenty of ingredients here, but for now select the <b><color=#006400>Green
+        Tea</color></b> leaves. They might have useful properties."
       objectReference: {fileID: 0}
     - target: {fileID: 5861647120038106237, guid: fe2a95bb93932ff4d86d6f45f973c0d3, type: 3}
       propertyPath: m_fontSize

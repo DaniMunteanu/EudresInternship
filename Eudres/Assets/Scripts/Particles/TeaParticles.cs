@@ -14,6 +14,8 @@ public class TeaParticles : MonoBehaviour
 
     public void PlayParticles(Sprite particleSprite)
     {
+        particles.Clear();
+
         particles.textureSheetAnimation.SetSprite(0, particleSprite);
 
         particles.Play();

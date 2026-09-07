@@ -1171,6 +1171,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5156344411114028255, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6205498436993354242, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1258,6 +1262,18 @@ PrefabInstance:
     - target: {fileID: 6877899965214917301, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374970719808006864, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1862778423}
+    - target: {fileID: 8374970719808006864, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374970719808006864, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9145042058863019749, guid: 358440147a5bd0a4d89d740bde382e16, type: 3}
       propertyPath: m_Value
@@ -2020,7 +2036,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!114 &755773091 stripped
 MonoBehaviour:
@@ -5644,7 +5660,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.31249988}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5654,7 +5670,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.37500012}
   m_EdgeRadius: 0
 --- !u!224 &2135861931
 RectTransform:
@@ -5672,7 +5688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7953491, y: 347.18326}
+  m_AnchoredPosition: {x: -1.7953491, y: 171.68326}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2167399088407501199
@@ -5997,7 +6013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
       propertyPath: m_fontSize
-      value: 38.3
+      value: 38.25
       objectReference: {fileID: 0}
     - target: {fileID: 7992471379596027929, guid: 19002599cd714914cb159146f57d9215, type: 3}
       propertyPath: m_margin.w
