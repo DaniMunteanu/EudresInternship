@@ -2022,6 +2022,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 3
   m_TargetDisplay: 0
+--- !u!114 &755773091 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4520661495331638943, guid: 2b5fc673ee9218e4f8a0876880ebf612, type: 3}
+  m_PrefabInstance: {fileID: 2167399088407501199}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ffcce9db70a22a41b4da6773045e50f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeaParticles
 --- !u!1001 &861028837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3609,6 +3620,10 @@ PrefabInstance:
       value: 0.75268555
       objectReference: {fileID: 0}
     - target: {fileID: 5605918477166300384, guid: bb060a5e117d5b8448e0ac7f2eeabd6e, type: 3}
+      propertyPath: teaParticles
+      value: 
+      objectReference: {fileID: 755773091}
+    - target: {fileID: 5605918477166300384, guid: bb060a5e117d5b8448e0ac7f2eeabd6e, type: 3}
       propertyPath: requiredKeywords
       value: 
       objectReference: {fileID: 11400000, guid: 5859986d43f709b48913662af03cf6f3, type: 2}
@@ -3814,7 +3829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -940.4768, y: -46.734375}
+  m_AnchoredPosition: {x: -940.4768, y: -46.734253}
   m_SizeDelta: {x: -1588.0421, y: -93.469}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1396304092

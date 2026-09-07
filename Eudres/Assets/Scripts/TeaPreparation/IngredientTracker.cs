@@ -16,6 +16,7 @@ public class IngredientTracker : MonoBehaviour
     [SerializeField] private GameObject ingredientTextsParent;
     [SerializeField] private GameObject draggableIngredientsParent;
     [SerializeField] private Ingredient tutorialIngredient;
+    [SerializeField] private TeaParticles teaParticles;
 
     private TMP_Text[] ingredientTexts;
     private int currentIngredientIndex = 0;
@@ -55,6 +56,11 @@ public class IngredientTracker : MonoBehaviour
     {
         if (IsIngredientValid(ingredient))
         {
+            if (ingredient.ingredientType.typeName != "Base")
+            {
+                teaParticles.PlayParticles(Color.white);
+            }
+
             ingredientTexts[currentIngredientIndex].text = ingredient.ingredientName;
             currentIngredientIndex++;
 

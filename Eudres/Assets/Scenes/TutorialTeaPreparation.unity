@@ -2770,6 +2770,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0492f33db6ab2c6449fd982ed008fcf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cup
+--- !u!114 &597262495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4520661495331638943, guid: 2b5fc673ee9218e4f8a0876880ebf612, type: 3}
+  m_PrefabInstance: {fileID: 597262492}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ffcce9db70a22a41b4da6773045e50f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeaParticles
 --- !u!1001 &653674810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3661,6 +3672,10 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: 0.75268555
       objectReference: {fileID: 0}
+    - target: {fileID: 5605918477166300384, guid: bb060a5e117d5b8448e0ac7f2eeabd6e, type: 3}
+      propertyPath: teaParticles
+      value: 
+      objectReference: {fileID: 597262495}
     - target: {fileID: 5605918477166300384, guid: bb060a5e117d5b8448e0ac7f2eeabd6e, type: 3}
       propertyPath: requiredKeywords
       value: 
@@ -6654,7 +6669,7 @@ Canvas:
   m_GameObject: {fileID: 1821509312}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 139303510}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
